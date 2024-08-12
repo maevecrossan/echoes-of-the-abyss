@@ -55,6 +55,7 @@ def show_map():
     """
     print(map)
 
+
 def backstory():
     terminal_clear()
     intro = """
@@ -248,7 +249,7 @@ def office():
     input("Press enter to continue...")
 
     office_choices = """
-    1. Read throughthe LOGBOOK. Gain insight into the experiments conducted in 
+    1. Read through the LOGBOOK. Gain insight into the experiments conducted in 
     the facility.\n
     2. Examine the broken COMPUTERS. There might be something useful or salvageable.\n
     3. Move to Room 1, the ENTRY hall.\n
@@ -258,6 +259,7 @@ def office():
     print(office_choices)
     
     input("Press enter to continue...")
+
 
 def laboratory():
     """
@@ -304,6 +306,7 @@ def laboratory():
     
     input("Press enter to continue...")
 
+
 def morgue():
     """
     Gives the morgue description and choices to be made.
@@ -342,6 +345,7 @@ def morgue():
     print(morgue_choices)
     
     input("Press enter to continue...")
+
 
 def break_room():
     """
@@ -383,6 +387,7 @@ def break_room():
     
     input("Press enter to continue...")
 
+
 def security_room():
     """
     Gives the security room description and choices to be made.
@@ -423,6 +428,7 @@ def security_room():
     print(security_room_choices)
     
     input("Press enter to continue...")
+
 
 def containment_room():
     """
