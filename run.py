@@ -83,6 +83,8 @@ def entry_hall():
     """
     print(entry_hall_choices)
 
+    entry_hall_prompt = input("Type prompt here: ")
+
 
 def observation_chamber():
     """
@@ -129,7 +131,7 @@ def observation_chamber():
     4. Move to Room 1, the ENTRY hall.\n
     """
     print(observation_chamber_choices)
-    
+    observation_chamber_prompt = input("Type prompt here: ")
     input("Press enter to continue...")
 
 
@@ -181,7 +183,7 @@ def storage_closet():
     5. Move to Room 6, the MORGUE.\n
     """
     print(storage_closet_choices)
-    
+    storage_closet_prompt = input("Type prompt here: ")
     input("Press enter to continue...")
 
 
@@ -223,7 +225,7 @@ def office():
     5. Move to Room 7, the BREAK room.\n
     """
     print(office_choices)
-    
+    office_choices_prompt = input("Type prompt here: ")
     input("Press enter to continue...")
 
 
@@ -269,7 +271,7 @@ def laboratory():
     6. Move to Room 8, the SECURITY Room.\n
     """
     print(laboratory_choices)
-    
+    laboratory_choices_prompt = input("Type prompt here: ")
     input("Press enter to continue...")
 
 
@@ -309,7 +311,7 @@ def morgue():
     4. Move to Room 9, the CONTAINMENT Room.\n
     """
     print(morgue_choices)
-    
+    morgue_choices_prompt = input("Type prompt here: ")
     input("Press enter to continue...")
 
 
@@ -350,7 +352,7 @@ def break_room():
     4. Move to Room 8, SECURITY Room, through the door ahead.\n
     """
     print(break_room_choices)
-    
+    break_room_choices_prompt = input("Type prompt here: ")
     input("Press enter to continue...")
 
 
@@ -392,7 +394,7 @@ def security_room():
     4. Move to Room 9, the CONTAINMENT Room.\n
     """
     print(security_room_choices)
-    
+    security_room_choices_prompt = input("Type prompt here: ")
     input("Press enter to continue...")
 
 
@@ -435,18 +437,18 @@ def containment_room():
     4. Move to Room 8, the SECURITY Room.\n
     """
     print(containment_room_choices)
-    
+    containment_room_choices_prompt = input("Type prompt here: ")
     input("Press enter to continue...")
 
-title_screen()
+#title_screen()
 #show_map()
-backstory()
+#backstory()
 entry_hall()
-observation_chamber()
-storage_closet()
-office()
-laboratory()
-morgue()
-break_room()
-security_room()
-containment_room()
+#observation_chamber()
+#storage_closet()
+#office()
+#laboratory()
+#morgue()
+#break_room()
+#security_room()
+#containment_room()
