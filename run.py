@@ -169,9 +169,23 @@ def observation_chamber():
     an old notebook, and a crowbar. The toolbox is locked, but it’s heavy, 
     suggesting it contains something valuable. 
     """
+
     print(storage_closet_description_3)
 
     input("Press enter to continue...")
+
+    storage_closet_choices = """
+    1. Pick up the CROWBAR. This could be helpful later.\n
+    2. Examine the NOTEBOOK. Reading through it might reveal vital information 
+    about the facility.\n
+    3. Inspect the TOOLBOX. If you can find a way to open it, it might contain 
+    something valuable.
+    4. Move to Room 6, the MORGUE.
+    """
+    print(storage_closet_choices)
+    
+    input("Press enter to continue...")
+
 
 #def office():
 
@@ -195,3 +209,4 @@ def observation_chamber():
 #backstory()
 #entry_hall()
 #observation_chamber()
+#storage_closet
