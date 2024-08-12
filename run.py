@@ -18,6 +18,7 @@ def title_screen():
     instructions = """
     You will be able to make multiple choices in this game.\n 
     To make a choice, when prompted, type the word in CAPITALS and hit 'enter'.\n
+    To look at the map, type MAP and hit 'enter'.
     """
     print(title)
     print(welcome_message)
@@ -25,6 +26,34 @@ def title_screen():
     input("Press enter to begin.")
     
 
+def show_map():
+    map = """
+    +--------+  X  +--------+  X  +--------+
+    |        |     |        |     |        |
+    | Room 1 X-----X Room 2 X-----X Room 3 |
+    | Entry  |     |Observa-|     | Storage|
+    |  Hall  |     |  tion  |     | Closet |
+    |        |     |Chamber |     |        |
+    +---X----+     +---X----+     +---X----+
+        |              |              |
+    +---X----+     +---X----+     +---X----+
+    |        |     |        |     |        |
+    | Room 4 X-----X Room 5 X-----X Room 6 |
+    | Office |     | Labor- |     | Morgue |
+    |        |     |  atory |     |        |
+    +---X----+     +---X----+     +---X----+
+        |              |              |
+    +---X----+     +---X----+     +---X----+
+    |        |     |        |     |        |
+    | Room 7 X-----X Room 8 X-----X Room 9 |
+    | Break  |     |Security|     |Contain-|
+    |  Room  |     |  Room  |     |  ment  |
+    |        |     |        |     |  Room  |
+    +--------+     +--------+     +--------+
+
+    X = door\n
+    """
+    print(map)
 
 def backstory():
     terminal_clear()
@@ -136,7 +165,7 @@ def observation_chamber():
     input("Press enter to continue...")
 
 
-#def storage_closet():
+def storage_closet():
     """
     Gives the storage closet description and choices to be made.
     """
@@ -179,7 +208,7 @@ def observation_chamber():
     2. Examine the NOTEBOOK. Reading through it might reveal vital information 
     about the facility.\n
     3. Inspect the TOOLBOX. If you can find a way to open it, it might contain 
-    something valuable.
+    something valuable.\n
     4. Move to Room 6, the MORGUE.
     """
     print(storage_closet_choices)
@@ -187,26 +216,260 @@ def observation_chamber():
     input("Press enter to continue...")
 
 
-#def office():
+def office():
+    """
+    Gives the X description and choices to be made.
+    """
+    terminal_clear()
 
+    office_description_1 = """
+    The Office is in disarray, with toppled chairs and scattered papers 
+    littering the floor. The walls are lined with filing cabinets, many 
+    of which have been pried open, their contents strewn about. A desk 
+    sits in the center of the room, covered in dust and old files. One 
+    of the computers on the desk is smashed, its screen shattered, 
+    while another seems to be intact but unpowered.
+    """
+    print(office_description_1)
 
-#def labratory():
+    input("Press enter to continue...")
 
+    office_description_2 = """
+    The room feels strangely untouched compared to the rest of the facility, 
+    as if the people who worked here left in a hurry. There’s a sense of 
+    urgency in the air, as though whatever happened here, happened quickly 
+    and unexpectedly. A logbook lies open on the desk, its pages filled with 
+    notes on the lab’s experiments.
+    """
+    print(office_description_2)
 
-#def morgue():
+    input("Press enter to continue...")
 
+    office_choices = """
+    1. Read throughthe LOGBOOK. Gain insight into the experiments conducted in 
+    the facility.\n
+    2. Examine the broken COMPUTERS. There might be something useful or salvageable.
+    3. Move to Room 5, the LABRATORY.
+    4. Move to Room 7, the BREAK room.
 
-#def breakroom():
+    """
+    print(office_choices)
+    
+    input("Press enter to continue...")
 
+def labratory():
+    """
+    Gives the X description and choices to be made.
+    """
+    terminal_clear()
 
-#def security_room():
+    labratory_description_1 = """
+    The Laboratory is the heart of the facility, where experiments were conducted. 
+    The room is large, with long tables covered in various pieces of scientific 
+    equipment, most of which are now broken or rusted. Glass beakers and test tubes 
+    are scattered across the floor, some of them shattered. A strange, faintly 
+    glowing residue clings to the surfaces of the tables, and the air is thick 
+    with the smell of chemicals that sting your nose.
 
+    """
+    print(labratory_description_1)
 
-#def containment_room():
+    input("Press enter to continue...")
 
+    labratory_description_2 = """
+    You can’t pinpoint the source, but you can hear the quiet hum of old machinery, 
+    though none of it seems to be working. Occasionally, you hear a faint buzzing 
+    noise, like electricity sparking. The room feels charged with an unseen energy, 
+    as if the experiments conducted here left a permanent mark on the space. The 
+    walls are lined with cabinets, most of which are locked. In one corner, a lab 
+    coat hangs on a hook, and you notice something bulging in one of its pockets.
+    """
+    print(labratory_description_2)
 
-#title_screen()
-#backstory()
-#entry_hall()
-#observation_chamber()
-#storage_closet
+    input("Press enter to continue...")
+
+    labratory_choices = """
+    1. Pick up the KEY: This might be the key to unlocking a critical part of the 
+    facility.\n
+    2. Examine the lab EQUIPMENT. Investigate the broken equipment for anything useful.\n
+    3. Move to Room 6, the MORGUE.\n
+    4. Move to Room 8, the SECURITY Room.\n
+    """
+    print(labratory_choices)
+    
+    input("Press enter to continue...")
+
+def morgue():
+    """
+    Gives the X description and choices to be made.
+    """
+    terminal_clear()
+
+    morgue_description_1 = """
+    The Morgue is cold and sterile, with rows of metal drawers lining the walls. 
+    The air is frigid, and your breath creates small clouds of mist in front of 
+    you. The room is dimly lit, with a single lightbulb flickering overhead, 
+    casting long, eerie shadows across the room. A metal examination table sits 
+    in the center, covered with a stained sheet.
+    """
+    print(morgue_description_1)
+
+    input("Press enter to continue...")
+
+    morgue_description_2 = """
+    The smell of formaldehyde is overwhelming, mixed with something else—something 
+    rotten. The drawers in the walls are mostly closed, but a few are slightly ajar, 
+    as if someone didn’t have time to close them all. Below one of the open draws, 
+    you see a keycard. You can’t shake the feeling that you’re being watched, even 
+    though the room is empty. There’s a small, rusted surgical cart in the corner, 
+    holding a few old, bloodstained tools. Something in the corner catches your eye.
+    """
+    print(morgue_description_2)
+
+    input("Press enter to continue...")
+
+    morgue_choices = """
+    1. Pick up the SCALPEL: This might be useful for defense.\n
+    2. Take the KEYCARD: You’ll need this to access certain parts of the facility.\n
+    3. Move to Room 5 (Laboratory): Through the door to the left.\n
+    4. Move to Room 9 (Containment Room): Through the door ahead.\n
+    """
+    print(morgue_choices)
+    
+    input("Press enter to continue...")
+
+def break_room():
+    """
+    Gives the X description and choices to be made.
+    """
+    terminal_clear()
+
+    break_room_description_1 = """
+    The Break Room was once a place where the lab staff could relax, but now it’s 
+    a scene of chaos. The room is cluttered with overturned and broken chairs and 
+    tables, as if something had torn through in a fit of rage. A vending machine 
+    lies on its side, its glass shattered and snacks scattered across the floor. 
+    There’s a small kitchenette in one corner, with a fridge and a microwave, 
+    both covered in grime.
+    """
+    print(break_room_description_1)
+
+    input("Press enter to continue...")
+
+    break_room_description_2 = """
+    The room feels oddly out of place compared to the rest of the facility, 
+    as if the normalcy of a break room doesn’t belong in such a sinister 
+    environment. There’s a calendar on the wall, still turned to a month from 
+    decades ago, and a few personal items left behind on the counter—a coffee mug,
+    a half-eaten sandwich, now mummified with age. The room is eerily silent, 
+    and the air is thick with dust.
+    """
+    print(break_room_description_2)
+
+    input("Press enter to continue...")
+
+    break_room_choices = """
+    1. Pick up the pocket KNIFE: A useful tool or potential weapon.\n
+    2. Take the energy DRINK: Might be useful for a quick boost of energy.\n
+    3. Go back to Room 4, the OFFICE.\n
+    4. Move to Room 8, SECURITY Room, through the door ahead.\n
+    """
+    print(break_room_choices)
+    
+    input("Press enter to continue...")
+
+def security_room():
+    """
+    Gives the X description and choices to be made.
+    """
+    terminal_clear()
+
+    security_room_description_1 = """
+    The Security Room is filled with monitors and control panels, most of which 
+    are now dark and lifeless. A few of the monitors still flicker with static, 
+    offering brief, distorted glimpses of various parts of the facility. The 
+    room is cramped, with just enough space for a single chair in front of the 
+    console. Papers and old security logs are scattered across the desk, 
+    detailing the final days of the lab’s operation.
+    """
+    print(security_room_description_1)
+
+    input("Press enter to continue...")
+
+    security_room_description_2 = """
+    A red light blinks ominously on one of the control panels, indicating that 
+    something is still active in the facility. A nearby locker stands open, 
+    with a few items left behind by the last security personnel. The room feels 
+    like a nerve center, where someone once kept watch over the entire lab. 
+    Now, it’s a tomb of information, with the only clues to what happened hidden 
+    within the disjointed logs and static-filled screens.
+    """
+    print(security_room_description_2)
+
+    input("Press enter to continue...")
+
+    security_room_choices = """
+    1. Read the security LOGS: Gain vital information about the facility’s 
+    final days and the creature.\n
+    2. Go back to Room 5, the LABORATORY.\n
+    3. Move to Room 7, the BREAK Room, through the door to the left.\n
+    4. Move to Room 9, the CONTAINMENT Room, through the door ahead.\n
+    """
+    print(security_room_choices)
+    
+    input("Press enter to continue...")
+
+def containment_room():
+    """
+    Gives the X description and choices to be made.
+    """
+    terminal_clear()
+
+    containment_room_description_1 = """
+    The Containment Room is the most ominous part of the facility. It’s large and 
+    mostly empty, with the main feature being a massive, reinforced glass enclosure 
+    in the center. The glass is cracked but still intact, though dark stains and 
+    scratch marks on the inside suggest something tried hard to escape. The room 
+    is dimly lit by emergency lights, casting a red glow that makes everything 
+    look surreal and threatening.
+    """
+    print(containment_room_description_1)
+
+    input("Press enter to continue...")
+
+    containment_room_description_2 = """
+    The air is heavy with a sense of dread, as if the very walls are charged 
+    with fear. The temperature here is noticeably lower, and a faint mist clings 
+    to the floor. There’s a control panel near the entrance, still operational but 
+    locked behind a password. You can hear the distant sound of something scraping 
+    against metal, but it’s impossible to tell where it’s coming from. The 
+    atmosphere is thick with tension, as if something terrible could happen at any 
+    moment. The hair on the back of your neck stands on end. 
+    """
+    print(containment_room_description_2)
+
+    input("Press enter to continue...")
+
+    containment_room_choices = """
+    1. Examine the control PANEL: Attempt to input the partial access code and 
+    unlock it.\n
+    2. INSPECT the glass enclosure: Try to determine what was once held inside.\n
+    3. Go back to Room 6, the MORGUE.\n
+    4. Move to Room 8, the Security Room, through the door to the left.\n
+    """
+    print(containment_room_choices)
+    
+    input("Press enter to continue...")
+
+title_screen()
+show_map()
+backstory()
+entry_hall()
+observation_chamber()
+storage_closet()
+office()
+labratory()
+morgue()
+break_room()
+security_room()
+containment_room()
