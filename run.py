@@ -111,8 +111,8 @@ def entry_hall():
 
     entry_hall_choices = """
     1. EXAMINE the room further.
-    2. Move to Room 2 (OBSERVATION Chamber).
-    3. Move to Room 4 (OFFICE). 
+    2. Move to Room 2, the OBSERVATION Chamber.
+    3. Move to Room 4, the OFFICE. 
     """
     print(entry_hall_choices)
 
@@ -158,7 +158,8 @@ def observation_chamber():
     cracks in the mirror seem to form a pattern, though it’s hard to 
     tell what it is. Should you try to see what’s behind the MIRROR?\n
     3. Move to Room 3, the STORAGE closet.\n
-    4. Move to Room 5, the LABRATORY.\n
+    4. Move to Room 5, the LABORATORY.\n
+    4. Move to Room 1, the ENTRY hall.\n
     """
     print(observation_chamber_choices)
     
@@ -209,7 +210,8 @@ def storage_closet():
     about the facility.\n
     3. Inspect the TOOLBOX. If you can find a way to open it, it might contain 
     something valuable.\n
-    4. Move to Room 6, the MORGUE.
+    4. Move to Room 2, the OBSERVATION chamber.\n
+    5. Move to Room 6, the MORGUE.\n
     """
     print(storage_closet_choices)
     
@@ -218,7 +220,7 @@ def storage_closet():
 
 def office():
     """
-    Gives the X description and choices to be made.
+    Gives the office description and choices to be made.
     """
     terminal_clear()
 
@@ -248,22 +250,22 @@ def office():
     office_choices = """
     1. Read throughthe LOGBOOK. Gain insight into the experiments conducted in 
     the facility.\n
-    2. Examine the broken COMPUTERS. There might be something useful or salvageable.
-    3. Move to Room 5, the LABRATORY.
-    4. Move to Room 7, the BREAK room.
-
+    2. Examine the broken COMPUTERS. There might be something useful or salvageable.\n
+    3. Move to Room 1, the ENTRY hall.\n
+    4. Move to Room 5, the LABRATORY.\n
+    5. Move to Room 7, the BREAK room.\n
     """
     print(office_choices)
     
     input("Press enter to continue...")
 
-def labratory():
+def laboratory():
     """
-    Gives the X description and choices to be made.
+    Gives the laboratory description and choices to be made.
     """
     terminal_clear()
 
-    labratory_description_1 = """
+    laboratory_description_1 = """
     The Laboratory is the heart of the facility, where experiments were conducted. 
     The room is large, with long tables covered in various pieces of scientific 
     equipment, most of which are now broken or rusted. Glass beakers and test tubes 
@@ -272,11 +274,11 @@ def labratory():
     with the smell of chemicals that sting your nose.
 
     """
-    print(labratory_description_1)
+    print(laboratory_description_1)
 
     input("Press enter to continue...")
 
-    labratory_description_2 = """
+    laboratory_description_2 = """
     You can’t pinpoint the source, but you can hear the quiet hum of old machinery, 
     though none of it seems to be working. Occasionally, you hear a faint buzzing 
     noise, like electricity sparking. The room feels charged with an unseen energy, 
@@ -284,24 +286,27 @@ def labratory():
     walls are lined with cabinets, most of which are locked. In one corner, a lab 
     coat hangs on a hook, and you notice something bulging in one of its pockets.
     """
-    print(labratory_description_2)
+    print(laboratory_description_2)
 
     input("Press enter to continue...")
 
-    labratory_choices = """
+    laboratory_choices = """
     1. Pick up the KEY: This might be the key to unlocking a critical part of the 
     facility.\n
-    2. Examine the lab EQUIPMENT. Investigate the broken equipment for anything useful.\n
-    3. Move to Room 6, the MORGUE.\n
-    4. Move to Room 8, the SECURITY Room.\n
+    2. Examine the lab EQUIPMENT. Investigate the broken equipment 
+    for anything useful.\n
+    3. Move to Room 2, the OBSERVATION chamber.\n
+    4. Move to Room 4, the OFFICE.\n
+    5. Move to Room 6, the MORGUE.\n
+    6. Move to Room 8, the SECURITY Room.\n
     """
-    print(labratory_choices)
+    print(laboratory_choices)
     
     input("Press enter to continue...")
 
 def morgue():
     """
-    Gives the X description and choices to be made.
+    Gives the morgue description and choices to be made.
     """
     terminal_clear()
 
@@ -331,8 +336,8 @@ def morgue():
     morgue_choices = """
     1. Pick up the SCALPEL: This might be useful for defense.\n
     2. Take the KEYCARD: You’ll need this to access certain parts of the facility.\n
-    3. Move to Room 5 (Laboratory): Through the door to the left.\n
-    4. Move to Room 9 (Containment Room): Through the door ahead.\n
+    3. Move to Room 5, the LABORATORY.\n
+    4. Move to Room 9, the CONTAINMENT Room.\n
     """
     print(morgue_choices)
     
@@ -340,7 +345,7 @@ def morgue():
 
 def break_room():
     """
-    Gives the X description and choices to be made.
+    Gives the break room description and choices to be made.
     """
     terminal_clear()
 
@@ -380,7 +385,7 @@ def break_room():
 
 def security_room():
     """
-    Gives the X description and choices to be made.
+    Gives the security room description and choices to be made.
     """
     terminal_clear()
 
@@ -412,8 +417,8 @@ def security_room():
     1. Read the security LOGS: Gain vital information about the facility’s 
     final days and the creature.\n
     2. Go back to Room 5, the LABORATORY.\n
-    3. Move to Room 7, the BREAK Room, through the door to the left.\n
-    4. Move to Room 9, the CONTAINMENT Room, through the door ahead.\n
+    3. Move to Room 7, the BREAK Room.\n
+    4. Move to Room 9, the CONTAINMENT Room.\n
     """
     print(security_room_choices)
     
@@ -421,7 +426,7 @@ def security_room():
 
 def containment_room():
     """
-    Gives the X description and choices to be made.
+    Gives the containment room description and choices to be made.
     """
     terminal_clear()
 
@@ -454,8 +459,8 @@ def containment_room():
     1. Examine the control PANEL: Attempt to input the partial access code and 
     unlock it.\n
     2. INSPECT the glass enclosure: Try to determine what was once held inside.\n
-    3. Go back to Room 6, the MORGUE.\n
-    4. Move to Room 8, the Security Room, through the door to the left.\n
+    3. Move to Room 6, the MORGUE.\n
+    4. Move to Room 8, the SECURITY Room.\n
     """
     print(containment_room_choices)
     
@@ -468,7 +473,7 @@ entry_hall()
 observation_chamber()
 storage_closet()
 office()
-labratory()
+laboratory()
 morgue()
 break_room()
 security_room()
