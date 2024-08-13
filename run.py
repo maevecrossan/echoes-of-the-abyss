@@ -1,6 +1,7 @@
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 from art import text2art #title
 from helper_functions import *
+from ending_sequences import *
 
 def title_screen():
     """
@@ -82,7 +83,17 @@ def entry_hall():
     """
     print(entry_hall_choices)
 
-    entry_hall_prompt = input("Type prompt here: ")
+    entry_hall_prompt = input("Type keyword here to make your choice: ")
+
+    if observation_chamber_prompt == "examine":
+        examine_entry_hall()
+    elif observation_chamber_prompt == "observation":
+        observation_chamber()
+    elif observation_chamber_prompt == "office":
+        office()
+    else:
+        print("Invalid choice. Please try again.")
+        observation_chamber_prompt() #re-runs the function if the user inputs an invalid option.
 
 
 def observation_chamber():
@@ -128,7 +139,23 @@ def observation_chamber():
     4. Move to Room 1, the ENTRY hall.\n
     """
     print(observation_chamber_choices)
-    observation_chamber_prompt = input("Type prompt here: ")
+
+    observation_chamber_prompt = input("Type keyword here to make your choice: ")
+
+    if observation_chamber_prompt == "syringe":
+        take_syringe()
+    elif observation_chamber_prompt == "mirror":
+        investigate_mirror()
+    elif observation_chamber_prompt == "toolbox":
+        inspect_toolbox()
+    elif observation_chamber_prompt == "observation":
+        observation_chamber()
+    elif observation_chamber_prompt == "morgue":
+        morgue()
+    else:
+        print("Invalid choice. Please try again.")
+        observation_chamber_prompt() #re-runs the function if the user inputs an invalid option.
+
     input("Press enter to continue...")
 
 
@@ -180,7 +207,22 @@ def storage_closet(): #needs key to open
     5. Move to Room 6, the MORGUE.\n
     """
     print(storage_closet_choices)
-    storage_closet_prompt = input("Type prompt here: ")
+    storage_closet_prompt = input("Type keyword here to make your choice: ")
+
+    if storage_closet_prompt == "crowbar":
+        take_crowbar()
+    elif storage_closet_prompt == "notebook":
+        read_notebook()
+    elif storage_closet_prompt == "toolbox":
+        inspect_toolbox()
+    elif storage_closet_prompt == "observation":
+        observation_chamber()
+    elif storage_closet_prompt == "morgue":
+        morgue()
+    else:
+        print("Invalid choice. Please try again.")
+        storage_closet_prompt() #re-runs the function if the user inputs an invalid option.
+
     input("Press enter to continue...")
 
 
@@ -222,7 +264,20 @@ def office():
     5. Move to Room 7, the BREAK room.\n
     """
     print(office_choices)
-    office_choices_prompt = input("Type prompt here: ")
+    office_choices_prompt = input("Type keyword here to make your choice: ").strip().lower()
+
+    if office_choices_prompt == "logbook":
+        read_logbook()
+    elif office_choices_prompt == "entry":
+        entry_hall()
+    elif office_choices_prompt == "laboratory":
+        laboratory()
+    elif office_choices_prompt == "break":
+        break_room()
+    else:
+        print("Invalid choice. Please try again.")
+        office_choices_prompt() #re-runs the function if the user inputs an invalid option.
+
     input("Press enter to continue...")
 
 
@@ -267,7 +322,24 @@ def laboratory():
     6. Move to Room 8, the SECURITY Room.\n
     """
     print(laboratory_choices)
-    laboratory_choices_prompt = input("Type prompt here: ")
+    laboratory_choices_prompt = input("Type keyword here to make your choice: ")
+
+    if laboratory_choices_prompt == "key":
+        take_key()
+    elif laboratory_choices_prompt == "equipment":
+        examine_equipment()
+    elif laboratory_choices_prompt == "observation":
+        observation_chamber()
+    elif laboratory_choices_prompt == "office":
+        office()
+    elif laboratory_choices_prompt == "morgue":
+        morgue()
+    elif laboratory_choices_prompt == "security":
+        security_room()
+    else:
+        print("Invalid choice. Please try again.")
+        laboratory_choices_prompt() #re-runs the function if the user inputs an invalid option.
+
     input("Press enter to continue...")
 
 
@@ -308,7 +380,20 @@ def morgue():
     4. Move to Room 9, the CONTAINMENT Room.\n
     """
     print(morgue_choices)
-    morgue_choices_prompt = input("Type prompt here: ")
+    morgue_choices_prompt = input("Type keyword here to make your choice: ")
+
+    if morgue_choices_prompt == "scalpel":
+        take_scalpel()
+    elif morgue_choices_prompt == "coat":
+        examine_lab_coat()
+    elif morgue_choices_prompt == "laboratory":
+        laboratory()
+    elif morgue_choices_prompt == "containment":
+        containment_room()
+    else:
+        print("Invalid choice. Please try again.")
+        morgue_choices_prompt() #re-runs the function if the user inputs an invalid option.
+
     input("Press enter to continue...")
 
 
@@ -349,7 +434,19 @@ def break_room():
     4. Move to Room 8, SECURITY Room, through the door ahead.\n
     """
     print(break_room_choices)
-    break_room_choices_prompt = input("Type prompt here: ")
+    break_room_choices_prompt = input("Type keyword here to make your choice: ").strip().lower()
+    
+    if break_room_choices_prompt == "knife":
+        security_panel()
+    elif break_room_choices_prompt == "drink":
+        energy_drink()
+    elif break_room_choices_prompt == "office":
+        office()
+    elif break_room_choices_prompt == "security":
+        security_room()
+    else:
+        print("Invalid choice. Please try again.")
+        break_room() #re-runs the function if the user inputs an invalid option.
     input("Press enter to continue...")
 
 
@@ -384,14 +481,27 @@ def security_room():
     input("Press enter to continue...")
 
     security_room_choices = """
-    1. Read the security LOGS: Gain vital information about the facility’s 
-    final days and the creature.\n
+    1. Read the security LOGS.\n
     2. Go back to Room 5, the LABORATORY.\n
     3. Move to Room 7, the BREAK Room.\n
     4. Move to Room 9, the CONTAINMENT Room.\n
     """
     print(security_room_choices)
-    security_room_choices_prompt = input("Type prompt here: ")
+    security_room_choices_prompt = input("Type keyword here to make your choice: ").strip().lower()
+
+    if security_room_choices_prompt == "logs":
+        security_logs()
+    elif security_room_choices_prompt == "laboratory":
+        laboratory()
+    elif security_room_choices_prompt == "break":
+        break_room()
+    elif security_room_choices_prompt == "containment":
+        containment_room()
+    else:
+        print("Invalid choice. Please try again.")
+        security_room() #re-runs the function if the user inputs an invalid option.
+
+
     input("Press enter to continue...")
 
 
@@ -434,11 +544,24 @@ def containment_room():
     4. Move to Room 8, the SECURITY Room.\n
     """
     print(containment_room_choices)
-    containment_room_choices_prompt = input("Type prompt here: ")
+    security_room_choices_prompt = input("Type keyword here to make your choice: ").strip().lower()
+
+    if security_room_choices_prompt == "panel":
+        security_panel()
+    elif security_room_choices_prompt == "inspect":
+        encounter()
+    elif security_room_choices_prompt == "morgue":
+        morgue()
+    elif security_room_choices_prompt == "security":
+        security_room()
+    else:
+        print("Invalid choice. Please try again.")
+        containment_room() #re-runs the function if the user inputs an invalid option.
+
     input("Press enter to continue...")
 
 #title_screen()
-#show_map()
+#map()
 #backstory()
 #entry_hall()
 #observation_chamber()

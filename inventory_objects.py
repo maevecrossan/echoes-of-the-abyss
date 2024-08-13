@@ -66,7 +66,7 @@ def read_notebook():
     Room, find the panel, and shut it down before it’s too late.\n
 
     - Dr. Alice Reynolds \n
-"""
+    """
     print(notebook_content)
 
 
@@ -149,7 +149,7 @@ def take_key():
 #key = take_key
 
 
-#def examine_equipment():
+def examine_equipment():
     lab_equipment_content = """
     You search around the graveyard of the lab equipment. Behind a pair of toppled
     monitors, you see a clipboard. \n
@@ -247,16 +247,16 @@ def security_panel():
     print(security_panel_content)
 #panel = control_panel
 
-#examine_entry_hall()
-#take_crowbar()
-#read_notebook()
-#inspect_toolbox()
-#read_logbook()
-#examine_computers()
-#take_key()
-#examine_lab_coat()
-#take_scalpel()
-#take_knife()
-#energy_drink()
-#security_logs()
-#security_panel() **right code vs wrong code
+examine_entry_hall()
+take_crowbar()
+read_notebook()
+inspect_toolbox()
+read_logbook()
+examine_computers()
+take_key()
+examine_lab_coat()
+take_scalpel()
+take_knife()
+energy_drink()
+security_logs()
+security_panel()
