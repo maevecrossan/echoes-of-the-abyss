@@ -23,7 +23,6 @@ def title_screen():
     print(instructions)
     input("Press enter to begin.")
 
-
 def backstory():
     terminal_clear()
     intro = """
@@ -42,8 +41,7 @@ def backstory():
     ever suggested.
     """
     print(intro)
-    input("Press enter to continue...")
-
+    user_commands()
 
 def entry_hall():
 
@@ -52,7 +50,7 @@ def entry_hall():
     Links to external file which details the interactions with each
     item that can be found throughout the game. 
     """
-
+    
     terminal_clear()
 
     entry_hall_description_1 = """ 
@@ -67,7 +65,7 @@ def entry_hall():
     """
     print(entry_hall_description_1)
 
-    input("Press enter to continue...")
+    user_commands()
 
     entry_hall_description_2 = """
     Near the center of the room is a large reception desk, toppled over 
@@ -78,7 +76,7 @@ def entry_hall():
     nerves on edge.
     """
     print(entry_hall_description_2)
-    input("Press enter to continue...")
+    user_commands()
 
     entry_hall_choices = """
     1. EXAMINE the room further.
@@ -118,7 +116,7 @@ def observation_chamber():
     """
     print(observation_chamber_description_1)
 
-    input("Press enter to continue...")
+    user_commands()
     
     observation_chamber_description_2 = """
     The room is otherwise eerily quiet, the only sound being the occasional
@@ -130,7 +128,7 @@ def observation_chamber():
     """
     print(observation_chamber_description_2)
 
-    input("Press enter to continue...")
+    user_commands()
 
     observation_chamber_choices = """
     1. Pick up the SYRINGE?\n
@@ -157,7 +155,7 @@ def observation_chamber():
         print("Invalid choice. Please try again.")
         observation_chamber_prompt() #re-runs the function if the user inputs an invalid option.
 
-    input("Press enter to continue...")
+    user_commands()
 
 
 def storage_closet(): #needs key to open
@@ -175,7 +173,7 @@ def storage_closet(): #needs key to open
     """
     print(storage_closet_description_1)
 
-    input("Press enter to continue...")
+    user_commands()
 
     storage_closet_description_2 = """
     The walls are lined with peeling paint, and there’s a small, 
@@ -186,7 +184,7 @@ def storage_closet(): #needs key to open
     """
     print(storage_closet_description_2)
 
-    input("Press enter to continue...")
+    user_commands()
 
     storage_closet_description_3 = """
     On one shelf, you spot a few items that might be useful: a small toolbox, 
@@ -196,7 +194,7 @@ def storage_closet(): #needs key to open
 
     print(storage_closet_description_3)
 
-    input("Press enter to continue...")
+    user_commands()
 
     storage_closet_choices = """
     1. Pick up the CROWBAR. This could be helpful later.\n
@@ -224,7 +222,7 @@ def storage_closet(): #needs key to open
         print("Invalid choice. Please try again.")
         storage_closet_prompt() #re-runs the function if the user inputs an invalid option.
 
-    input("Press enter to continue...")
+    user_commands()
 
 
 def office():
@@ -243,7 +241,7 @@ def office():
     """
     print(office_description_1)
 
-    input("Press enter to continue...")
+    user_commands()
 
     office_description_2 = """
     The room feels strangely untouched compared to the rest of the facility, 
@@ -254,7 +252,7 @@ def office():
     """
     print(office_description_2)
 
-    input("Press enter to continue...")
+    user_commands()
 
     office_choices = """
     1. Read through the LOGBOOK. Gain insight into the experiments conducted in 
@@ -279,7 +277,7 @@ def office():
         print("Invalid choice. Please try again.")
         office_choices_prompt() #re-runs the function if the user inputs an invalid option.
 
-    input("Press enter to continue...")
+    user_commands()
 
 
 def laboratory():
@@ -299,7 +297,7 @@ def laboratory():
     """
     print(laboratory_description_1)
 
-    input("Press enter to continue...")
+    user_commands()
 
     laboratory_description_2 = """
     You can’t pinpoint the source, but you can hear the quiet hum of old machinery, 
@@ -311,7 +309,7 @@ def laboratory():
     """
     print(laboratory_description_2)
 
-    input("Press enter to continue...")
+    user_commands()
 
     laboratory_choices = """
     1. Pick up the KEY: This might be the key to unlocking a critical part of the 
@@ -341,7 +339,7 @@ def laboratory():
         print("Invalid choice. Please try again.")
         laboratory_choices_prompt() #re-runs the function if the user inputs an invalid option.
 
-    input("Press enter to continue...")
+    user_commands()
 
 
 def morgue():
@@ -359,7 +357,7 @@ def morgue():
     """
     print(morgue_description_1)
 
-    input("Press enter to continue...")
+    user_commands()
 
     morgue_description_2 = """
     The smell of formaldehyde is overwhelming, mixed with something else—something 
@@ -372,7 +370,7 @@ def morgue():
     """
     print(morgue_description_2)
 
-    input("Press enter to continue...")
+    user_commands()
 
     morgue_choices = """
     1. Pick up the SCALPEL.\n
@@ -395,7 +393,7 @@ def morgue():
         print("Invalid choice. Please try again.")
         morgue_choices_prompt() #re-runs the function if the user inputs an invalid option.
 
-    input("Press enter to continue...")
+    user_commands()
 
 
 def break_room():
@@ -414,7 +412,7 @@ def break_room():
     """
     print(break_room_description_1)
 
-    input("Press enter to continue...")
+    user_commands()
 
     break_room_description_2 = """
     The room feels oddly out of place compared to the rest of the facility, 
@@ -426,7 +424,7 @@ def break_room():
     """
     print(break_room_description_2)
 
-    input("Press enter to continue...")
+    user_commands()
 
     break_room_choices = """
     1. Pick up the KNIFE.\n
@@ -448,7 +446,7 @@ def break_room():
     else:
         print("Invalid choice. Please try again.")
         break_room() #re-runs the function if the user inputs an invalid option.
-    input("Press enter to continue...")
+    user_commands()
 
 
 def security_room():
@@ -467,7 +465,7 @@ def security_room():
     """
     print(security_room_description_1)
 
-    input("Press enter to continue...")
+    user_commands()
 
     security_room_description_2 = """
     A red light blinks ominously on one of the control panels, indicating that 
@@ -479,7 +477,7 @@ def security_room():
     """
     print(security_room_description_2)
 
-    input("Press enter to continue...")
+    user_commands()
 
     security_room_choices = """
     1. Read the security LOGS.\n
@@ -503,7 +501,7 @@ def security_room():
         security_room() #re-runs the function if the user inputs an invalid option.
 
 
-    input("Press enter to continue...")
+    user_commands()
 
 
 def containment_room():
@@ -522,7 +520,7 @@ def containment_room():
     """
     print(containment_room_description_1)
 
-    input("Press enter to continue...")
+    user_commands()
 
     containment_room_description_2 = """
     The air is heavy with a sense of dread, as if the very walls are charged 
@@ -535,7 +533,7 @@ def containment_room():
     """
     print(containment_room_description_2)
 
-    input("Press enter to continue...")
+    user_commands()
 
     containment_room_choices = """
     1. Examine the control PANEL: Attempt to input the partial access code and 
@@ -559,7 +557,7 @@ def containment_room():
         print("Invalid choice. Please try again.")
         containment_room() #re-runs the function if the user inputs an invalid option.
 
-    input("Press enter to continue...")
+    user_commands()
 
 
 def game_main():

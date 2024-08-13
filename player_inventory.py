@@ -1,7 +1,4 @@
-from run.py import *
-from helper_functions import *
-from choices_functions import *
-from ending_sequences import *
+
 
 possible_inventory = ["syringe", "crowbar", "wire cutters", "roll of tape", "key", "keycard", "scalpel", "knife"]
 current_inventory = []
@@ -27,8 +24,8 @@ def add_to_inventory(item):
 while True:
     choice_prompt = input("Type keyword here to make your choice: ")
 
-    if choice_promptlogs == 'quit':
+    if choice_prompt == 'quit':
         print("You are exiting the game.")
         break
 
-add_to_inventory(choice_prompt)
+#add_to_inventory(choice_prompt)

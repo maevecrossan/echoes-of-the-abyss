@@ -1,7 +1,4 @@
-from run.py import *
-from helper_functions import *
-from player_inventory import *
-from ending_sequences import *
+
 
 def examine_entry_hall():
     entry_hall_content = """
@@ -25,8 +22,6 @@ def take_syringe():
     """
 
     print(syringe_content)
-    
-    print(f"{item} added to your inventory.")
 
 #syringe = take_syringe
 
@@ -37,8 +32,6 @@ def take_crowbar():
     against an attack."\n
     """
     print(crowbar_content)
-
-    print(f"{item} added to your inventory.") 
 #crowbar = take_crowbar
 
 
@@ -86,8 +79,6 @@ def inspect_toolbox():
     You put them in your backpack.
     """
     print(toolbox_content)
-
-    print(f"{item} added to your inventory.")
 
 #toolbox = inspect_toolbox
 
@@ -144,8 +135,6 @@ def take_key():
     which indicates that it unlocks a cabinet or door within the facility.\n
     """
     print(key_content)
-
-    print(f"{item} added to your inventory.")
 #key = take_key
 
 
@@ -177,8 +166,7 @@ def examine_lab_coat():
     The keycard is labeled "Level 3 Clearance – Containment Access."
     """
     print(examine_lab_coat)
-    print(f"{item} added to your inventory.") 
-#keycard = examine_lab_coat()
+    #keycard = examine_lab_coat()
 
 
 def take_scalpel():
@@ -186,8 +174,7 @@ def take_scalpel():
     You pick up the scalpel, not looking too closely at the stains on it that
     look like blood. 
     """
-    print(scalpel_content)
-    print(f"{item} added to your inventory.") 
+    print(scalpel_content) 
 #scalpel = take_scalpel
 
 
@@ -196,7 +183,6 @@ def take_knife():
     You pick up the knife. It's rusted and blunt but better than nothing.
     """
     print(knife_content)
-    print(f"{item} added to your inventory.") 
 #knife = take_knife
 
 

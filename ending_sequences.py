@@ -1,7 +1,4 @@
-from run.py import *
-from helper_functions import *
-from player_inventory import *
-from choices_functions import *
+
 
 def investigate_mirror():
     """

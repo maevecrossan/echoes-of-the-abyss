@@ -1,8 +1,4 @@
-import os #clear terminal
-from helper_functions import *
-from choices_functions import *
-from player_inventory import *
-from ending_sequences import *
+
 
 def terminal_clear():
     """
@@ -54,4 +50,4 @@ def user_commands():
         elif command == 'quit':
             print("Exiting the game.")
         else:
-            print("Invalid command. Please try again".)
+            print("Invalid command. Please try again.")
