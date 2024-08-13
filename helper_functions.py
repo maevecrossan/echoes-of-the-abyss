@@ -1,10 +1,16 @@
 import os
 
+def terminal_clear():
+    """
+    Clears terminal of all text.
+    """
+    os.system('clear')
+
 def map():
     show_map = """
 
     Here is the map of the facility.
-    
+
     +--------+  X  +--------+  X  +--------+
     |        |     |        |     |        |
     | Room 1 X-----X Room 2 X-----X Room 3 |

@@ -1,9 +1,11 @@
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 import os
 from art import text2art #title
-from helper_functions import *
-#rom choices_functions import *
+from helper_functions import user_commands
+from helper_functions import map
+from helper_functions import terminal_clear
 #from player_inventory import *
+#from choices_functions import *
 #from ending_sequences import *
 
 def title_screen():
@@ -24,9 +26,8 @@ def title_screen():
     print(instructions)
     input("Press enter to begin.")
 
-
 def backstory():
-    terminal_clear()
+
     intro = """
     You are Alex, a 16-year-old who has lived in the quiet town of Redbrook
     your whole life. One summer night, your friend dares you to enter the
@@ -606,21 +607,14 @@ def containment_room():
     user_commands()
 
 
-def game_main():
-    """
-    Responsible for calling title, backstory and all room functions.
-    """
-    title_screen()
-    map()
-    backstory()
-    entry_hall()
-    observation_chamber()
-    storage_closet()
-    office()
-    laboratory()
-    morgue()
-    break_room()
-    security_room()
-    containment_room()
-
-game_main()
+title_screen()
+backstory()
+entry_hall()
+observation_chamber()
+storage_closet()
+office()
+laboratory()
+morgue()
+break_room()
+security_room()
+containment_room()
