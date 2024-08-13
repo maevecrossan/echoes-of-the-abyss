@@ -1,13 +1,10 @@
-
-
-def terminal_clear():
-    """
-    Clears terminal for user readibility
-    """
-    os.system('clear')
+import os
 
 def map():
     show_map = """
+
+    Here is the map of the facility.
+    
     +--------+  X  +--------+  X  +--------+
     |        |     |        |     |        |
     | Room 1 X-----X Room 2 X-----X Room 3 |
@@ -35,10 +32,6 @@ def map():
     """
     print(show_map)
     input("Press enter to continue...")
-
-def exit_game():
-    print("Thank you for playing. Goodbye!")
-    exit()
 
 def user_commands():
     while True:

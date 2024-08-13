@@ -5,7 +5,7 @@ def investigate_mirror():
     Gives the description for the encounter in the containment room if the 
     user decides to inspect the enclosure.
     """
-    terminal_clear()
+    #terminal_clear()
 
     encounter_description_1 = """
     As you stand near the cracked glass enclosure, your curiosity gets the better 
@@ -44,6 +44,6 @@ def endings_main():
     """
     Responsible for calling all ending functions.
     """
-    investigate_mirror()
+    #investigate_mirror()
 
-endings_main()
+#endings_main()

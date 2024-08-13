@@ -2,10 +2,9 @@
 import os
 from art import text2art #title
 from helper_functions import *
-from choices_functions import *
-from player_inventory import *
-from ending_sequences import *
-
+#rom choices_functions import *
+#from player_inventory import *
+#from ending_sequences import *
 
 def title_screen():
     """
@@ -144,7 +143,6 @@ def observation_chamber():
     4. Move to Room 1, the ENTRY hall.\n
     """
     print(observation_chamber_choices)
-
 
     while True:
         observation_chamber_prompt = input("Type keyword here to make your choice: ").strip().lower()

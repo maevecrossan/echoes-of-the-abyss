@@ -1,5 +1,3 @@
-
-
 def examine_entry_hall():
     entry_hall_content = """
     Upon closer inspection, the you find a small panel on the wall hidden behind the desk. 
@@ -165,7 +163,7 @@ def examine_lab_coat():
     lab coat from its place on the floor. You find a keycard in the inner pocket. 
     The keycard is labeled "Level 3 Clearance – Containment Access."
     """
-    print(examine_lab_coat)
+    print(lab_coat_keycard)
     #keycard = examine_lab_coat()
 
 
