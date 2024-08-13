@@ -1,4 +1,9 @@
-def encounter():
+from run.py import *
+from helper_functions import *
+from player_inventory import *
+from choices_functions import *
+
+def investigate_mirror():
     """
     Gives the description for the encounter in the containment room if the 
     user decides to inspect the enclosure.
@@ -37,3 +42,11 @@ def encounter():
     print(encounter_choices)
     encounter_choices_prompt = input("Type prompt here: ")
     input("Press enter to continue...")
+
+def endings_main():
+    """
+    Responsible for calling all ending functions.
+    """
+    investigate_mirror()
+
+endings_main()

@@ -1,3 +1,8 @@
+from run.py import *
+from helper_functions import *
+from player_inventory import *
+from ending_sequences import *
+
 def examine_entry_hall():
     entry_hall_content = """
     Upon closer inspection, the you find a small panel on the wall hidden behind the desk. 
@@ -24,11 +29,6 @@ def take_syringe():
     print(f"{item} added to your inventory.")
 
 #syringe = take_syringe
-
-
-#def investigate_mirror():
-
-#mirror = investigate_mirror()
 
 
 def take_crowbar():
@@ -247,16 +247,22 @@ def security_panel():
     print(security_panel_content)
 #panel = control_panel
 
-examine_entry_hall()
-take_crowbar()
-read_notebook()
-inspect_toolbox()
-read_logbook()
-examine_computers()
-take_key()
-examine_lab_coat()
-take_scalpel()
-take_knife()
-energy_drink()
-security_logs()
-security_panel()
+def choices_main():
+    """
+    Responsible for calling all the choices functions.
+    """
+    examine_entry_hall()
+    take_crowbar()
+    read_notebook()
+    inspect_toolbox()
+    read_logbook()
+    examine_computers()
+    take_key()
+    examine_lab_coat()
+    take_scalpel()
+    take_knife()
+    energy_drink()
+    security_logs()
+    security_panel()
+
+choices_main()

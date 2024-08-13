@@ -1,7 +1,11 @@
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
+import os
 from art import text2art #title
 from helper_functions import *
+from choices_functions import *
+from player_inventory import *
 from ending_sequences import *
+
 
 def title_screen():
     """
@@ -130,10 +134,7 @@ def observation_chamber():
 
     observation_chamber_choices = """
     1. Pick up the SYRINGE?\n
-    2. The flickering light creates a disorienting effect, making it 
-    difficult to tell what’s real and what’s a trick of the eye. The 
-    cracks in the mirror seem to form a pattern, though it’s hard to 
-    tell what it is. Should you try to see what’s behind the MIRROR?\n
+    2. Try to see what’s behind the MIRROR.\n
     3. Move to Room 3, the STORAGE closet.\n
     4. Move to Room 5, the LABORATORY.\n
     4. Move to Room 1, the ENTRY hall.\n
@@ -560,15 +561,22 @@ def containment_room():
 
     input("Press enter to continue...")
 
-#title_screen()
-#map()
-#backstory()
-#entry_hall()
-#observation_chamber()
-#storage_closet()
-#office()
-#laboratory()
-#morgue()
-#break_room()
-#security_room()
-#containment_room()
+
+def game_main():
+    """
+    Responsible for calling title, backstory and all room functions.
+    """
+    title_screen()
+    map()
+    backstory()
+    entry_hall()
+    observation_chamber()
+    storage_closet()
+    office()
+    laboratory()
+    morgue()
+    break_room()
+    security_room()
+    containment_room()
+
+game_main()
