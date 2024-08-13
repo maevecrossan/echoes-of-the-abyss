@@ -1,5 +1,4 @@
 
-
 possible_inventory = ["syringe", "crowbar", "wire cutters", "roll of tape", "key", "keycard", "scalpel", "knife"]
 current_inventory = []
 

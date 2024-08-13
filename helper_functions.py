@@ -47,6 +47,8 @@ def user_commands():
             map()
         elif command == 'inventory':
             current_inventory()
+        elif command in ["continue", ""]:
+            return
         elif command == 'quit':
             print("Exiting the game.")
         else:
