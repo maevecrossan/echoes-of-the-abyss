@@ -40,6 +40,9 @@ def map():
     print(show_map)
     input("Press enter to continue...")
 
+def exit_game():
+    print("Thank you for playing. Goodbye!")
+    exit()
 
 def user_commands():
     while True:
@@ -48,3 +51,7 @@ def user_commands():
             map()
         elif command == 'inventory':
             current_inventory()
+        elif command == 'quit':
+            print("Exiting the game.")
+        else:
+            print("Invalid command. Please try again".)
