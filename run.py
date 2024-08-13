@@ -119,9 +119,7 @@ def observation_chamber():
     input("Press enter to continue...")
 
     observation_chamber_choices = """
-    1. You see a syringe. It is filled with a strange, glowing liquid, 
-    found on the floor near a metal tray. This might be useful later on.
-    Pick up the SYRINGE?\n
+    1. Pick up the SYRINGE?\n
     2. The flickering light creates a disorienting effect, making it 
     difficult to tell what’s real and what’s a trick of the eye. The 
     cracks in the mirror seem to form a pattern, though it’s hard to 
@@ -135,7 +133,7 @@ def observation_chamber():
     input("Press enter to continue...")
 
 
-def storage_closet():
+def storage_closet(): #needs key to open
     """
     Gives the storage closet description and choices to be made.
     """
@@ -263,8 +261,7 @@ def laboratory():
     laboratory_choices = """
     1. Pick up the KEY: This might be the key to unlocking a critical part of the 
     facility.\n
-    2. Examine the lab EQUIPMENT. Investigate the broken equipment 
-    for anything useful.\n
+    2. Examine the lab EQUIPMENT.\n
     3. Move to Room 2, the OBSERVATION chamber.\n
     4. Move to Room 4, the OFFICE.\n
     5. Move to Room 6, the MORGUE.\n
@@ -286,7 +283,7 @@ def morgue():
     The air is frigid, and your breath creates small clouds of mist in front of 
     you. The room is dimly lit, with a single lightbulb flickering overhead, 
     casting long, eerie shadows across the room. A metal examination table sits 
-    in the center, covered with a stained sheet.
+    in the center, covered with a stained sheet.\n
     """
     print(morgue_description_1)
 
@@ -295,18 +292,19 @@ def morgue():
     morgue_description_2 = """
     The smell of formaldehyde is overwhelming, mixed with something else—something 
     rotten. The drawers in the walls are mostly closed, but a few are slightly ajar, 
-    as if someone didn’t have time to close them all. Below one of the open draws, 
-    you see a keycard. You can’t shake the feeling that you’re being watched, even 
+    as if someone didn’t have time to close them all. In front of the row of draws, 
+    you see a lab coat crumpled on the floor. Something is peaking out of the pocket.\n
+    You pause, unable to shake the feeling that you’re being watched, even 
     though the room is empty. There’s a small, rusted surgical cart in the corner, 
-    holding a few old, bloodstained tools. Something in the corner catches your eye.
+    holding a few old, bloodstained tools. Something in the corner catches your eye.\n
     """
     print(morgue_description_2)
 
     input("Press enter to continue...")
 
     morgue_choices = """
-    1. Pick up the SCALPEL: This might be useful for defense.\n
-    2. Take the KEYCARD: You’ll need this to access certain parts of the facility.\n
+    1. Pick up the SCALPEL.\n
+    2. Examine the lab COAT.\n
     3. Move to Room 5, the LABORATORY.\n
     4. Move to Room 9, the CONTAINMENT Room.\n
     """
@@ -346,8 +344,8 @@ def break_room():
     input("Press enter to continue...")
 
     break_room_choices = """
-    1. Pick up the pocket KNIFE: A useful tool or potential weapon.\n
-    2. Take the energy DRINK: Might be useful for a quick boost of energy.\n
+    1. Pick up the KNIFE.\n
+    2. Take the energy DRINK.\n
     3. Go back to Room 4, the OFFICE.\n
     4. Move to Room 8, SECURITY Room, through the door ahead.\n
     """
