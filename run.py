@@ -1,7 +1,6 @@
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 from art import text2art #title
-from helper_functions import terminal_clear
-from helper_functions import show_map
+from helper_functions import *
 
 def title_screen():
     """
@@ -441,7 +440,7 @@ def containment_room():
 #title_screen()
 #show_map()
 #backstory()
-entry_hall()
+#entry_hall()
 #observation_chamber()
 #storage_closet()
 #office()

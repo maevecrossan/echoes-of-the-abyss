@@ -18,7 +18,10 @@ def take_syringe():
     liquid, found on the floor near a metal tray. This might be useful later on.
     You put it carefully in your pocket.
     """
+
     print(syringe_content)
+    
+    print(f"{item} added to your inventory.")
 
 #syringe = take_syringe
 
@@ -34,6 +37,8 @@ def take_crowbar():
     against an attack."\n
     """
     print(crowbar_content)
+
+    print(f"{item} added to your inventory.") 
 #crowbar = take_crowbar
 
 
@@ -78,9 +83,11 @@ def inspect_toolbox():
     a set of wire cutters. They might be useful for 
     disabling security systems or cutting through locks.\n
 
-    Do you take them?
+    You put them in your backpack.
     """
     print(toolbox_content)
+
+    print(f"{item} added to your inventory.")
 
 #toolbox = inspect_toolbox
 
@@ -137,6 +144,8 @@ def take_key():
     which indicates that it unlocks a cabinet or door within the facility.\n
     """
     print(key_content)
+
+    print(f"{item} added to your inventory.")
 #key = take_key
 
 
@@ -168,6 +177,7 @@ def examine_lab_coat():
     The keycard is labeled "Level 3 Clearance – Containment Access."
     """
     print(examine_lab_coat)
+    print(f"{item} added to your inventory.") 
 #keycard = examine_lab_coat()
 
 
@@ -177,6 +187,7 @@ def take_scalpel():
     look like blood. 
     """
     print(scalpel_content)
+    print(f"{item} added to your inventory.") 
 #scalpel = take_scalpel
 
 
@@ -185,6 +196,7 @@ def take_knife():
     You pick up the knife. It's rusted and blunt but better than nothing.
     """
     print(knife_content)
+    print(f"{item} added to your inventory.") 
 #knife = take_knife
 
 
@@ -226,13 +238,11 @@ def security_logs():
 
 def security_panel():
     security_panel_content = """
-    CONTAINMENT OVERRIDE: ENTER ACCESS CODE
-
-    WARNING: FAILURE TO INPUT CORRECT CODE WILL INITIATE LOCKDOWN SEQUENCE 
-    AND FULL FACILITY SHUTDOWN. 
-    PROCEED WITH CAUTION.
-
-    ACCESS CODE: _ _ _ _ _\n
+    The screen glitches, making it difficult to decipher much. However, you 
+    can just about make out something slinking between rooms, moving with 
+    unnatural ease. It's movements happen in time with the soft clinky of glass 
+    across the hall.\n
+    You should move.\n
     """
     print(security_panel_content)
 #panel = control_panel
