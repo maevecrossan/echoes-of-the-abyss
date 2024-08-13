@@ -249,4 +249,3 @@ def choices_main():
     security_logs()
     security_panel()
 
-choices_main()

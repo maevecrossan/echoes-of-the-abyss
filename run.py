@@ -4,8 +4,8 @@ from art import text2art #title
 from helper_functions import user_commands
 from helper_functions import map
 from helper_functions import terminal_clear
+from choices_functions import *
 #from player_inventory import *
-#from choices_functions import *
 #from ending_sequences import *
 
 def title_screen():
@@ -44,7 +44,7 @@ def backstory():
     ever suggested.
     """
     print(intro)
-    input("Press enter to continue.")
+    input("Enter the facility.")
 
 
 def entry_hall():
@@ -618,3 +618,5 @@ morgue()
 break_room()
 security_room()
 containment_room()
+
+choices_main()
