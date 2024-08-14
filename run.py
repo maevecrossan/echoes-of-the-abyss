@@ -621,7 +621,6 @@ def containment_room():
         elif containment_room_choices_prompt == "inspect":
             encounter()
             break 
-    
         elif containment_room_choices_prompt == "morgue":
             morgue()
             break
