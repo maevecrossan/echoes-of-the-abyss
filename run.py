@@ -5,7 +5,7 @@ from helper_functions import user_commands
 from helper_functions import map
 from helper_functions import terminal_clear
 from choices_functions import *
-#from player_inventory import *
+from player_inventory import *
 #from ending_sequences import *
 
 def title_screen():
@@ -155,7 +155,8 @@ def observation_chamber():
         observation_chamber_prompt = input("Type keyword here to make your choice: ").strip().lower()
         
         if observation_chamber_prompt == "syringe":
-            take_syringe()
+            item = take_syringe()
+            add_to_inventory(item)
         elif observation_chamber_prompt == "mirror":
             investigate_mirror()
         elif observation_chamber_prompt == "storage":
@@ -229,11 +230,13 @@ def storage_closet(): #needs key to open
         storage_closet_prompt = input("Type keyword here to make your choice: ").strip().lower()
 
         if storage_closet_prompt == "crowbar":
-            take_crowbar()
+            item = take_crowbar()
+            add_to_inventory(item)
         elif storage_closet_prompt == "notebook":
             read_notebook()
         elif storage_closet_prompt == "toolbox":
-            inspect_toolbox()
+            item = inspect_toolbox()
+            add_to_inventory(item) #two items
         elif storage_closet_prompt == "observation":
             observation_chamber()
             break
@@ -357,7 +360,8 @@ def laboratory():
         laboratory_choices_prompt = input("Type keyword here to make your choice: ").strip().lower()
 
         if laboratory_choices_prompt == "key":#working
-            take_key()
+            item = take_key()
+            add_to_inventory(item)
         elif laboratory_choices_prompt == "equipment":#working
             examine_equipment()
             break
@@ -424,9 +428,11 @@ def morgue():
         morgue_choices_prompt = input("Type keyword here to make your choice: ").strip().lower()
 
         if morgue_choices_prompt == "scalpel":#working
-            take_scalpel()
+            item = take_scalpel()
+            add_to_inventory(item)
         elif morgue_choices_prompt == "coat":#working
-            examine_lab_coat()
+            item = examine_lab_coat()
+            add_to_inventory(item)
         elif morgue_choices_prompt == "laboratory":#working
             laboratory()
             break
@@ -484,7 +490,8 @@ def break_room():
         break_room_choices_prompt = input("Type keyword here to make your choice: ").strip().lower()
         
         if break_room_choices_prompt == "knife":
-            take_knife()
+            item = take_knife()
+            add_to_inventory(item)
         elif break_room_choices_prompt == "drink":
             energy_drink()
         elif break_room_choices_prompt == "office":

@@ -15,19 +15,14 @@ def add_to_inventory(item):
     if item in possible_inventory:
         if item not in current_inventory:
             current_inventory.append(item) #adds item to inventory.
-            print(f"{item} has been added to your inventory.")
+            print(f"{item.capitalize()} has been added to your inventory.\n")
         else:
-            print(f"{item} is already in your invetory.")
+            print(f"{item.capitalize()} is already in your invetory.\n")
     else:
-        print(f"{item} is not valid. Please try again.")
+        print(f"{item.capitalize()} is not valid. Please try again.\n")
 
-while True:
-    choice_prompt = input("Type keyword here to make your choice: ")
-
-    if choice_prompt == 'quit':
-        print("You are exiting the game.")
-        break
-
-def inventory_main():
-
-    add_to_inventory(choice_prompt)
+def display_inventory():
+    if current_inventory:
+        print("Current inventory: ")
+        for i, item in enumerate(current_inventory, starts=1):
+            print(f"{i}. {item.capitalize()}")

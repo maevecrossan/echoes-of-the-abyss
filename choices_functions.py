@@ -1,4 +1,4 @@
-from player_inventory import *
+
 
 def examine_desk(): 
     desk_content = """
@@ -13,7 +13,7 @@ def examine_desk():
     print(desk_content)
 
 
-def take_syringe(): #working
+def take_syringe(): #working #INVENTORYITEM
     syringe_content = """
     You take a closer look at the syringe. It is filled with a strange, glowing 
     liquid, found on the floor near a metal tray. This might be useful later on.
@@ -21,17 +21,16 @@ def take_syringe(): #working
     """
 
     print(syringe_content)
+    return "syringe"
 
-#syringe = take_syringe
 
-
-def take_crowbar():
+def take_crowbar(): #INVENTORYITEM
     crowbar_content = """
     A sturdy metal crowbar that can be used to pry open doors or defend 
     against an attack."\n
     """
     print(crowbar_content)
-#crowbar = take_crowbar
+    return "crowbar"
 
 
 def read_notebook():
@@ -64,7 +63,7 @@ def read_notebook():
 #notebook = read_notebook()
 
 
-def inspect_toolbox():
+def inspect_toolbox(): #INVENTORYITEM
     toolbox_content = """
     You reach for the toolbox, underestimating its weight. It bangs to the floor, 
     it's hinges fracturing revealing the contents.\n
@@ -77,8 +76,7 @@ def inspect_toolbox():
     You put them in your backpack.
     """
     print(toolbox_content)
-
-#toolbox = inspect_toolbox
+    return "wire cutters", "roll of tape"
 
 
 def read_logbook(): #working
@@ -129,7 +127,7 @@ def examine_computers(): #working
 #computers = examine_computers()
 
 
-def take_key():#working
+def take_key():#working #INVENTORYITEM
     key_content = """
     As you search through the chaos of broken glassware, overturned tables, and 
     scattered notes, they notice a small key lying on the floor near an 
@@ -137,7 +135,7 @@ def take_key():#working
     which indicates that it unlocks a cabinet or door within the facility.\n
     """
     print(key_content)
-#key = take_key
+    return "key"
 
 
 def examine_equipment():#working
@@ -161,31 +159,31 @@ def examine_equipment():#working
 #equipment = examine_equipment()
 
 
-def examine_lab_coat():#working
+def examine_lab_coat():#working #INVENTORYITEM
     lab_coat_keycard = """
     You cross the cold, eerie room, and pick up the bloodied 
     lab coat from its place on the floor. You find a keycard in the inner pocket. 
     The keycard is labeled "Level 3 Clearance – Containment Access."
     """
     print(lab_coat_keycard)
-    #keycard = examine_lab_coat()
+    return "keycard"
 
 
-def take_scalpel():#working
+def take_scalpel():#working #INVENTORYITEM
     scalpel_content = """
     You pick up the scalpel, not looking too closely at the stains on it that
     look like blood. You decide to take it with you.
     """
     print(scalpel_content) 
-#scalpel = take_scalpel
+    return "scalpel"
 
 
-def take_knife():#working
+def take_knife():#working #INVENTORYITEM
     knife_content = """
     You pick up the knife. It's rusted and blunt, but better than nothing.
     """
     print(knife_content)
-#knife = take_knife
+    return "knife"
 
 
 def energy_drink():#working
