@@ -211,11 +211,9 @@ def storage_closet(): #needs key to open
     user_commands()
 
     storage_closet_choices = """
-    1. Pick up the CROWBAR. This could be helpful later.\n
-    2. Examine the NOTEBOOK. Reading through it might reveal vital information 
-    about the facility.\n
-    3. Inspect the TOOLBOX. If you can find a way to open it, it might contain 
-    something valuable.\n
+    1. Pick up the CROWBAR.\n
+    2. Examine the NOTEBOOK.\n
+    3. Inspect the TOOLBOX.\n
     4. Move to Room 2, the OBSERVATION chamber.\n
     5. Move to Room 6, the MORGUE.\n
     """
@@ -460,7 +458,7 @@ def break_room():
     1. Pick up the KNIFE.\n
     2. Take the energy DRINK.\n
     3. Go back to Room 4, the OFFICE.\n
-    4. Move to Room 8, SECURITY Room, through the door ahead.\n
+    4. Move to Room 8, SECURITY Room.\n
     """
     print(break_room_choices)#working
 
@@ -575,9 +573,8 @@ def containment_room():
     user_commands() #working
 
     containment_room_choices = """
-    1. Examine the control PANEL: Attempt to input the partial access code and 
-    unlock it.\n
-    2. INSPECT the glass enclosure: Try to determine what was once held inside.\n
+    1. Examine the control PANEL.\n
+    2. INSPECT the glass enclosure.\n
     3. Move to Room 6, the MORGUE.\n
     4. Move to Room 8, the SECURITY Room.\n
     """
@@ -604,9 +601,9 @@ def containment_room():
 
 
 def game_main():
-    title_screen()
-    backstory()
-    entry_hall()
+    #title_screen()
+    #backstory()
+    #entry_hall()
     observation_chamber()
     storage_closet()
     office()
