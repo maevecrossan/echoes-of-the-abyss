@@ -472,9 +472,13 @@ def morgue():
         elif morgue_choices_prompt == "laboratory":#working
             laboratory()
             break
-        elif morgue_choices_prompt == "containment": #working
-            containment_room()
-            break
+        elif morgue_choices_prompt == "containment":#add keycard if/else
+            if "keycard" not in current_inventory:
+                print("The door is locked. I need a keycard to open it.")
+                print(morgue_choices)
+            else:
+                containment_room()
+                break
         elif morgue_choices_prompt == "quit":
             print("Exiting the game. Thank you for playing!")
             exit()
@@ -612,7 +616,7 @@ def containment_room():
     """
     terminal_clear()
 
-    #add keycard
+    #can be accessed if they have keycard
 
     containment_room_description_1 = """
     The Containment Room is the most ominous part of the facility. It’s large and 
@@ -676,11 +680,11 @@ def game_main():
     #title_screen()
     #backstory()
     #entry_hall()
-    observation_chamber()
-    storage_closet()
+    #observation_chamber()
+    #storage_closet()
     #office()
     #laboratory()
-    #morgue()
+    morgue()
     #break_room()
     #security_room()
     containment_room()

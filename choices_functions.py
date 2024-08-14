@@ -230,6 +230,7 @@ def security_panel():# does player have keycard?
 
     user_commands()
 
+
 def choices_main():
     """
     Responsible for calling all the choices functions.
