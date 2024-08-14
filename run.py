@@ -26,6 +26,7 @@ def title_screen():
     print(instructions)
     user_commands()
 
+
 def backstory():
 
     intro = """
@@ -152,10 +153,8 @@ def observation_chamber():
         
         if observation_chamber_prompt == "syringe":
             take_syringe()
-            break
         elif observation_chamber_prompt == "mirror":
             investigate_mirror()
-            break
         elif observation_chamber_prompt == "storage":
             storage_closet()
             break
@@ -227,13 +226,10 @@ def storage_closet(): #needs key to open
 
         if storage_closet_prompt == "crowbar":
             take_crowbar()
-            break
         elif storage_closet_prompt == "notebook":
             read_notebook()
-            break
         elif storage_closet_prompt == "toolbox":
             inspect_toolbox()
-            break
         elif storage_closet_prompt == "observation":
             observation_chamber()
             break
@@ -289,10 +285,8 @@ def office():
         office_choices_prompt = input("Type keyword here to make your choice: ").strip().lower()
         if office_choices_prompt == "logbook": #working
             read_logbook()
-            break
         elif office_choices_prompt == "computers": #working
             examine_computers()
-            break
         elif office_choices_prompt == "entry": #working
             entry_hall()
             break
@@ -354,7 +348,6 @@ def laboratory():
 
         if laboratory_choices_prompt == "key":#working
             take_key()
-            break
         elif laboratory_choices_prompt == "equipment":#working
             examine_equipment()
             break
@@ -419,10 +412,8 @@ def morgue():
 
         if morgue_choices_prompt == "scalpel":#working
             take_scalpel()
-            break
         elif morgue_choices_prompt == "coat":#working
             examine_lab_coat()
-            break
         elif morgue_choices_prompt == "laboratory":#working
             laboratory()
             break
@@ -478,10 +469,8 @@ def break_room():
         
         if break_room_choices_prompt == "knife":
             take_knife()
-            break
         elif break_room_choices_prompt == "drink":
             energy_drink()
-            break
         elif break_room_choices_prompt == "office":
             office()
             break
@@ -537,7 +526,6 @@ def security_room():
 
         if security_room_choices_prompt == "logs":#working
             security_logs()
-            break
         elif security_room_choices_prompt == "laboratory":#working
             laboratory()
             break
@@ -600,10 +588,9 @@ def containment_room():
 
         if security_room_choices_prompt == "panel":
             security_panel()
-            break
         elif security_room_choices_prompt == "inspect":
             encounter()
-            break
+            break 
         elif security_room_choices_prompt == "morgue":
             morgue()
             break
@@ -614,6 +601,7 @@ def containment_room():
             print("Invalid choice. Please try again.")
 
     user_commands()#working
+
 
 def game_main():
     title_screen()

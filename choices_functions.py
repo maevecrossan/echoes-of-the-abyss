@@ -1,4 +1,4 @@
-def examine_desk(): #working
+def examine_desk(): 
     desk_content = """
     Upon closer inspection, the you find a small panel on the wall hidden behind the desk. 
     It has been pried open. Inside the panel, scrawled in a hurried, shaky hand on the metal 
