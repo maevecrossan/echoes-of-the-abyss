@@ -589,34 +589,39 @@ def containment_room():
     4. Move to Room 8, the SECURITY Room.\n
     """
     print(containment_room_choices)
-    security_room_choices_prompt = input("Type keyword here to make your choice: ").strip().lower()
 
-    if security_room_choices_prompt == "panel":
-        security_panel()
-    elif security_room_choices_prompt == "inspect":
-        encounter()
-    elif security_room_choices_prompt == "morgue":
-        morgue()
-    elif security_room_choices_prompt == "security":
-        security_room()
-    else:
-        print("Invalid choice. Please try again.")
-        print(containment_room_choices)
-        containment_room() #re-runs the prompt if the user inputs an invalid option.
+    while True:
+        security_room_choices_prompt = input("Type keyword here to make your choice: ").strip().lower()
+
+        if security_room_choices_prompt == "panel":
+            security_panel()
+            break
+        elif security_room_choices_prompt == "inspect":
+            encounter()
+            break
+        elif security_room_choices_prompt == "morgue":
+            morgue()
+            break
+        elif security_room_choices_prompt == "security":
+            security_room()
+            break
+        else:
+            print("Invalid choice. Please try again.")
 
     user_commands()
 
+def game_main():
+    title_screen()
+    backstory()
+    entry_hall()
+    observation_chamber()
+    storage_closet()
+    office()
+    laboratory()
+    morgue()
+    break_room()
+    security_room()
+    containment_room()
 
-title_screen()
-backstory()
-entry_hall()
-observation_chamber()
-storage_closet()
-office()
-laboratory()
-morgue()
-break_room()
-security_room()
-containment_room()
-
+game_main()
 choices_main()
