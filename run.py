@@ -24,7 +24,7 @@ def title_screen():
     print(title)
     print(welcome_message)
     print(instructions)
-    input("Press enter to begin.")
+    user_commands()
 
 def backstory():
 
@@ -44,7 +44,7 @@ def backstory():
     ever suggested.
     """
     print(intro)
-    input("Enter the facility.")
+    user_commands()
 
 
 def entry_hall():
@@ -624,4 +624,6 @@ def game_main():
     containment_room()
 
 game_main()
+choices_main()
+inventory_main()
 choices_main()

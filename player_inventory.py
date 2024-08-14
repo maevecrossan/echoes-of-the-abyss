@@ -26,4 +26,6 @@ while True:
         print("You are exiting the game.")
         break
 
-#add_to_inventory(choice_prompt)
+def inventory_main():
+
+    add_to_inventory(choice_prompt)

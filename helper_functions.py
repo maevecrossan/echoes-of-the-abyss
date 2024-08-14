@@ -37,7 +37,6 @@ def map():
     X = door\n
     """
     print(show_map)
-    input("Press enter to continue...")
 
 def user_commands():
     while True:
@@ -49,6 +48,7 @@ def user_commands():
         elif command in ["continue", ""]:
             return
         elif command == 'quit':
-            print("Exiting the game.")
+            print("Exiting the game. Thank you for playing!")
+            exit()
         else:
             print("Invalid command. Please try again.")
