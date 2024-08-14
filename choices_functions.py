@@ -138,7 +138,7 @@ def take_key():#working
 #key = take_key
 
 
-def examine_equipment():
+def examine_equipment():#working
     lab_equipment_content = """
     You search around the graveyard of the lab equipment. Behind a pair of toppled
     monitors, you see a clipboard. \n

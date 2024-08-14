@@ -103,6 +103,9 @@ def entry_hall():
         elif entry_hall_prompt == "office": #working
             office()
             break
+        elif entry_hall_prompt == "quit":
+            print("Exiting the game. Thank you for playing!")
+            exit()
         else:
             print("Invalid choice. Please try again.")
 
@@ -164,6 +167,9 @@ def observation_chamber():
         elif observation_chamber_prompt == "entry":
             entry_hall()
             break
+        elif observation_chamber_prompt == "quit":
+            print("Exiting the game. Thank you for playing!")
+            exit()
         else:
             print("Invalid choice. Please try again.")
             
@@ -234,6 +240,9 @@ def storage_closet(): #needs key to open
         elif storage_closet_prompt == "morgue":
             morgue()
             break
+        elif storage_closet_prompt == "quit":
+            print("Exiting the game. Thank you for playing!")
+            exit()
         else:
             print("Invalid choice. Please try again.")
 
@@ -294,6 +303,9 @@ def office():
         elif office_choices_prompt == "break": #working
             break_room()
             break
+        elif office_choices_prompt == "quit":
+            print("Exiting the game. Thank you for playing!")
+            exit()
         else:
             print("Invalid choice. Please try again.")
 
@@ -361,6 +373,9 @@ def laboratory():
         elif laboratory_choices_prompt == "security":#working
             security_room()
             break
+        elif laboratory_choices_prompt == "quit":
+            print("Exiting the game. Thank you for playing!")
+            exit()
         else:
             print("Invalid choice. Please try again.")
 
@@ -418,6 +433,9 @@ def morgue():
         elif morgue_choices_prompt == "containment": #working
             containment_room()
             break
+        elif morgue_choices_prompt == "quit":
+            print("Exiting the game. Thank you for playing!")
+            exit()
         else:
             print("Invalid choice. Please try again.")
 
@@ -475,6 +493,9 @@ def break_room():
         elif break_room_choices_prompt == "security":
             security_room()
             break
+        elif break_room_choices_prompt == "quit":
+            print("Exiting the game. Thank you for playing!")
+            exit()
         else:
             print("Invalid choice. Please try again.")
        
@@ -533,6 +554,9 @@ def security_room():
         elif security_room_choices_prompt == "containment":#working
             containment_room()
             break
+        elif security_room_choices_prompt == "quit":
+            print("Exiting the game. Thank you for playing!")
+            exit()
         else:
             print("Invalid choice. Please try again.")#working
 
@@ -583,17 +607,20 @@ def containment_room():
     while True:#working
         security_room_choices_prompt = input("Type keyword here to make your choice: ").strip().lower()
 
-        if security_room_choices_prompt == "panel":
+        if containment_room_choices_prompt == "panel":
             security_panel()
-        elif security_room_choices_prompt == "inspect":
+        elif containment_room_choices_prompt == "inspect":
             encounter()
             break 
-        elif security_room_choices_prompt == "morgue":
+        elif containment_room_choices_prompt == "morgue":
             morgue()
             break
-        elif security_room_choices_prompt == "security":
+        elif containment_room_choices_prompt == "security":
             security_room()
             break
+        elif containment_room_choices_prompt == "quit":
+            print("Exiting the game. Thank you for playing!")
+            exit()
         else:
             print("Invalid choice. Please try again.")
 
