@@ -684,7 +684,7 @@ def game_main():
     #storage_closet()
     #office()
     #laboratory()
-    morgue()
+    #morgue()
     #break_room()
     #security_room()
     containment_room()

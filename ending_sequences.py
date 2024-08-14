@@ -55,9 +55,39 @@ def encounter():
         if encounter_choices_prompt == "run":
             encounter_run()
         elif encounter_choices_prompt == "crowbar":
-            use_crowbar()
+            if "crowbar" not in current_inventory:
+                print("\nUh-oh... you don't have that item...\n")
+                print("""
+                You turn around and see a shadowy creature 
+                emerging from the darkness, its eyes glowing 
+                with a menacing hunger.\n""")
+                print("""
+                The creature lunges at you before you can react. 
+                Without the crowbar, you have no way to defend yourself. 
+                The last thing you hear is the creature's snarl as it devours 
+                you whole."
+                """)
+                print("You died. Ending X of X.")
+                user_commands()
+            else: 
+                use_crowbar()
         elif encounter_choices_prompt == "syringe":
-            use_syringe()
+            if "syringe" not in current_inventory:
+                print("\nUh-oh... you don't have that item...\n")
+                print("""
+                You turn around and see a shadowy creature 
+                emerging from the darkness, its eyes glowing 
+                with a menacing hunger.\n""")
+                print("""
+                The creature lunges at you before you can react. 
+                Without the syringe, you have no way to sedate the creature. 
+                The last thing you hear is the creature's snarl as it devours 
+                you whole."
+                """)
+                print("You died. Ending X of X.")
+                user_commands()
+            else: 
+                use_syringe()
             break
         elif encounter_choices_prompt == "fate":
             accept_fate()
@@ -96,7 +126,7 @@ def encounter_run():
         if room_choice in ["1", "5"]:
             player_sequence.append(room_choice)
         else:
-             print("That's not a valid room number. Try again.")
+             print("That's not a valid room number. You have one c")
 
         if player_sequence == correct_sequence:
             print("""
