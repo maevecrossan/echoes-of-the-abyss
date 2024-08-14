@@ -9,6 +9,7 @@ def title_screen():
     """
     Displays game title and welcome message.
     """
+    terminal_clear()
     title = text2art("Echoes  of  the  Abyss", font="smaller", chr_ignore = True)
     welcome_message = "Welcome to Echoes of the Abyss, a choose your own adventure game.\n"
     instructions = """
@@ -628,14 +629,14 @@ def containment_room():
     """
     print(containment_room_description_1)#working
 
-    user_commands()#working
+    user_commands
+    
+    ()#working
 
     containment_room_description_2 = """
     The air is heavy with a sense of dread, as if the very walls are charged 
     with fear. The temperature here is noticeably lower, and a faint mist clings 
-    to the floor. There’s a control panel near the entrance, still operational but 
-    locked behind a thick plastic cover. It looks like it could be opened with a
-    keycard...\n 
+    to the floor. There’s a control panel near the entrance, it still looks operational.\n 
     You can hear the distant sound of something scraping 
     against metal, but it’s impossible to tell where it’s coming from. The 
     atmosphere is thick with tension, as if something terrible could happen at any 
@@ -677,16 +678,16 @@ def containment_room():
 
 
 def game_main():
-    #title_screen()
-    #backstory()
-    #entry_hall()
-    #observation_chamber()
-    #storage_closet()
-    #office()
-    #laboratory()
-    #morgue()
-    #break_room()
-    #security_room()
+    title_screen()
+    backstory()
+    entry_hall()
+    observation_chamber()
+    storage_closet()
+    office()
+    laboratory()
+    morgue()
+    break_room()
+    security_room()
     containment_room()
 
 game_main()

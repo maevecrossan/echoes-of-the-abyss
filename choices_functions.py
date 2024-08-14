@@ -220,15 +220,13 @@ def security_logs():# working
 def security_panel():# does player have keycard?
     security_panel_content = """ 
     The screen glitches and the cover is dusty, making it difficult to decipher 
-    much. The cover is also covering a large red button labelled:\n
-    'INITIATE LOCKDOWN SEQUENCE'\n
-    It looks like a keycard can be used to unlock the cover.You sense something
-    silently moving behind you, confirmed after by a faint clink 
+    much. The cover is also conceals a large red button labelled:\n
+        'INITIATE LOCKDOWN SEQUENCE'\n
+    You debate pressing it, but you sense something
+    silently moving behind you. Your suspicions are confirmed by a faint clink 
     of broken glass.\n
     """
     print(security_panel_content)
-
-    user_commands()
 
 
 def choices_main():

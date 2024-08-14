@@ -56,17 +56,18 @@ def encounter():
             encounter_run()
         elif encounter_choices_prompt == "crowbar":
             if "crowbar" not in current_inventory:
-                print("\nUh-oh... you don't have that item...\n")
                 print("""
-                You turn around and see a shadowy creature 
-                emerging from the darkness, its eyes glowing 
-                with a menacing hunger.\n""")
-                print("""
-                The creature lunges at you before you can react. 
-                Without the crowbar, you have no way to defend yourself. 
-                The last thing you hear is the creature's snarl as it devours 
-                you whole."
-                """)
+Uh-oh... you don't have that item...\n
+
+You turn around and see a shadowy creature 
+emerging from the darkness, its eyes glowing 
+with a menacing hunger.\n
+
+The creature lunges at you before you can react. 
+Without the crowbar, you have no way to defend yourself. 
+The last thing you hear is the creature's snarl as it devours 
+you whole."\n
+                """) #indented as above so it prints in line.
                 print("You died. Ending X of X.")
                 user_commands()
             else: 
@@ -75,19 +76,20 @@ def encounter():
             if "syringe" not in current_inventory:
                 print("\nUh-oh... you don't have that item...\n")
                 print("""
-                You turn around and see a shadowy creature 
-                emerging from the darkness, its eyes glowing 
-                with a menacing hunger.\n""")
-                print("""
-                The creature lunges at you before you can react. 
-                Without the syringe, you have no way to sedate the creature. 
-                The last thing you hear is the creature's snarl as it devours 
-                you whole."
+You turn around and see a shadowy creature 
+emerging from the darkness, its eyes glowing 
+with a menacing hunger.\n
+
+The creature lunges at you before you can react. 
+Without the syringe, you have no way to sedate the creature. 
+The last thing you hear is the creature's snarl as it devours 
+you whole."\n
                 """)
                 print("You died. Ending X of X.")
-                user_commands()
+                break
             else: 
                 use_syringe()
+                break
             break
         elif encounter_choices_prompt == "fate":
             accept_fate()
