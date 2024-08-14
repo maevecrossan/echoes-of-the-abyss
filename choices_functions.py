@@ -1,5 +1,5 @@
-def examine_entry_hall():
-    entry_hall_content = """
+def examine_desk(): #working
+    desk_content = """
     Upon closer inspection, the you find a small panel on the wall hidden behind the desk. 
     It has been pried open. Inside the panel, scrawled in a hurried, shaky hand on the metal 
     surface, is a message etched into the steel:
@@ -8,11 +8,10 @@ def examine_entry_hall():
         Don’t trust your senses.
         Get out. -J
     """
-    print(entry_hall_content)
-#examine = examine_entry_hall()
+    print(desk_content)
 
 
-def take_syringe():
+def take_syringe(): #working
     syringe_content = """
     You take a closer look at the syringe. It is filled with a strange, glowing 
     liquid, found on the floor near a metal tray. This might be useful later on.
@@ -60,7 +59,6 @@ def read_notebook():
     """
     print(notebook_content)
 
-
 #notebook = read_notebook()
 
 
@@ -81,7 +79,7 @@ def inspect_toolbox():
 #toolbox = inspect_toolbox
 
 
-def read_logbook():
+def read_logbook(): #working
     logbook_content = """
     April 27th, 1998\n
 
@@ -106,26 +104,30 @@ def read_logbook():
 #logbook = read_logbook
 
 
-def examine_computers():
+def examine_computers(): #working
     computer_content = """
-    URGENT: CONTAINMENT PROTOCOL
+    You press a button on the keyboard, and the sudden bright light form 
+    the screen hurts your eyes for a moment. When your eyes adjust, you see
+    a warning message on the screen that reads:\n
 
-    In case of containment breach, all personnel are to evacuate the facility 
-    immediately. The creature must not be allowed to escape under any 
-    circumstances. Keycards are required to access the Containment Room and 
-    initiate the lockdown procedure.
+        URGENT: CONTAINMENT PROTOCOL\n
 
-    Failure to follow protocol will result in immediate termination of the 
-    facility’s power and security systems. This measure is in place to prevent 
-    the creature from escaping the premises.
+        In case of containment breach, all personnel are to evacuate the facility 
+        immediately. The creature must not be allowed to escape under any 
+        circumstances. Keycards are required to access the Containment Room and 
+        initiate the lockdown procedure.
 
-    - Director Markson\n
+        Failure to follow protocol will result in immediate termination of the 
+        facility’s power and security systems. This measure is in place to prevent 
+        the creature from escaping the premises.
+
+        - Director Markson\n
     """
     print(computer_content)
 #computers = examine_computers()
 
 
-def take_key():
+def take_key():#working
     key_content = """
     As you search through the chaos of broken glassware, overturned tables, and 
     scattered notes, they notice a small key lying on the floor near an 
@@ -141,23 +143,23 @@ def examine_equipment():
     You search around the graveyard of the lab equipment. Behind a pair of toppled
     monitors, you see a clipboard. \n
 
-    Subject: SPECIMEN #42
+        SUBJECT: SPECIMEN #42
 
-    Notes on Weaknesses:
+        Notes on Weaknesses:
 
-    - Metabolism: The creature exhibits an extremely high metabolic rate. 
-    Sedatives have a temporary effect but can slow it down enough for containment.
-    - Exposure to Cold: Preliminary tests suggest that the creature is sensitive 
-    to extreme cold. Cryogenic solutions or environments may temporarily 
-    immobilize it.
-    - Glowing Serum: Compound X-17, when injected, causes severe neural disruption 
-    in the creature. Temporary paralysis observed in 83% of cases.
+        - METABOLISM: The creature exhibits an extremely high metabolic rate. 
+        Sedatives have a temporary effect but can slow it down enough for containment.\n
+        - EXPOSURE TO COLD: Preliminary tests suggest that the creature is sensitive 
+        to extreme cold. Cryogenic solutions or environments may temporarily 
+        immobilize it.\n
+        - GLOWING SERUM: Compound X-17, when injected, causes severe neural disruption 
+        in the creature. Temporary paralysis observed in 83% of cases.\n
     """
     print(lab_equipment_content)
 #equipment = examine_equipment()
 
 
-def examine_lab_coat():
+def examine_lab_coat():#working
     lab_coat_keycard = """
     You cross the cold, eerie room, and pick up the bloodied 
     lab coat from its place on the floor. You find a keycard in the inner pocket. 
@@ -167,24 +169,24 @@ def examine_lab_coat():
     #keycard = examine_lab_coat()
 
 
-def take_scalpel():
+def take_scalpel():#working
     scalpel_content = """
     You pick up the scalpel, not looking too closely at the stains on it that
-    look like blood. 
+    look like blood. You decide to take it with you.
     """
     print(scalpel_content) 
 #scalpel = take_scalpel
 
 
-def take_knife():
+def take_knife():#working
     knife_content = """
-    You pick up the knife. It's rusted and blunt but better than nothing.
+    You pick up the knife. It's rusted and blunt, but better than nothing.
     """
     print(knife_content)
 #knife = take_knife
 
 
-def energy_drink():
+def energy_drink():#working
     energy_drink_content = """
     You drink the energy drink. It tastes good, but the caffeine hits your
     system. Whatever nerves you felt before are heightened significantly, making
@@ -194,27 +196,30 @@ def energy_drink():
 #drink = energy_drink()
 
 
-def security_logs():
+def security_logs():#working
     security_logs_content = """
-    April 29th, 1998 - 23:15
-    - Movement detected in the lower levels. Subject appears to be testing the 
-    containment barrier.
+    You move closer to the desk and scan the papers strewn across it. One catches 
+    your eye, so you take a closer look:
 
-    April 30th, 1998 - 02:30
-    - Subject has breached the secondary containment unit. Lockdown initiated 
-    in zones 4 and 5.
+        April 29th, 1998 - 23:15
+        - Movement detected in the lower levels. Subject appears to be testing the 
+        containment barrier.
 
-    April 30th, 1998 - 04:00
-    - Security personnel dispatched to subdue the subject. No contact since 
-    last report.
+        April 30th, 1998 - 02:30
+        - Subject has breached the secondary containment unit. Lockdown initiated 
+        in zones 4 and 5.
 
-    April 30th, 1998 - 05:45
-    - Emergency power activated. All non-essential systems offline. Facility 
-    personnel ordered to secure keycards and await further instructions.
+        April 30th, 1998 - 04:00
+        - Security personnel dispatched to subdue the subject. No contact since 
+        last report.
 
-    April 30th, 1998 - 06:00
-    - Major breach reported in the Containment Room. Subject last seen 
-    heading toward the maintenance tunnels. Lockdown protocols failing.\n
+        April 30th, 1998 - 05:45
+        - Emergency power activated. All non-essential systems offline. Facility 
+        personnel ordered to secure keycards and await further instructions.
+
+        April 30th, 1998 - 06:00
+        - Major breach reported in the Containment Room. Subject last seen 
+        heading toward the maintenance tunnels. Lockdown protocols failing.\n
     """
     print(security_logs_content)
 #logs = security_logs
@@ -235,7 +240,7 @@ def choices_main():
     """
     Responsible for calling all the choices functions.
     """
-    examine_entry_hall()
+    examine_desk()
     take_crowbar()
     read_notebook()
     inspect_toolbox()
@@ -248,4 +253,3 @@ def choices_main():
     energy_drink()
     security_logs()
     security_panel()
-

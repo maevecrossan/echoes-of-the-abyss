@@ -84,7 +84,7 @@ def entry_hall():
     user_commands()
 
     entry_hall_choices = """
-    1. EXAMINE the room further.
+    1. Look behind the DESK.
     2. Move to Room 2, the OBSERVATION Chamber.
     3. Move to Room 4, the OFFICE. 
     """
@@ -93,13 +93,13 @@ def entry_hall():
     while True: #Keep prompting until response is valid.
         entry_hall_prompt = input("Type keyword here to make your choice: ").strip().lower()
 
-        if entry_hall_prompt == "examine":
-            examine_entry_hall()
+        if entry_hall_prompt == "desk": #needs to be debugged - moves straight to next function
+            examine_desk()
             break
-        elif entry_hall_prompt == "observation":
+        elif entry_hall_prompt == "observation": #working
             observation_chamber()
             break
-        elif entry_hall_prompt == "office":
+        elif entry_hall_prompt == "office": #working
             office()
             break
         else:
@@ -110,7 +110,7 @@ def observation_chamber():
     """
     Gives the observation chamber description and choices to be made.
     """
-    terminal_clear()
+    terminal_clear() #working
 
     observation_chamber_description_1 = """
     You enter the Observation Chamber, once used to monitor experiments 
@@ -122,9 +122,9 @@ def observation_chamber():
     force. Occasionally, you think you can hear faint scratching noises 
     coming, as if something is moving behind it. 
     """
-    print(observation_chamber_description_1)
+    print(observation_chamber_description_1) #working
 
-    user_commands()
+    user_commands() #working
     
     observation_chamber_description_2 = """
     The room is otherwise eerily quiet, the only sound being the occasional
@@ -134,17 +134,17 @@ def observation_chamber():
     the floor that you hope are just oil. The air feels heavy, as though 
     the room is holding its breath, waiting for something to happen.
     """
-    print(observation_chamber_description_2)
+    print(observation_chamber_description_2) #working
 
-    user_commands()
+    user_commands() #working
 
     observation_chamber_choices = """
-    1. Pick up the SYRINGE?\n
+    1. Pick up the SYRINGE.\n 
     2. Try to see what’s behind the MIRROR.\n
     3. Move to Room 3, the STORAGE closet.\n
     4. Move to Room 5, the LABORATORY.\n
     4. Move to Room 1, the ENTRY hall.\n
-    """
+    """ #working: syringe, storage, lab, entry. NOT MIRROR.
     print(observation_chamber_choices)
 
     while True:
@@ -156,14 +156,14 @@ def observation_chamber():
         elif observation_chamber_prompt == "mirror":
             investigate_mirror()
             break
-        elif observation_chamber_prompt == "toolbox":
-            inspect_toolbox()
+        elif observation_chamber_prompt == "storage":
+            storage_closet()
             break
-        elif observation_chamber_prompt == "observation":
-            observation_chamber()
+        elif observation_chamber_prompt == "laboratory":
+            laboratory()
             break
-        elif observation_chamber_prompt == "morgue":
-            morgue()
+        elif observation_chamber_prompt == "entry":
+            entry_hall()
             break
         else:
             print("Invalid choice. Please try again.")
@@ -176,6 +176,8 @@ def storage_closet(): #needs key to open
     Gives the storage closet description and choices to be made.
     """
     terminal_clear()
+
+    #storage_closet_key_check
 
     storage_closet_description_1 = """
     The Storage Closet is cramped and claustrophobic, with shelves 
@@ -249,7 +251,7 @@ def office():
     """
     Gives the office description and choices to be made.
     """
-    terminal_clear()
+    terminal_clear() #working
 
     office_description_1 = """
     The Office is in disarray, with toppled chairs and scattered papers 
@@ -257,11 +259,11 @@ def office():
     of which have been pried open, their contents strewn about. A desk 
     sits in the center of the room, covered in dust and old files. One 
     of the computers on the desk is smashed, its screen shattered, 
-    while another seems to be intact but unpowered.
+    while another seems to be intact and humming quietly.
     """
     print(office_description_1)
 
-    user_commands()
+    user_commands()#working
 
     office_description_2 = """
     The room feels strangely untouched compared to the rest of the facility, 
@@ -270,45 +272,47 @@ def office():
     and unexpectedly. A logbook lies open on the desk, its pages filled with 
     notes on the lab’s experiments.
     """
-    print(office_description_2)
+    print(office_description_2) #working
 
-    user_commands()
+    user_commands() #working
 
     office_choices = """
-    1. Read through the LOGBOOK. Gain insight into the experiments conducted in 
-    the facility.\n
-    2. Examine the broken COMPUTERS. There might be something useful or salvageable.\n
+    1. Read through the LOGBOOK.\n
+    2. Examine the broken COMPUTERS.\n
     3. Move to Room 1, the ENTRY hall.\n
     4. Move to Room 5, the LABRATORY.\n
     5. Move to Room 7, the BREAK room.\n
     """
-    print(office_choices)
+    print(office_choices) #working
 
     while True: 
         office_choices_prompt = input("Type keyword here to make your choice: ").strip().lower()
-        if office_choices_prompt == "logbook":
+        if office_choices_prompt == "logbook": #working
             read_logbook()
             break
-        elif office_choices_prompt == "entry":
+        elif office_choices_prompt == "computers": #working
+            examine_computers()
+            break
+        elif office_choices_prompt == "entry": #working
             entry_hall()
             break
-        elif office_choices_prompt == "laboratory":
+        elif office_choices_prompt == "laboratory": #working
             laboratory()
             break
-        elif office_choices_prompt == "break":
+        elif office_choices_prompt == "break": #working
             break_room()
             break
         else:
             print("Invalid choice. Please try again.")
 
-    user_commands()
+    user_commands() #working
 
 
 def laboratory():
     """
     Gives the laboratory description and choices to be made.
     """
-    terminal_clear()
+    terminal_clear() #working
 
     laboratory_description_1 = """
     The Laboratory is the heart of the facility, where experiments were conducted. 
@@ -319,9 +323,9 @@ def laboratory():
     with the smell of chemicals that sting your nose.
 
     """
-    print(laboratory_description_1)
+    print(laboratory_description_1)#working
 
-    user_commands()
+    user_commands()#working
 
     laboratory_description_2 = """
     You can’t pinpoint the source, but you can hear the quiet hum of old machinery, 
@@ -331,46 +335,45 @@ def laboratory():
     walls are lined with cabinets, most of which are locked. In one corner, a lab 
     coat hangs on a hook, and you notice something bulging in one of its pockets.
     """
-    print(laboratory_description_2)
+    print(laboratory_description_2)#working
 
-    user_commands()
+    user_commands()#working
 
     laboratory_choices = """
-    1. Pick up the KEY: This might be the key to unlocking a critical part of the 
-    facility.\n
+    1. Pick up the KEY.\n
     2. Examine the lab EQUIPMENT.\n
     3. Move to Room 2, the OBSERVATION chamber.\n
     4. Move to Room 4, the OFFICE.\n
     5. Move to Room 6, the MORGUE.\n
     6. Move to Room 8, the SECURITY Room.\n
     """
-    print(laboratory_choices)
+    print(laboratory_choices)#working
 
     while True:
         laboratory_choices_prompt = input("Type keyword here to make your choice: ").strip().lower()
 
-        if laboratory_choices_prompt == "key":
+        if laboratory_choices_prompt == "key":#working
             take_key()
             break
-        elif laboratory_choices_prompt == "equipment":
+        elif laboratory_choices_prompt == "equipment":#working
             examine_equipment()
             break
-        elif laboratory_choices_prompt == "observation":
+        elif laboratory_choices_prompt == "observation":#working
             observation_chamber()
             break
-        elif laboratory_choices_prompt == "office":
+        elif laboratory_choices_prompt == "office":#working
             office()
             break
-        elif laboratory_choices_prompt == "morgue":
+        elif laboratory_choices_prompt == "morgue":#working
             morgue()
             break
-        elif laboratory_choices_prompt == "security":
+        elif laboratory_choices_prompt == "security":#working
             security_room()
             break
         else:
             print("Invalid choice. Please try again.")
 
-    user_commands()
+    user_commands()#working
 
 
 def morgue():
@@ -414,16 +417,16 @@ def morgue():
     while True:
         morgue_choices_prompt = input("Type keyword here to make your choice: ").strip().lower()
 
-        if morgue_choices_prompt == "scalpel":
+        if morgue_choices_prompt == "scalpel":#working
             take_scalpel()
             break
-        elif morgue_choices_prompt == "coat":
+        elif morgue_choices_prompt == "coat":#working
             examine_lab_coat()
             break
-        elif morgue_choices_prompt == "laboratory":
+        elif morgue_choices_prompt == "laboratory":#working
             laboratory()
             break
-        elif morgue_choices_prompt == "containment":
+        elif morgue_choices_prompt == "containment": #working
             containment_room()
             break
         else:
@@ -436,7 +439,7 @@ def break_room():
     """
     Gives the break room description and choices to be made.
     """
-    terminal_clear()
+    terminal_clear()#working
 
     break_room_description_1 = """
     The Break Room was once a place where the lab staff could relax, but now it’s 
@@ -446,9 +449,9 @@ def break_room():
     There’s a small kitchenette in one corner, with a fridge and a microwave, 
     both covered in grime.
     """
-    print(break_room_description_1)
+    print(break_room_description_1)#working
 
-    user_commands()
+    user_commands()#working
 
     break_room_description_2 = """
     The room feels oddly out of place compared to the rest of the facility, 
@@ -458,9 +461,9 @@ def break_room():
     a half-eaten sandwich, now mummified with age. The room is eerily silent, 
     and the air is thick with dust.
     """
-    print(break_room_description_2)
+    print(break_room_description_2)#working
 
-    user_commands()
+    user_commands()#working
 
     break_room_choices = """
     1. Pick up the KNIFE.\n
@@ -468,13 +471,13 @@ def break_room():
     3. Go back to Room 4, the OFFICE.\n
     4. Move to Room 8, SECURITY Room, through the door ahead.\n
     """
-    print(break_room_choices)
+    print(break_room_choices)#working
 
-    while True:
+    while True:#working
         break_room_choices_prompt = input("Type keyword here to make your choice: ").strip().lower()
         
         if break_room_choices_prompt == "knife":
-            security_panel()
+            take_knife()
             break
         elif break_room_choices_prompt == "drink":
             energy_drink()
@@ -495,7 +498,7 @@ def security_room():
     """
     Gives the security room description and choices to be made.
     """
-    terminal_clear()
+    terminal_clear()#working
 
     security_room_description_1 = """
     The Security Room is filled with monitors and control panels, most of which 
@@ -505,9 +508,9 @@ def security_room():
     console. Papers and old security logs are scattered across the desk, 
     detailing the final days of the lab’s operation.
     """
-    print(security_room_description_1)
+    print(security_room_description_1)#working
 
-    user_commands()
+    user_commands()#working
 
     security_room_description_2 = """
     A red light blinks ominously on one of the control panels, indicating that 
@@ -517,9 +520,9 @@ def security_room():
     Now, it’s a tomb of information, with the only clues to what happened hidden 
     within the disjointed logs and static-filled screens.
     """
-    print(security_room_description_2)
+    print(security_room_description_2)#working
 
-    user_commands()
+    user_commands()#working
 
     security_room_choices = """
     1. Read the security LOGS.\n
@@ -532,20 +535,20 @@ def security_room():
     while True:
         security_room_choices_prompt = input("Type keyword here to make your choice: ").strip().lower()
 
-        if security_room_choices_prompt == "logs":
+        if security_room_choices_prompt == "logs":#working
             security_logs()
             break
-        elif security_room_choices_prompt == "laboratory":
+        elif security_room_choices_prompt == "laboratory":#working
             laboratory()
             break
-        elif security_room_choices_prompt == "break":
+        elif security_room_choices_prompt == "break":#working
             break_room()
             break
-        elif security_room_choices_prompt == "containment":
+        elif security_room_choices_prompt == "containment":#working
             containment_room()
             break
         else:
-            print("Invalid choice. Please try again.")
+            print("Invalid choice. Please try again.")#working
 
     user_commands()
 
@@ -556,6 +559,8 @@ def containment_room():
     """
     terminal_clear()
 
+    #add keycard
+
     containment_room_description_1 = """
     The Containment Room is the most ominous part of the facility. It’s large and 
     mostly empty, with the main feature being a massive, reinforced glass enclosure 
@@ -564,9 +569,9 @@ def containment_room():
     is dimly lit by emergency lights, casting a red glow that makes everything 
     look surreal and threatening.
     """
-    print(containment_room_description_1)
+    print(containment_room_description_1)#working
 
-    user_commands()
+    user_commands()#working
 
     containment_room_description_2 = """
     The air is heavy with a sense of dread, as if the very walls are charged 
@@ -577,9 +582,9 @@ def containment_room():
     atmosphere is thick with tension, as if something terrible could happen at any 
     moment. The hair on the back of your neck stands on end. 
     """
-    print(containment_room_description_2)
+    print(containment_room_description_2) #working
 
-    user_commands()
+    user_commands() #working
 
     containment_room_choices = """
     1. Examine the control PANEL: Attempt to input the partial access code and 
@@ -590,7 +595,7 @@ def containment_room():
     """
     print(containment_room_choices)
 
-    while True:
+    while True:#working
         security_room_choices_prompt = input("Type keyword here to make your choice: ").strip().lower()
 
         if security_room_choices_prompt == "panel":
@@ -608,7 +613,7 @@ def containment_room():
         else:
             print("Invalid choice. Please try again.")
 
-    user_commands()
+    user_commands()#working
 
 def game_main():
     title_screen()
