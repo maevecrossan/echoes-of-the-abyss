@@ -1,4 +1,4 @@
-
+from helper_functions import user_commands
 
 def examine_desk(): 
     desk_content = """
@@ -60,8 +60,6 @@ def read_notebook():
     """
     print(notebook_content)
 
-#notebook = read_notebook()
-
 
 def inspect_toolbox(): #INVENTORYITEM
     toolbox_content = """
@@ -101,8 +99,6 @@ def read_logbook(): #working
     """
     print(logbook_content)
 
-#logbook = read_logbook
-
 
 def examine_computers(): #working
     computer_content = """
@@ -124,7 +120,6 @@ def examine_computers(): #working
         - Director Markson\n
     """
     print(computer_content)
-#computers = examine_computers()
 
 
 def take_key():#working #INVENTORYITEM
@@ -156,7 +151,6 @@ def examine_equipment():#working
         in the creature. Temporary paralysis observed in 83% of cases.\n
     """
     print(lab_equipment_content)
-#equipment = examine_equipment()
 
 
 def examine_lab_coat():#working #INVENTORYITEM
@@ -193,10 +187,9 @@ def energy_drink():#working
     you more jumpy.
     """
     print(energy_drink_content)
-#drink = energy_drink()
 
 
-def security_logs():#working
+def security_logs():# working
     security_logs_content = """
     You move closer to the desk and scan the papers strewn across it. One catches 
     your eye, so you take a closer look:
@@ -222,34 +215,36 @@ def security_logs():#working
         heading toward the maintenance tunnels. Lockdown protocols failing.\n
     """
     print(security_logs_content)
-#logs = security_logs
 
 
-def security_panel():
-    security_panel_content = """
-    The screen glitches, making it difficult to decipher much. However, you 
-    can just about make out something slinking between rooms, moving with 
-    unnatural ease. It's movements happen in time with the soft clinky of glass 
-    across the hall.\n
-    You should move.\n
+def security_panel():# does player have keycard?
+    security_panel_content = """ 
+    The screen glitches and the cover is dusty, making it difficult to decipher 
+    much. The cover is also covering a large red button labelled:\n
+    'INITIATE LOCKDOWN SEQUENCE'\n
+    It looks like a keycard can be used to unlock the cover.You sense something
+    silently moving behind you, confirmed after by a faint clink 
+    of broken glass.\n
+    Use KEYCARD?\n
     """
     print(security_panel_content)
-#panel = control_panel
+
+    user_commands()
 
 def choices_main():
     """
     Responsible for calling all the choices functions.
     """
-    examine_desk()
-    take_crowbar()
-    read_notebook()
-    inspect_toolbox()
-    read_logbook()
-    examine_computers()
-    take_key()
-    examine_lab_coat()
-    take_scalpel()
-    take_knife()
-    energy_drink()
-    security_logs()
-    security_panel()
+    #examine_desk()
+    #take_crowbar()
+    #read_notebook()
+    #inspect_toolbox()
+    #read_logbook()
+    #examine_computers()
+    #take_key()
+    #examine_lab_coat()
+    #take_scalpel()
+    #take_knife()
+    #energy_drink()
+    #security_logs()
+    #security_panel()

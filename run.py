@@ -1,12 +1,10 @@
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 import os
 from art import text2art #title
-from helper_functions import user_commands
-from helper_functions import map
-from helper_functions import terminal_clear
+from helper_functions import *
 from choices_functions import *
 from player_inventory import *
-#from ending_sequences import *
+from ending_sequences import *
 
 def title_screen():
     """
@@ -168,6 +166,8 @@ def observation_chamber():
         elif observation_chamber_prompt == "entry":
             entry_hall()
             break
+        elif observation_chamber_prompt == "inventory": #not working
+            display_inventory()
         elif observation_chamber_prompt == "quit":
             print("Exiting the game. Thank you for playing!")
             exit()
@@ -594,10 +594,12 @@ def containment_room():
     The air is heavy with a sense of dread, as if the very walls are charged 
     with fear. The temperature here is noticeably lower, and a faint mist clings 
     to the floor. There’s a control panel near the entrance, still operational but 
-    locked behind a password. You can hear the distant sound of something scraping 
+    locked behind a thick plastic cover. It looks like it could be opened with a
+    keycard...\n 
+    You can hear the distant sound of something scraping 
     against metal, but it’s impossible to tell where it’s coming from. The 
     atmosphere is thick with tension, as if something terrible could happen at any 
-    moment. The hair on the back of your neck stands on end. 
+    moment. The hair on the back of your neck stands on end.\n
     """
     print(containment_room_description_2) #working
 
@@ -612,13 +614,14 @@ def containment_room():
     print(containment_room_choices)
 
     while True:#working
-        security_room_choices_prompt = input("Type keyword here to make your choice: ").strip().lower()
+        containment_room_choices_prompt = input("Type keyword here to make your choice: ").strip().lower()
 
         if containment_room_choices_prompt == "panel":
             security_panel()
         elif containment_room_choices_prompt == "inspect":
             encounter()
             break 
+    
         elif containment_room_choices_prompt == "morgue":
             morgue()
             break
@@ -638,16 +641,18 @@ def game_main():
     #title_screen()
     #backstory()
     #entry_hall()
-    observation_chamber()
-    storage_closet()
-    office()
-    laboratory()
-    morgue()
-    break_room()
-    security_room()
+    #observation_chamber()
+    #storage_closet()
+    #office()
+    #laboratory()
+    #morgue()
+    #break_room()
+    #security_room()
     containment_room()
 
 game_main()
+helper_functions()
 choices_main()
 inventory_main()
 choices_main()
+ending_sequences()
