@@ -71,7 +71,7 @@ def encounter():
             print("Invalid choice. Please try again.")
 
 
-def encounter_run(): #keycard?
+def encounter_run():
 
     encounter_run_content = """
     Your heart pounds in your chest as the entity prowls closer,

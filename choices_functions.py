@@ -225,7 +225,6 @@ def security_panel():# does player have keycard?
     It looks like a keycard can be used to unlock the cover.You sense something
     silently moving behind you, confirmed after by a faint clink 
     of broken glass.\n
-    Use KEYCARD?\n
     """
     print(security_panel_content)
 

@@ -3,7 +3,6 @@ import os
 from art import text2art #title
 from helper_functions import *
 from choices_functions import *
-from player_inventory import *
 from ending_sequences import *
 
 def title_screen():
@@ -27,22 +26,55 @@ def title_screen():
 
 def backstory():
 
-    intro = """
-    You are Alex, a 16-year-old who has lived in the quiet town of Redbrook
-    your whole life. One summer night, your friend dares you to enter the
-    long-abandoned government lab on the outskirts of town, a place shrouded
-    in mystery and fear. No one dares to speak of what happened there, and
-    those who have ventured inside never returned. The task was simple:
-    retrieve your skateboard your friend claimed to have hidden in one of the
-    rooms the day before.\n
-
-    With nothing but a flashlight, you step into the cold, crumbling 
-    facility. The door slams shut behind you with an eerie finality, 
-    and you realize too late that this is no ordinary dare. Something 
-    lurks within these walls, something far worse than the rumors 
-    ever suggested.
+    intro_1 = """
+    You are a seasoned urban explorer, known for uncovering the secrets
+    of forgotten places. Recently, you’ve heard rumors about an abandoned 
+    research facility deep in the forest—locals call it the 
+    “Echoes of the Abyss” and avoid it at all costs. Intrigued by the mystery, 
+    you decide to investigate.
     """
-    print(intro)
+    print(intro_1)
+    user_commands()
+
+    intro_2 = """
+    The journey to the facility is challenging, with overgrown paths and an 
+    eerie silence that thickens as you approach. The crumbling building stands 
+    before you, its walls covered in ivy and decay, the windows shattered like 
+    dark, empty eyes. A chill hangs in the air, sending shivers down your spine.
+    """
+    print(intro_2)
+    user_commands()
+
+    intro_3 = """
+    Inside, the lab is a maze of twisted hallways, rusted equipment, and cryptic 
+    symbols. Every step echoes through the empty corridors, and strange phenomena 
+    begin to occur—moving shadows, doors slamming shut on their own, and sudden 
+    drops in temperature.
+    """
+    print(intro_3)
+    user_commands()
+
+    intro_4 = """
+    You discover a shattered containment room and realize that this is no 
+    ordinary abandoned site. Something still lurks in the darkness, watching 
+    and waiting. The deeper you go, the more you sense that this exploration is 
+    turning into a fight for survival.
+    """
+    print(intro_4)
+    user_commands()
+
+    intro_5 = """
+    You’ve come too far to turn back. The secrets of the Echoes of the Abyss 
+    are within reach—but so are the horrors that still haunt this place.
+    """
+    print(intro_5)
+    user_commands()
+
+    intro_6 = """
+    Will you uncover the truth, or will you become another lost 
+    soul in this forsaken facility?
+    """
+    print(intro_6)
     user_commands()
 
 
@@ -158,8 +190,12 @@ def observation_chamber():
         elif observation_chamber_prompt == "mirror":
             investigate_mirror()
         elif observation_chamber_prompt == "storage":
-            storage_closet()
-            break
+            if "key" not in current_inventory:
+                print("\nThe door is locked. Maybe there's a key somewhere?\n")
+                print(observation_chamber_choices)
+            else: 
+                storage_closet()
+                break
         elif observation_chamber_prompt == "laboratory":
             laboratory()
             break
@@ -179,11 +215,12 @@ def observation_chamber():
 
 def storage_closet(): #needs key to open
     """
+    Establishes whether or not the player has the key to open the door.
     Gives the storage closet description and choices to be made.
     """
     terminal_clear()
 
-    #storage_closet_key_check
+    #Storage closet descriptions and choices
 
     storage_closet_description_1 = """
     The Storage Closet is cramped and claustrophobic, with shelves 
@@ -236,7 +273,7 @@ def storage_closet(): #needs key to open
             read_notebook()
         elif storage_closet_prompt == "toolbox":
             item = inspect_toolbox()
-            add_to_inventory(item) #two items
+            add_to_inventory(item)
         elif storage_closet_prompt == "observation":
             observation_chamber()
             break
@@ -248,7 +285,6 @@ def storage_closet(): #needs key to open
             exit()
         else:
             print("Invalid choice. Please try again.")
-
 
     user_commands()
 
@@ -640,8 +676,8 @@ def game_main():
     #title_screen()
     #backstory()
     #entry_hall()
-    #observation_chamber()
-    #storage_closet()
+    observation_chamber()
+    storage_closet()
     #office()
     #laboratory()
     #morgue()
@@ -651,7 +687,5 @@ def game_main():
 
 game_main()
 helper_functions()
-choices_main()
-inventory_main()
 choices_main()
 ending_sequences()
