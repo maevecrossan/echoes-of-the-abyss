@@ -5,10 +5,13 @@ from choices_functions import *
 from choices_functions import examine_desk
 from ending_sequences import *
 
-helpers.title_screen()
+helpers.title_screen()  # Calls title_screen() from helper_functions file.
 
 
 def backstory():
+    """
+    Prints backstory to terminal in increments after title screen.
+    """
 
     intro_1 = """
     You are a seasoned urban explorer, known for uncovering the secrets
@@ -66,8 +69,8 @@ def backstory():
 def entry_hall():
     """
     Gives the entry hall description and choices to be made.
-    Links to external file which details the interactions with each
-    item that can be found throughout the game.
+    Links to choices_funtions file which details the interactions 
+    with each item that can be found throughout the game.
     """
 
     helpers.terminal_clear()
@@ -131,6 +134,8 @@ def entry_hall():
 def observation_chamber():
     """
     Gives the observation chamber description and choices to be made.
+    Links to choices_funtions file which details the interactions 
+    with each item that can be found throughout the game.
     """
     helpers.terminal_clear()  # working
 
@@ -212,6 +217,9 @@ def observation_chamber():
 def storage_closet():
     """
     Gives the storage closet description and choices to be made.
+    Links to choices_funtions file which details the interactions 
+    with each item that can be found throughout the game.
+
     Establishes whether or not the player has the key to open the door.
     """
     helpers.terminal_clear()
@@ -299,6 +307,8 @@ def storage_closet():
 def office():
     """
     Gives the office description and choices to be made.
+    Links to choices_funtions file which details the interactions 
+    with each item that can be found throughout the game.
     """
     helpers.terminal_clear()  # working
 
@@ -374,6 +384,8 @@ def office():
 def laboratory():
     """
     Gives the laboratory description and choices to be made.
+    Links to choices_funtions file which details the interactions 
+    with each item that can be found throughout the game.
     """
     helpers.terminal_clear()  # working
 
@@ -460,6 +472,8 @@ def laboratory():
 def morgue():
     """
     Gives the morgue description and choices to be made.
+    Links to choices_funtions file which details the interactions 
+    with each item that can be found throughout the game.
     """
     helpers.terminal_clear()
 
@@ -543,6 +557,8 @@ def morgue():
 def break_room():
     """
     Gives the break room description and choices to be made.
+    Links to choices_funtions file which details the interactions 
+    with each item that can be found throughout the game.
     """
     helpers.terminal_clear()  # working
 
@@ -617,6 +633,8 @@ def break_room():
 def security_room():
     """
     Gives the security room description and choices to be made.
+    Links to choices_funtions file which details the interactions 
+    with each item that can be found throughout the game.
     """
     helpers.terminal_clear()  # working
 
@@ -694,7 +712,8 @@ def containment_room():
     Gives the containment room description and choices to be made.
     This room can only be accessed if the player has a keycard in
     their inventory.
-    Triggers ending sequences.
+    Links to ending_sequences file which details the multiple
+    ending possibilities.
     """
     helpers.terminal_clear()
 
