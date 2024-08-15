@@ -2,6 +2,7 @@
 import os
 from helper_functions import *
 from choices_functions import *
+from choices_functions import examine_desk
 from ending_sequences import *
 
 
@@ -107,7 +108,6 @@ def entry_hall():
 
         if entry_hall_prompt == "desk": #needs to be debugged - moves straight to next function
             examine_desk()
-            break
         elif entry_hall_prompt == "observation":#working
             observation_chamber()
             break
@@ -688,17 +688,17 @@ def containment_room():
     user_commands()
 
 def game_main():
-    title_screen()
+    #title_screen()
     #backstory()
-    #entry_hall()
-    #observation_chamber()
+    entry_hall()
+    observation_chamber()
     #storage_closet()
-    #office()
+    office()
     #laboratory()
     #morgue()
     #break_room()
     #security_room()
-    containment_room()
+    #containment_room()
 
 game_main()
 choices_main()

@@ -232,7 +232,7 @@ def choices_main():
     """
     Responsible for calling all the choices functions.
     """
-    #examine_desk()
+    examine_desk()
     #take_crowbar()
     #read_notebook()
     #inspect_toolbox()
