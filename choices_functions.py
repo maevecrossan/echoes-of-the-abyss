@@ -164,12 +164,14 @@ def examine_equipment():  # working
         Notes on Weaknesses:
 
         - METABOLISM: The creature exhibits an extremely high metabolic rate.
-        Sedatives have a temporary effect but can slow it down enough for containment.\n
-        - EXPOSURE TO COLD: Preliminary tests suggest that the creature is sensitive
-        to extreme cold. Cryogenic solutions or environments may temporarily
-        immobilize it.\n
-        - GLOWING SERUM: Compound X-17, when injected, causes severe neural disruption
-        in the creature. Temporary paralysis observed in 83% of cases.\n
+        Sedatives have a temporary effect but can slow it down enough 
+        for containment.\n
+        - EXPOSURE TO COLD: Preliminary tests suggest that the creature is 
+        sensitive to extreme cold. Cryogenic solutions or environments may 
+        temporarily immobilize it.\n
+        - GLOWING SERUM: Compound X-17, when injected, causes severe neural 
+        disruption in the creature. Temporary paralysis observed in 
+        83% of cases.\n
     """
     print(lab_equipment_content)
 
