@@ -126,7 +126,7 @@ def entry_hall():
         elif entry_hall_prompt == 'map':  # working
             map()
         elif entry_hall_prompt == 'inventory':  # working
-            display_inventory()
+            helpers.display_inventory()
         else:
             print("Invalid choice. Please try again.")
 
@@ -196,7 +196,7 @@ def observation_chamber():
             entry_hall()
             break
         elif observation_chamber_prompt == "inventory":
-            display_inventory()
+            helpers.display_inventory()
         elif observation_chamber_prompt == "quit":
             print("Exiting the game. Thank you for playing!")
             exit()
@@ -289,7 +289,7 @@ def storage_closet():
         elif storage_closet_prompt == 'map':
             map()
         elif storage_closet_prompt == 'inventory':
-            display_inventory()
+            helpers.display_inventory()
         elif command == 'help':
             print("""
             To make a choice, when prompted, type the word in CAPITALS and hit 'enter'.\n
@@ -366,7 +366,7 @@ def office():
         elif office_choices_prompt == 'map':
             map()
         elif office_choices_prompt == 'inventory':  # working
-            display_inventory()
+            helpers.display_inventory()
         elif command == 'help':
             print("""
             To make a choice, when prompted, type the word in CAPITALS and hit 'enter'.\n
@@ -454,7 +454,7 @@ def laboratory():
         elif laboratory_choices_prompt == 'map':
             map()
         elif laboratory_choices_prompt == 'inventory':  # working
-            display_inventory()
+            helpers.display_inventory()
         elif command == 'help':
             print("""
             To make a choice, when prompted, type the word in CAPITALS and hit 'enter'.\n
@@ -539,7 +539,7 @@ def morgue():
         elif morgue_choices_prompt == 'map':
             map()
         elif morgue_choices_promptand == 'inventory':
-            display_inventory()
+            helpers.display_inventory()
         elif command == 'help':
             print("""
             To make a choice, when prompted, type the word in CAPITALS and hit 'enter'.\n
@@ -615,7 +615,7 @@ def break_room():
         if break_room_choices_prompt == 'map':
             map()
         elif break_room_choices_prompt == 'inventory':
-            display_inventory()
+            helpers.display_inventory()
         elif command == 'help':
             print("""
             To make a choice, when prompted, type the word in CAPITALS and hit 'enter'.\n
@@ -692,7 +692,7 @@ def security_room():
         elif security_room_choices_prompt == 'map':  # working
             map()
         elif security_room_choices_prompt == 'inventory':  # working
-            display_inventory()
+            helpers.display_inventory()
         elif command == 'help':
             print("""
             To make a choice, when prompted, type the word in CAPITALS and hit 'enter'.\n
@@ -775,7 +775,7 @@ def containment_room():
         elif containment_room_choices_prompt == 'map':
             map()
         elif containment_room_choices_prompt == 'inventory':
-            display_inventory()
+            helpers.display_inventory()
         elif command == 'help':
             print("""
             To make a choice, when prompted, type the word in CAPITALS and hit 'enter'.\n
