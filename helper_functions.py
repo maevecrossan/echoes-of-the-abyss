@@ -70,7 +70,7 @@ def user_commands():
     """
     while True:
         command = input(
-            "Type a command, or press enter to continue...").strip().lower()
+            "Type a command, or press enter to continue...\n").strip().lower()
         if command == 'map':
             map()
         elif command == 'inventory':
