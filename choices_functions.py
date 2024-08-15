@@ -80,21 +80,20 @@ def read_notebook():
 def inspect_toolbox():  # INVENTORYITEM
     """
     Prints the content if the player enters 'toolbox' keyword.
-    Passes wire cutters and roll of tape to the inventory.
+    Passes wire cutters to the inventory function.
     """
     toolbox_content = """
     You reach for the toolbox, underestimating its weight. It bangs to 
     the floor, it's hinges fracturing revealing the contents.\n
 
-    Inside you find a variety of tools useful things. A roll of duct 
-    tape that might be useful for securing items or fixing broken equipment. 
-    There is also a set of wire cutters. They might be useful for
-    disabling security systems or cutting through locks.\n
+    Inside you find a variety of tools useful things. A set of wire cutters. 
+    They might be useful for disabling security systems or cutting through 
+    chains.\n
 
     You put them in your backpack.\n
     """
     print(toolbox_content)
-    return "wire cutters", "roll of tape"
+    return "wire cutters"
 
 
 def investigate_mirror():
@@ -308,6 +307,7 @@ def choices_main():
     take_crowbar()
     read_notebook()
     inspect_toolbox()
+    inspect_and_add_toolbox()
     read_logbook()
     examine_computers()
     take_key()
