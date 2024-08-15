@@ -5,6 +5,12 @@ def encounter():
     """
     Gives the description for the encounter in the containment room if the
     user decides to inspect the enclosure.
+    Initiates ending sequences by providing the player with four possible
+    choices, with 7 possible outcomes.
+
+    The syringe-related ending is contained in this function with two 
+    possibilities depending on whether or not the item is in the player's 
+    inventory.
     """
     helpers.terminal_clear()
 
@@ -121,7 +127,11 @@ you whole."\n
 
 
 def encounter_run():
-
+    """
+    Prints the content if the player enters 'run' keyword.
+    Player will have to enter correct room sequence to escape the facility. 
+    If wrong, the get caught and die. If correct, they escape.
+    """
     encounter_run_content = """
     Your heart pounds in your chest as the entity prowls closer,
     its glowing eyes locked onto you. Without a second thought, you turn
@@ -145,7 +155,6 @@ def encounter_run():
             room_choice = input(
                 "Enter the room number to escape (X,Y): \n").strip()
 
-            # Converts input into tuple of integers.
             room_choice_tuple = tuple(
                 int(x) for x in room_choice.strip("()").split(","))
 
@@ -191,8 +200,15 @@ def encounter_run():
         quit()
 
 
-def use_crowbar():  # crowbar?
+def use_crowbar():
+    """
+    Prints the content if the player enters 'crowbar' keyword.
+    There are two possible outcomes depending on whether of not
+    the item is in their inventory.
 
+    If the player dies, a news article is printed to add futher 
+    lore to the game. 
+    """
     use_crowbar_content = """
     Hands sweaty, you grip onto the crowbar and prepare to defend yourself.
     You just need to buy some time to get out. The entity is now right in 
@@ -260,6 +276,11 @@ def use_crowbar():  # crowbar?
 
 
 def use_syringe():
+    """
+    Prints the content if the player enters 'syringe' keyword.
+    There are two possible outcomes depending on whether of not
+    the item is in their inventory.
+    """
     use_syringe_content = """
     Desperation fuels your next move. With shaking hands, you grab the
     syringe from your pocket. The strange, glowing liquid inside pulses
@@ -287,6 +308,11 @@ def use_syringe():
 
 
 def accept_fate():
+    """
+    Prints the content if the player enters 'fate' keyword.
+    There is only one ending, where the player allows themselves
+    to die in the facility at the hands of the monster.
+    """
     fate_description = """
     You realize there's no way out. The entity is too close, too powerful.
     You lower your hands, your body trembling, as you stand your ground. The
