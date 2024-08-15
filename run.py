@@ -106,7 +106,7 @@ def entry_hall():
     while True: #Keep prompting until response is valid.
         entry_hall_prompt = input("Type keyword here to make your choice: ").strip().lower()
 
-        if entry_hall_prompt == "desk": #needs to be debugged - moves straight to next function
+        if entry_hall_prompt == "desk": #working
             examine_desk()
         elif entry_hall_prompt == "observation":#working
             observation_chamber()
@@ -114,9 +114,13 @@ def entry_hall():
         elif entry_hall_prompt == "office": #working
             office()
             break
-        elif entry_hall_prompt == "quit":
+        elif entry_hall_prompt == "quit":#working
             print("Exiting the game. Thank you for playing!")
             exit()
+        elif entry_hall_prompt == 'map':#working
+            map()
+        elif entry_hall_prompt == 'inventory': #working
+            display_inventory()
         else:
             print("Invalid choice. Please try again.")
 
@@ -134,8 +138,7 @@ def observation_chamber():
     dominates one wall. Once upon a time, you would have been able to see 
     through to the other side. Not anymore. It now bears a huge crack, 
     spiderwebbing from the center, as if something struck it with immense
-    force. Occasionally, you think you can hear faint scratching noises 
-    coming, as if something is moving behind it. 
+    force.
     """
     print(observation_chamber_description_1) #working
 
@@ -159,7 +162,7 @@ def observation_chamber():
     3. Move to Room 3, the STORAGE closet.\n
     4. Move to Room 5, the LABORATORY.\n
     4. Move to Room 1, the ENTRY hall.\n
-    """ #working: syringe, storage, lab, entry. NOT MIRROR.
+    """
     print(observation_chamber_choices)
 
     while True: #all working
@@ -194,14 +197,12 @@ def observation_chamber():
     user_commands()
 
 
-def storage_closet(): #needs key to open
+def storage_closet():
     """
-    Establishes whether or not the player has the key to open the door.
     Gives the storage closet description and choices to be made.
+    Establishes whether or not the player has the key to open the door.
     """
     terminal_clear()
-
-    #Storage closet descriptions and choices
 
     storage_closet_description_1 = """
     The Storage Closet is cramped and claustrophobic, with shelves 
@@ -477,7 +478,7 @@ def morgue():
             exit()
         elif morgue_choices_prompt == 'map':
             map()
-        elif commmorgue_choices_promptand == 'inventory':
+        elif morgue_choices_promptand == 'inventory':
             display_inventory()
         else:
             print("Invalid choice. Please try again.")
@@ -688,17 +689,17 @@ def containment_room():
     user_commands()
 
 def game_main():
-    #title_screen()
-    #backstory()
+    title_screen()
+    backstory()
     entry_hall()
     observation_chamber()
-    #storage_closet()
+    storage_closet()
     office()
-    #laboratory()
-    #morgue()
-    #break_room()
-    #security_room()
-    #containment_room()
+    laboratory()
+    morgue()
+    break_room()
+    security_room()
+    containment_room()
 
 game_main()
 choices_main()

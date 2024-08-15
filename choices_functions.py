@@ -76,6 +76,15 @@ def inspect_toolbox(): #INVENTORYITEM
     print(toolbox_content)
     return "wire cutters", "roll of tape"
 
+def investigate_mirror():
+    """
+
+    """
+    mirror_content = """
+    You step closer to the mirror. You swear you can hear faint scratching noises 
+    coming, as if something is moving behind it. 
+    """
+    print(mirror_content)
 
 def read_logbook(): #working
     logbook_content = """
@@ -245,3 +254,4 @@ def choices_main():
     #energy_drink()
     #security_logs()
     #security_panel()
+    #investigate_mirror()
