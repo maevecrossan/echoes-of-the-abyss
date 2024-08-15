@@ -67,7 +67,7 @@ def user_commands():
         command = input("Type a command, or press enter to continue...").strip().lower()
         if command == 'map':
             map()
-        elif command == 'inventory': #not working
+        elif command == 'inventory':
             display_inventory()
         elif command in ["continue", ""]:
             return

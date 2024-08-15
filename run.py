@@ -264,6 +264,10 @@ def storage_closet(): #needs key to open
         elif storage_closet_prompt == "quit":
             print("Exiting the game. Thank you for playing!")
             exit()
+        elif storage_closet_prompt == 'map':
+            map()
+        elif storage_closet_prompt == 'inventory':
+            display_inventory()
         else:
             print("Invalid choice. Please try again.")
 
@@ -326,6 +330,10 @@ def office():
         elif office_choices_prompt == "quit":
             print("Exiting the game. Thank you for playing!")
             exit()
+        elif office_choices_prompt == 'map':
+            map()
+        elif office_choices_prompt == 'inventory': #not working
+            display_inventory()
         else:
             print("Invalid choice. Please try again.")
 
@@ -397,6 +405,10 @@ def laboratory():
         elif laboratory_choices_prompt == "quit":
             print("Exiting the game. Thank you for playing!")
             exit()
+        elif laboratory_choices_prompt == 'map':
+            map()
+        elif laboratory_choices_prompt == 'inventory': #not working
+            display_inventory()
         else:
             print("Invalid choice. Please try again.")
 
@@ -463,6 +475,10 @@ def morgue():
         elif morgue_choices_prompt == "quit":
             print("Exiting the game. Thank you for playing!")
             exit()
+        elif morgue_choices_prompt == 'map':
+            map()
+        elif commmorgue_choices_promptand == 'inventory': #not working
+            display_inventory()
         else:
             print("Invalid choice. Please try again.")
 
@@ -524,6 +540,10 @@ def break_room():
         elif break_room_choices_prompt == "quit":
             print("Exiting the game. Thank you for playing!")
             exit()
+        if break_room_choices_prompt == 'map':
+            map()
+        elif break_room_choices_prompt == 'inventory': #not working
+            display_inventory()
         else:
             print("Invalid choice. Please try again.")
        
@@ -585,6 +605,10 @@ def security_room():
         elif security_room_choices_prompt == "quit":
             print("Exiting the game. Thank you for playing!")
             exit()
+        elif security_room_choices_prompt == 'map':
+            map()
+        elif security_room_choices_prompt == 'inventory': #not working
+            display_inventory()
         else:
             print("Invalid choice. Please try again.")#working
 
@@ -654,6 +678,10 @@ def containment_room():
         elif containment_room_choices_prompt == "quit":
             print("Exiting the game. Thank you for playing!")
             exit()
+        elif containment_room_choices_prompt == 'map':
+            map()
+        elif containment_room_choices_prompt == 'inventory': #not working
+            display_inventory()
         else:
             print("Invalid choice. Please try again.")
 
