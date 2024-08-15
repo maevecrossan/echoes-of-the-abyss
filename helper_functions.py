@@ -1,4 +1,25 @@
 import os
+from art import text2art #title art
+
+def title_screen():
+    """
+    Displays game title and welcome message.
+    Informs the user of the type commands they can use.
+    """
+    terminal_clear()
+    title = text2art("Echoes  of  the  Abyss", font="smaller", chr_ignore = True)
+    welcome_message = "Welcome to Echoes of the Abyss, a choose your own adventure game.\n"
+    instructions = """
+    You will be able to make multiple choices in this game.\n 
+    To make a choice, when prompted, type the word in CAPITALS and hit 'enter'.\n
+    To look at the map, type MAP and hit 'enter'.\n
+    To see your inventory, type INVENTORY and hit 'enter'.\n
+    To quit the game, type QUIT.\n
+    """
+    print(title)
+    print(welcome_message)
+    print(instructions)
+    user_commands()
 
 def terminal_clear():
     """
@@ -39,6 +60,9 @@ def map():
     print(show_map)
 
 def user_commands():
+    """
+    Reads user's comands and calls the relevant functions.
+    """
     while True:
         command = input("Press enter to continue...").strip().lower()
         if command == 'map':
@@ -50,6 +74,8 @@ def user_commands():
         elif command == 'quit':
             print("Exiting the game. Thank you for playing!")
             exit()
+        elif command == 'home':
+            game_main()
         else:
             print("Invalid command. Please try again.")
 

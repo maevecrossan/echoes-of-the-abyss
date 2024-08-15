@@ -1,28 +1,8 @@
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 import os
-from art import text2art #title
 from helper_functions import *
 from choices_functions import *
 from ending_sequences import *
-
-def title_screen():
-    """
-    Displays game title and welcome message.
-    """
-    terminal_clear()
-    title = text2art("Echoes  of  the  Abyss", font="smaller", chr_ignore = True)
-    welcome_message = "Welcome to Echoes of the Abyss, a choose your own adventure game.\n"
-    instructions = """
-    You will be able to make multiple choices in this game.\n 
-    To make a choice, when prompted, type the word in CAPITALS and hit 'enter'.\n
-    To look at the map, type MAP and hit 'enter'.\n
-    To see your inventory, type INVENTORY and hit 'enter'.\n
-    To quit the game, type QUIT.\n
-    """
-    print(title)
-    print(welcome_message)
-    print(instructions)
-    user_commands()
 
 
 def backstory():
@@ -464,16 +444,16 @@ def morgue():
     while True:
         morgue_choices_prompt = input("Type keyword here to make your choice: ").strip().lower()
 
-        if morgue_choices_prompt == "scalpel":#working
+        if morgue_choices_prompt == "scalpel": #working
             item = take_scalpel()
             add_to_inventory(item)
-        elif morgue_choices_prompt == "coat":#working
+        elif morgue_choices_prompt == "coat": #working
             item = examine_lab_coat()
             add_to_inventory(item)
-        elif morgue_choices_prompt == "laboratory":#working
+        elif morgue_choices_prompt == "laboratory": #working
             laboratory()
             break
-        elif morgue_choices_prompt == "containment":#add keycard if/else
+        elif morgue_choices_prompt == "containment": #add keycard if/else
             if "keycard" not in current_inventory:
                 print("The door is locked. I need a keycard to open it.")
                 print(morgue_choices)
@@ -681,7 +661,7 @@ def containment_room():
 
 
 def game_main():
-    #title_screen()
+    title_screen()
     #backstory()
     #entry_hall()
     #observation_chamber()
@@ -694,6 +674,5 @@ def game_main():
     containment_room()
 
 game_main()
-helper_functions()
 choices_main()
-ending_main()
+endings_main()
