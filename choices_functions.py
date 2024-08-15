@@ -2,6 +2,9 @@ from helper_functions import user_commands
 
 
 def examine_desk():
+    """
+    Prints the content if the player chooses ''
+    """
     desk_content = """
     Upon closer inspection, the you find a small panel on the wall 
     hidden behind the desk. It has been pried open. Inside the panel, 
@@ -12,10 +15,14 @@ def examine_desk():
         Don’t trust your senses.
         Get out. -J\n
     """
+
     print(desk_content)
 
 
-def take_syringe():  # working #INVENTORYITEM
+def take_syringe(): #INVENTORYITEM
+    """
+    Prints the content if the player chooses ''
+    """
     syringe_content = """
     You take a closer look at the syringe. It is filled with a strange, 
     glowing liquid, found on the floor near a metal tray. This might be 
@@ -28,20 +35,22 @@ def take_syringe():  # working #INVENTORYITEM
 
 
 def take_crowbar():  # INVENTORYITEM
+    """
+    Prints the content if the player chooses 'crowbar'.
+    Returns 'crowbar' to be added to inventory.
+    """
     crowbar_content = """
     A sturdy metal crowbar that can be used to pry open doors or defend
     against an attack."\n
     """
+
     print(crowbar_content)
     return "crowbar"
 
 
 def read_notebook():
     """
-    This function holds the string content for the notebook found
-    in the storage room.
-    The notebook hints at the existence of the keycard and the
-    critical role the Containment Room plays in stopping the creature.
+    Prints the content if the player enters 'notebook' keyword.
     """
     notebook_content = """
     May 4th, 1998\n
@@ -69,6 +78,10 @@ def read_notebook():
 
 
 def inspect_toolbox():  # INVENTORYITEM
+    """
+    Prints the content if the player enters 'toolbox' keyword.
+    Passes wire cutters and roll of tape to the inventory.
+    """
     toolbox_content = """
     You reach for the toolbox, underestimating its weight. It bangs to 
     the floor, it's hinges fracturing revealing the contents.\n
@@ -86,7 +99,7 @@ def inspect_toolbox():  # INVENTORYITEM
 
 def investigate_mirror():
     """
-
+    Prints the content if the player enters 'mirror' keyword.
     """
     mirror_content = """
     You step closer to the mirror. You swear you can hear faint 
@@ -95,7 +108,10 @@ def investigate_mirror():
     print(mirror_content)
 
 
-def read_logbook():  # working
+def read_logbook():
+    """
+    Prints the content if the player enters 'logbook' keyword.
+    """
     logbook_content = """
     April 27th, 1998\n
 
@@ -120,7 +136,10 @@ def read_logbook():  # working
     print(logbook_content)
 
 
-def examine_computers():  # working
+def examine_computers():
+    """
+    Prints the content if the player enters 'computers' keyword.
+    """
     computer_content = """
     You press a button on the keyboard, and the sudden bright light form
     the screen hurts your eyes for a moment. When your eyes adjust, you see
@@ -142,7 +161,11 @@ def examine_computers():  # working
     print(computer_content)
 
 
-def take_key():  # working #INVENTORYITEM
+def take_key():  # INVENTORYITEM
+    """
+    Prints the content if the player enters 'key' keyword.
+    Passes 'key' to inventory function. 
+    """
     key_content = """
     As you search through the chaos of broken glassware, overturned tables, 
     and scattered notes, they notice a small key lying on the floor near an
@@ -154,7 +177,10 @@ def take_key():  # working #INVENTORYITEM
     return "key"
 
 
-def examine_equipment():  # working
+def examine_equipment():
+    """
+    Prints the content if the player enters 'equipment' keyword.
+    """
     lab_equipment_content = """
     You search around the graveyard of the lab equipment. Behind a 
     pair of toppled monitors, you see a clipboard. \n
@@ -176,7 +202,11 @@ def examine_equipment():  # working
     print(lab_equipment_content)
 
 
-def examine_lab_coat():  # working #INVENTORYITEM
+def examine_lab_coat():  # INVENTORYITEM
+    """
+    Prints the content if the player enters 'coat' keyword.
+    Passes 'keycard' to inventory function.
+    """
     lab_coat_keycard = """
     You cross the cold, eerie room, and pick up the bloodied
     lab coat from its place on the floor. You find a keycard in the 
@@ -187,7 +217,11 @@ def examine_lab_coat():  # working #INVENTORYITEM
     return "keycard"
 
 
-def take_scalpel():  # working #INVENTORYITEM
+def take_scalpel():  # INVENTORYITEM
+    """
+    Prints the content if the player enters 'scalpel' keyword.
+    Passes 'scalpel' to inventory function.
+    """
     scalpel_content = """
     You pick up the scalpel, not looking too closely at the stains on it that
     look like blood. You decide to take it with you.\n
@@ -196,7 +230,11 @@ def take_scalpel():  # working #INVENTORYITEM
     return "scalpel"
 
 
-def take_knife():  # working #INVENTORYITEM
+def take_knife():  # INVENTORYITEM
+    """
+    Prints the content if the player enters 'knife' keyword.
+    Passes 'knife' to inventory function.
+    """
     knife_content = """
     You pick up the knife. It's rusted and blunt, but better than nothing.\n
     """
@@ -204,7 +242,10 @@ def take_knife():  # working #INVENTORYITEM
     return "knife"
 
 
-def energy_drink():  # working
+def energy_drink():
+    """
+    Prints the content if the player enters 'drink' keyword.
+    """
     energy_drink_content = """
     You drink the energy drink. It tastes good, but the caffeine hits your
     system. Whatever nerves you felt before are heightened significantly,
@@ -214,6 +255,9 @@ def energy_drink():  # working
 
 
 def security_logs():  # working
+    """
+    Prints the content if the player enters 'logs' keyword.
+    """
     security_logs_content = """
     You move closer to the desk and scan the papers strewn across it. 
     One catches your eye, so you take a closer look:
@@ -243,6 +287,9 @@ def security_logs():  # working
 
 
 def security_panel():
+    """
+    Prints the content if the player enters 'panel' keyword.
+    """
     security_panel_content = """
     The screen glitches and the cover is dusty, making it difficult to 
     decipher much. The cover is also conceals a large red button labelled:\n
