@@ -5,6 +5,7 @@ from choices_functions import *
 from choices_functions import examine_desk
 from ending_sequences import *
 
+helpers.title_screen()
 
 def backstory():
 
@@ -191,6 +192,14 @@ def observation_chamber():
         elif observation_chamber_prompt == "quit":
             print("Exiting the game. Thank you for playing!")
             exit()
+        elif command == 'help':
+            print("""
+            To make a choice, when prompted, type the word in CAPITALS and hit 'enter'.\n
+            To look at the map, type MAP and hit 'enter'.\n
+            To see your inventory, type INVENTORY and hit 'enter'.\n
+            To quit the game, type QUIT.\n
+            To see this list of commands, type HELP and hit 'enter'.\n
+            """)
         else:
             print("Invalid choice. Please try again.")
             
@@ -269,6 +278,14 @@ def storage_closet():
             map()
         elif storage_closet_prompt == 'inventory':
             display_inventory()
+        elif command == 'help':
+            print("""
+            To make a choice, when prompted, type the word in CAPITALS and hit 'enter'.\n
+            To look at the map, type MAP and hit 'enter'.\n
+            To see your inventory, type INVENTORY and hit 'enter'.\n
+            To quit the game, type QUIT.\n
+            To see this list of commands, type HELP and hit 'enter'.\n
+            """)
         else:
             print("Invalid choice. Please try again.")
 
@@ -335,6 +352,14 @@ def office():
             map()
         elif office_choices_prompt == 'inventory': #working
             display_inventory()
+        elif command == 'help':
+            print("""
+            To make a choice, when prompted, type the word in CAPITALS and hit 'enter'.\n
+            To look at the map, type MAP and hit 'enter'.\n
+            To see your inventory, type INVENTORY and hit 'enter'.\n
+            To quit the game, type QUIT.\n
+            To see this list of commands, type HELP and hit 'enter'.\n
+            """)
         else:
             print("Invalid choice. Please try again.")
 
@@ -410,6 +435,14 @@ def laboratory():
             map()
         elif laboratory_choices_prompt == 'inventory': #working
             display_inventory()
+        elif command == 'help':
+            print("""
+            To make a choice, when prompted, type the word in CAPITALS and hit 'enter'.\n
+            To look at the map, type MAP and hit 'enter'.\n
+            To see your inventory, type INVENTORY and hit 'enter'.\n
+            To quit the game, type QUIT.\n
+            To see this list of commands, type HELP and hit 'enter'.\n
+            """)
         else:
             print("Invalid choice. Please try again.")
 
@@ -480,6 +513,14 @@ def morgue():
             map()
         elif morgue_choices_promptand == 'inventory':
             display_inventory()
+        elif command == 'help':
+            print("""
+            To make a choice, when prompted, type the word in CAPITALS and hit 'enter'.\n
+            To look at the map, type MAP and hit 'enter'.\n
+            To see your inventory, type INVENTORY and hit 'enter'.\n
+            To quit the game, type QUIT.\n
+            To see this list of commands, type HELP and hit 'enter'.\n
+            """)
         else:
             print("Invalid choice. Please try again.")
 
@@ -545,6 +586,14 @@ def break_room():
             map()
         elif break_room_choices_prompt == 'inventory':
             display_inventory()
+        elif command == 'help':
+            print("""
+            To make a choice, when prompted, type the word in CAPITALS and hit 'enter'.\n
+            To look at the map, type MAP and hit 'enter'.\n
+            To see your inventory, type INVENTORY and hit 'enter'.\n
+            To quit the game, type QUIT.\n
+            To see this list of commands, type HELP and hit 'enter'.\n
+            """)
         else:
             print("Invalid choice. Please try again.")
        
@@ -611,6 +660,14 @@ def security_room():
             map()
         elif security_room_choices_prompt == 'inventory': #working
             display_inventory()
+        elif command == 'help':
+            print("""
+            To make a choice, when prompted, type the word in CAPITALS and hit 'enter'.\n
+            To look at the map, type MAP and hit 'enter'.\n
+            To see your inventory, type INVENTORY and hit 'enter'.\n
+            To quit the game, type QUIT.\n
+            To see this list of commands, type HELP and hit 'enter'.\n
+            """)
         else:
             print("Invalid choice. Please try again.")#working
 
@@ -684,23 +741,30 @@ def containment_room():
             map()
         elif containment_room_choices_prompt == 'inventory':
             display_inventory()
+        elif command == 'help':
+            print("""
+            To make a choice, when prompted, type the word in CAPITALS and hit 'enter'.\n
+            To look at the map, type MAP and hit 'enter'.\n
+            To see your inventory, type INVENTORY and hit 'enter'.\n
+            To quit the game, type QUIT.\n
+            To see this list of commands, type HELP and hit 'enter'.\n
+            """)
         else:
             print("Invalid choice. Please try again.")
 
     helpers.user_commands()
 
 def game_main():
-    #title_screen()
-    #backstory()
-    #entry_hall()
-    #observation_chamber()
-    #storage_closet()
-    #office()
-    #laboratory()
-    #morgue()
-    #break_room()
+    backstory()
+    entry_hall()
+    observation_chamber()
+    storage_closet()
+    office()
+    laboratory()
+    morgue()
+    break_room()
     security_room()
-    #containment_room()
+    containment_room()
 
 game_main()
 choices_main()

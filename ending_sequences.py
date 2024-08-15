@@ -106,6 +106,14 @@ you whole."\n
             map()
         elif containment_room_choices_prompt == 'inventory': #not working
             display_inventory()
+        elif command == 'help':
+            print("""
+            To make a choice, when prompted, type the word in CAPITALS and hit 'enter'.\n
+            To look at the map, type MAP and hit 'enter'.\n
+            To see your inventory, type INVENTORY and hit 'enter'.\n
+            To quit the game, type QUIT.\n
+            To see this list of commands, type HELP and hit 'enter'.\n
+            """)
         else:
             print("\nInvalid choice. Please try again.\n")
 

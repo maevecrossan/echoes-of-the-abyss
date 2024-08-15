@@ -15,6 +15,7 @@ def title_screen():
     To look at the map, type MAP and hit 'enter'.\n
     To see your inventory, type INVENTORY and hit 'enter'.\n
     To quit the game, type QUIT.\n
+    To see this list of commands, type HELP and hit 'enter'.\n
     """
     print(title)
     print(welcome_message)
@@ -74,8 +75,14 @@ def user_commands():
         elif command == 'quit':
             print("Exiting the game. Thank you for playing!")
             exit()
-        elif command == 'home':
-            game_main()
+        elif command == 'help':
+            print("""
+            To make a choice, when prompted, type the word in CAPITALS and hit 'enter'.\n
+            To look at the map, type MAP and hit 'enter'.\n
+            To see your inventory, type INVENTORY and hit 'enter'.\n
+            To quit the game, type QUIT.\n
+            To see this list of commands, type HELP and hit 'enter'.\n
+            """)
         else:
             print("Invalid command. Please try again.")
 
