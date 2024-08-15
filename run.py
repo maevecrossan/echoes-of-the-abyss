@@ -179,7 +179,7 @@ def observation_chamber():
 
         if observation_chamber_prompt == "syringe":
             item = take_syringe()
-            add_to_inventory(item)
+            helper.add_to_inventory(item)
         elif observation_chamber_prompt == "mirror":
             investigate_mirror()
         elif observation_chamber_prompt == "storage":
@@ -271,12 +271,12 @@ def storage_closet():
 
         if storage_closet_prompt == "crowbar":
             item = take_crowbar()
-            add_to_inventory(item)
+            helper.add_to_inventory(item)
         elif storage_closet_prompt == "notebook":
             read_notebook()
         elif storage_closet_prompt == "toolbox":
             item = inspect_toolbox()
-            add_to_inventory(item)
+            helper.add_to_inventory(item)
         elif storage_closet_prompt == "observation":
             observation_chamber()
             break
@@ -432,7 +432,7 @@ def laboratory():
 
         if laboratory_choices_prompt == "key":  # working
             item = take_key()
-            add_to_inventory(item)
+            helper.add_to_inventory(item)
         elif laboratory_choices_prompt == "equipment":  # working
             examine_equipment()
             break
@@ -519,10 +519,10 @@ def morgue():
 
         if morgue_choices_prompt == "scalpel":  # working
             item = take_scalpel()
-            add_to_inventory(item)
+            helper.addto_inventory(item)
         elif morgue_choices_prompt == "coat":  # working
             item = examine_lab_coat()
-            add_to_inventory(item)
+            helper.add_to_inventory(item)
         elif morgue_choices_prompt == "laboratory":  # working
             laboratory()
             break
@@ -600,7 +600,7 @@ def break_room():
         # all working
         if break_room_choices_prompt == "knife":
             item = take_knife()
-            add_to_inventory(item)
+            helper.add_to_inventory(item)
         elif break_room_choices_prompt == "drink":
             energy_drink()
         elif break_room_choices_prompt == "office":
