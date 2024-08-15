@@ -69,9 +69,8 @@ The last thing you hear is the creature's snarl as it devours
 you whole."\n
                 """) #indented as above so it prints in line.
                 print("You died. Ending 1 of 7.")
-                input("\nPress enter to proceed to title screen...")
-                title_screen()
-                return
+                print("\nExiting the game. Thank you for playing!\n")
+                exit()
             else: 
                 use_crowbar()
         elif encounter_choices_prompt == "syringe":
@@ -101,10 +100,14 @@ you whole."\n
         elif encounter_choices_prompt == "inventory": #not working
             display_inventory()
         elif encounter_choices_prompt == "quit":
-            print("Exiting the game. Thank you for playing!\n")
+            print("\nExiting the game. Thank you for playing!\n")
             exit()
+        elif containment_room_choices_prompt == 'map':
+            map()
+        elif containment_room_choices_prompt == 'inventory': #not working
+            display_inventory()
         else:
-            print("Invalid choice. Please try again.\n")
+            print("\nInvalid choice. Please try again.\n")
 
 
 def encounter_run():
@@ -159,10 +162,9 @@ def encounter_run():
         
         You're safe... for now. \n
         """)
-        user_commands()
         print("\nYou escaped. Ending 3 of 7.\n")
-        print("Type 'home' to return to title screen.")
-        user_commands()
+        print("Game closing. Click 'Run Program' to restart.")
+        quit()
     else:
         print("""
         In your panic, you take a wrong turn. You burst through a door, 
@@ -173,9 +175,8 @@ def encounter_run():
         """) 
         user_commands()
         print("\nYou died. Ending 4 of 7.\n")
-        input("\nPress enter to proceed to title screen...")
-        title_screen()
-        return
+        print("\nGame closing. Click 'Run Program' to restart.\n")
+        quit()
     
 def use_crowbar(): #crowbar?
 
@@ -240,9 +241,8 @@ def use_crowbar(): #crowbar?
     print(news_report)
     user_commands()
     print("You died. Ending 5 of 7.")
-    input("\nPress enter to proceed to title screen...")
-    title_screen()
-    return
+    print("\nGame closing. Click 'Run Program' to restart.\n")
+    quit()
 
 
 def use_syringe():
@@ -265,9 +265,8 @@ def use_syringe():
     """
     print(use_syringe_content)
     print("\nYou escaped. Ending 6 of 7.\n")
-    input("\nPress enter to proceed to title screen...")
-    title_screen()
-    return
+    print("\nGame closing. Click 'Run Program' to restart.\n")
+    quit()
 
 
 def accept_fate():
@@ -290,9 +289,8 @@ def accept_fate():
     user_commands()
 
     print("\nYou died. Ending 7 of 7.\n")
-    input("\nPress enter to proceed to title screen...")
-    title_screen()
-    return
+    print("\nGame closing. Click 'Run Program' to restart.\n")
+    quit()
 
 def endings_main():
     encounter()

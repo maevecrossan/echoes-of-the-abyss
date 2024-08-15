@@ -108,7 +108,7 @@ def entry_hall():
         if entry_hall_prompt == "desk": #needs to be debugged - moves straight to next function
             examine_desk()
             break
-        elif entry_hall_prompt == "observation": #working
+        elif entry_hall_prompt == "observation":#working
             observation_chamber()
             break
         elif entry_hall_prompt == "office": #working
@@ -121,7 +121,7 @@ def entry_hall():
             print("Invalid choice. Please try again.")
 
 
-def observation_chamber():
+def observation_chamber(): 
     """
     Gives the observation chamber description and choices to be made.
     """
@@ -162,7 +162,7 @@ def observation_chamber():
     """ #working: syringe, storage, lab, entry. NOT MIRROR.
     print(observation_chamber_choices)
 
-    while True:
+    while True: #all working
         observation_chamber_prompt = input("Type keyword here to make your choice: ").strip().lower()
         
         if observation_chamber_prompt == "syringe":
@@ -183,7 +183,7 @@ def observation_chamber():
         elif observation_chamber_prompt == "entry":
             entry_hall()
             break
-        elif observation_chamber_prompt == "inventory": #not working
+        elif observation_chamber_prompt == "inventory":
             display_inventory()
         elif observation_chamber_prompt == "quit":
             print("Exiting the game. Thank you for playing!")
@@ -244,7 +244,7 @@ def storage_closet(): #needs key to open
     """
     print(storage_closet_choices)
 
-    while True: 
+    while True: #all working
         storage_closet_prompt = input("Type keyword here to make your choice: ").strip().lower()
 
         if storage_closet_prompt == "crowbar":
@@ -332,7 +332,7 @@ def office():
             exit()
         elif office_choices_prompt == 'map':
             map()
-        elif office_choices_prompt == 'inventory': #not working
+        elif office_choices_prompt == 'inventory': #working
             display_inventory()
         else:
             print("Invalid choice. Please try again.")
@@ -407,7 +407,7 @@ def laboratory():
             exit()
         elif laboratory_choices_prompt == 'map':
             map()
-        elif laboratory_choices_prompt == 'inventory': #not working
+        elif laboratory_choices_prompt == 'inventory': #working
             display_inventory()
         else:
             print("Invalid choice. Please try again.")
@@ -477,7 +477,7 @@ def morgue():
             exit()
         elif morgue_choices_prompt == 'map':
             map()
-        elif commmorgue_choices_promptand == 'inventory': #not working
+        elif commmorgue_choices_promptand == 'inventory':
             display_inventory()
         else:
             print("Invalid choice. Please try again.")
@@ -525,7 +525,7 @@ def break_room():
 
     while True:#working
         break_room_choices_prompt = input("Type keyword here to make your choice: ").strip().lower()
-        
+        #all working
         if break_room_choices_prompt == "knife":
             item = take_knife()
             add_to_inventory(item)
@@ -542,7 +542,7 @@ def break_room():
             exit()
         if break_room_choices_prompt == 'map':
             map()
-        elif break_room_choices_prompt == 'inventory': #not working
+        elif break_room_choices_prompt == 'inventory':
             display_inventory()
         else:
             print("Invalid choice. Please try again.")
@@ -602,12 +602,12 @@ def security_room():
         elif security_room_choices_prompt == "containment":#working
             containment_room()
             break
-        elif security_room_choices_prompt == "quit":
+        elif security_room_choices_prompt == "quit": #working
             print("Exiting the game. Thank you for playing!")
             exit()
-        elif security_room_choices_prompt == 'map':
+        elif security_room_choices_prompt == 'map': #working
             map()
-        elif security_room_choices_prompt == 'inventory': #not working
+        elif security_room_choices_prompt == 'inventory': #working
             display_inventory()
         else:
             print("Invalid choice. Please try again.")#working
@@ -661,7 +661,7 @@ def containment_room():
     """
     print(containment_room_choices)
 
-    while True:#working
+    while True:
         containment_room_choices_prompt = input("Type keyword here to make your choice: ").strip().lower()
 
         if containment_room_choices_prompt == "panel":
@@ -680,13 +680,12 @@ def containment_room():
             exit()
         elif containment_room_choices_prompt == 'map':
             map()
-        elif containment_room_choices_prompt == 'inventory': #not working
+        elif containment_room_choices_prompt == 'inventory':
             display_inventory()
         else:
             print("Invalid choice. Please try again.")
 
-    user_commands()#working
-
+    user_commands()
 
 def game_main():
     title_screen()
