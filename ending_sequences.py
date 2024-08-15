@@ -68,7 +68,7 @@ Without the crowbar, you have no way to defend yourself.
 The last thing you hear is the creature's snarl as it devours 
 you whole."\n
                 """) #indented as above so it prints in line.
-                print("You died. Ending X of X.")
+                print("You died. Ending 1 of 7.")
                 user_commands()
             else: 
                 use_crowbar()
@@ -85,7 +85,7 @@ Without the syringe, you have no way to sedate the creature.
 The last thing you hear is the creature's snarl as it devours 
 you whole."\n
                 """)
-                print("You died. Ending X of X.")
+                print("You died. Ending 2 of 7.")
                 break
             else: 
                 use_syringe()
@@ -97,10 +97,10 @@ you whole."\n
         elif encounter_choices_prompt == "inventory": #not working
             display_inventory()
         elif encounter_choices_prompt == "quit":
-            print("Exiting the game. Thank you for playing!")
+            print("Exiting the game. Thank you for playing!\n")
             exit()
         else:
-            print("Invalid choice. Please try again.")
+            print("Invalid choice. Please try again.\n")
 
 
 def encounter_run():
@@ -117,41 +117,59 @@ def encounter_run():
     What are the two room numbers that will get you out quickest?
     """
     print(encounter_run_content)
-    print(map)
+    map()
 
-    correct_sequence = ["5", "1"]
+    correct_sequence = [(5,1)]
     player_sequence = []
 
-    while len(player_sequence) < 2:
-        room_choice = input("Enter the room number to escape (Room 5, Room 1): ").strip()
+    while len(player_sequence) < len(correct_sequence):
+        try:
+            # Asks player to input room numbers in (X,Y) format.
+            room_choice = input("Enter the room number to escape (X,Y): \n").strip()
 
-        if room_choice in ["1", "5"]:
-            player_sequence.append(room_choice)
-        else:
-             print("That's not a valid room number. You have one c")
+            # Converts input into tuple of integers.
+            room_choice_tuple = tuple(int(x) for x in room_choice.strip("()").split(","))
+            
+            # Ensure the player inputs the right numbers.
+            if room_choice_tuple == correct_sequence[len(player_sequence)]:
+                player_sequence.append(room_choice_tuple)
+            else:
+                print("That's not a valid room number. You had one chance.\n")
+                break
+        except ValueError:
+            print("Invalid input format. Please enter the numbers as X,Y.\n")
+    
+    # Final outcome check
+    if player_sequence == correct_sequence:
+        print("""
+        Before you leave the room, you pause to lift the cover of the 
+        control panel. You can smell the stench of the monster behind you. 
+        You slam your hand onto the button, and nothing
+        happens. You stand stunned for a moment, then you move. \n
 
-        if player_sequence == correct_sequence:
-            print("""
-            You dash through the facility, your footsteps echoing as you rush through Room 5, then Room 1. 
-            The entity is close behind, but you don’t dare look back. You reach the entryway and slam 
-            your hand against the door controls. The door slides open, and you throw yourself through 
-            just in time, sealing it shut behind you.
-            
-            You're safe... for now. 
-            """)
-            user_commands()
-            print("You escaped. Ending X of X.")
-            user_commands()
-        else:
-            print("""
-            In your panic, you take a wrong turn. You burst through a door, only to find yourself trapped 
-            in a dead-end room. The entity is upon you before you can react. There's no escape.
-            
-            This is the end...
-            """) 
-            user_commands()
-            print("You died. Ending X of X.")
-            user_commands()
+        You dash through the facility, your footsteps echoing as you rush 
+        through Room 5, then Room 1. The entity is close behind, but you don’t 
+        dare look back. You reach the entryway and slam your hand against the 
+        door controls. The door slides open, and you throw yourself through 
+        just in time, sealing it shut behind you.\n
+        
+        You're safe... for now. \n
+        """)
+        user_commands()
+        print("\nYou escaped. Ending 3 of 7.\n")
+        user_commands()
+    else:
+        print("""
+        In your panic, you take a wrong turn. You burst through a door, 
+        only to find yourself trapped in a dead-end room. The entity is upon 
+        you before you can react. There's no escape.
+        
+        This is the end...\n
+        """) 
+        user_commands()
+        print("\nYou died. Ending 4 of 7.\n")
+        user_commands()
+    
     
 
 def use_crowbar(): #crowbar?
@@ -159,8 +177,8 @@ def use_crowbar(): #crowbar?
     use_crowbar_content = """
     Hands sweaty, you grip onto the crowbar and prepare to defend yourself.
     You just need to buy some time to get out. The entity is now right in front
-    out you. It's claws making a shrieking noise as it stalks lazily towards you,
-    like it knows it's won already.\n
+    out you. It's claws making a shrieking noise as it stalks lazily towards 
+    you, like it knows it's won already.\n
     """
     print(use_crowbar_content)
 
@@ -174,70 +192,72 @@ def use_crowbar(): #crowbar?
     user_commands()
 
     use_crowbar_content_3 = """
-    It lunges for you. \n
+    It lunges for you.\n
     """
     print(use_crowbar_content_3)
 
     user_commands()
 
     use_crowbar_content_4 = """
-    You didn't even get to raise your arm. \n
+    You barely raise your arm.\n
     """
     print(use_crowbar_content_4)
 
     user_commands()
 
     news_report = """
-    Missing Urbex Explorer Sparks Urgent Search
+    Missing Urbex Explorer Sparks Urgent Search\n
 
-    Date: August 14, 2024
+    Date: August 14, 2024\n
 
-    Location: Edgewood City
+    Location: Edgewood City\n
 
-    Reporter: Jamie Miller, WXY News
+    Reporter: Jamie Miller, WXY News\n
 
     Edgewood City authorities have launched a search for 28-year-old
     Alex Carter, a known urban explorer, who vanished while
     investigating the abandoned Edgewood Facility. Carter entered
     the facility late yesterday night, aiming to explore the abandoned
     facility for content creation purposes. Communication with Carter
-    ceased later that day, raising alarm among their peers.
+    ceased later that day, raising alarm among their peers.\n
 
     The Edgewood Facility, closed since the early 2000s due to safety
     concerns and mysterious incidents, is notorious for its dangerous
     conditions. Authorities are combing the area and reviewing security
-    footage, urging anyone with information to come forward.
+    footage, urging anyone with information to come forward.\n
 
     “Carter is a seasoned explorer with a meticulous approach,” said
-    a close friend. “Their disappearance is very concerning.”
+    a close friend. “Their disappearance is very concerning.”\n
 
     The search continues as authorities warn of the facility’s
     hazards and urge the public to report any leads.\n
     """
     print(news_report)
     user_commands()
-    print("You died. Ending X of X.")
+    print("You died. Ending 5 of 7.")
     user_commands()
 
 
 def use_syringe():
     use_syringe_content = """
-    Desperation fuels your next move. With shaking hands, you grab the syringe from your pocket. 
-    The strange, glowing liquid inside pulses as if alive. The entity is almost upon you, its 
-    darkness swallowing the light around it.
+    Desperation fuels your next move. With shaking hands, you grab the 
+    syringe from your pocket. The strange, glowing liquid inside pulses 
+    as if alive. The entity is almost upon you, its darkness swallowing 
+    the light around it.\n
     
-    As it lunges, you thrust the syringe forward, plunging it into the creature's form. The liquid 
-    spreads quickly, glowing brighter and brighter, until the entity is enveloped in light. It lets 
-    out a terrible, otherworldly screech, thrashing violently before collapsing to the ground.
+    As it lunges, you thrust the syringe forward, plunging it into the 
+    creature's form. The liquid spreads quickly, glowing brighter and 
+    brighter, until the entity is enveloped in light. It lets out a terrible, 
+    otherworldly screech, thrashing violently before collapsing to the ground.\n
     
-    The glow fades, and the entity dissolves into a harmless puddle of darkness.
+    The glow fades, and the entity remains still on the ground, breathing deeply.\n
     
-    You did it. You’ve subdued it.
+    You did it. You’ve subdued it.\n
     
     The path to the exit is clear. You don't waste any more time and make your way out. You're free.\n
     """
     print(use_syringe_content)
-    print("You escaped. Ending X of X")
+    print("\nYou escaped. Ending 6 of 7.\n")
     
     user_commands()
 
@@ -246,20 +266,22 @@ def accept_fate():
     You realize there's no way out. The entity is too close, too powerful.
     You lower your hands, your body trembling, as you stand your ground. The 
     entity looms over you, its form shifting and writhing, its glowing 
-    eyes piercing into your soul.
+    eyes piercing into your soul.\n
     
     You close your eyes, taking a final, steadying breath. The air around you 
     turns cold, and you feel the entity’s presence enveloping you. 
-    There’s a moment of excruciating pain, then… nothing.
+    There’s a moment of excruciating pain, then… nothing.\n
     
-    Darkness. Silence. It’s all over.
+    Darkness. Silence. It’s all over.\n
     
-    Your story ends here.
+    Your story ends here.\n
     """
     print(fate_description)
 
     user_commands()
 
-    print("You died. Ending X of X.")
+    print("\nYou died. Ending 7 of 7.\n")
 
     user_commands()
+
+encounter_run()

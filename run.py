@@ -614,6 +614,9 @@ def security_room():
 def containment_room():
     """
     Gives the containment room description and choices to be made.
+    This room can only be accessed if the player has a keycard in
+    their inventory.
+    Triggers ending sequences. 
     """
     terminal_clear()
 
@@ -629,9 +632,7 @@ def containment_room():
     """
     print(containment_room_description_1)#working
 
-    user_commands
-    
-    ()#working
+    user_commands() #working
 
     containment_room_description_2 = """
     The air is heavy with a sense of dread, as if the very walls are charged 
@@ -678,16 +679,16 @@ def containment_room():
 
 
 def game_main():
-    title_screen()
-    backstory()
-    entry_hall()
-    observation_chamber()
-    storage_closet()
-    office()
-    laboratory()
-    morgue()
-    break_room()
-    security_room()
+    #title_screen()
+    #backstory()
+    #entry_hall()
+    #observation_chamber()
+    #storage_closet()
+    #office()
+    #laboratory()
+    #morgue()
+    #break_room()
+    #security_room()
     containment_room()
 
 game_main()
