@@ -226,7 +226,7 @@ def security_logs():# working
     print(security_logs_content)
 
 
-def security_panel():# does player have keycard?
+def security_panel():
     security_panel_content = """ 
     The screen glitches and the cover is dusty, making it difficult to decipher 
     much. The cover is also conceals a large red button labelled:\n
@@ -242,16 +242,16 @@ def choices_main():
     Responsible for calling all the choices functions.
     """
     examine_desk()
-    #take_crowbar()
-    #read_notebook()
-    #inspect_toolbox()
-    #read_logbook()
-    #examine_computers()
-    #take_key()
-    #examine_lab_coat()
-    #take_scalpel()
-    #take_knife()
-    #energy_drink()
-    #security_logs()
-    #security_panel()
-    #investigate_mirror()
+    take_crowbar()
+    read_notebook()
+    inspect_toolbox()
+    read_logbook()
+    examine_computers()
+    take_key()
+    examine_lab_coat()
+    take_scalpel()
+    take_knife()
+    energy_drink()
+    security_logs()
+    security_panel()
+    investigate_mirror()

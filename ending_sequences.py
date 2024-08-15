@@ -1,11 +1,11 @@
-from helper_functions import *
+import helper_functions as helpers
 
 def encounter():
     """
     Gives the description for the encounter in the containment room if the 
     user decides to inspect the enclosure.
     """
-    terminal_clear()
+    helpers.terminal_clear()
 
     encounter_description_1 = """
     As you stand near the cracked glass enclosure, your curiosity gets the better 
@@ -17,7 +17,7 @@ def encounter():
     """
     print(encounter_description_1)
 
-    user_commands()
+    helpers.user_commands()
 
     encounter_description_2 = """
     Before you can react, a pair of glowing eyes appear in the darkness behind 
@@ -28,7 +28,7 @@ def encounter():
     """
     print(encounter_description_2)
 
-    user_commands()
+    helpers.user_commands()
 
     encounter_description_3 = """
     From inside the enclosure, you see a black, shapless entity spring through the
@@ -39,7 +39,7 @@ def encounter():
     """
     print(encounter_description_3)
 
-    user_commands()
+    helpers.user_commands()
 
     encounter_choices = """
     1. RUN.
@@ -173,7 +173,7 @@ def encounter_run():
         
         This is the end...\n
         """) 
-        user_commands()
+        helpers.user_commands()
         print("\nYou died. Ending 4 of 7.\n")
         print("\nGame closing. Click 'Run Program' to restart.\n")
         quit()
@@ -188,28 +188,28 @@ def use_crowbar(): #crowbar?
     """
     print(use_crowbar_content)
 
-    user_commands()
+    helpers.user_commands()
 
     use_crowbar_content_2 = """
     It pauses about 15 feet from you, and you try to take a steadying breath. \n
     """
     print(use_crowbar_content_2)
 
-    user_commands()
+    helpers.user_commands()
 
     use_crowbar_content_3 = """
     It lunges for you.\n
     """
     print(use_crowbar_content_3)
 
-    user_commands()
+    helpers.user_commands()
 
     use_crowbar_content_4 = """
     You barely raise your arm.\n
     """
     print(use_crowbar_content_4)
 
-    user_commands()
+    helpers.user_commands()
 
     news_report = """
     Missing Urbex Explorer Sparks Urgent Search\n
@@ -239,7 +239,7 @@ def use_crowbar(): #crowbar?
     hazards and urge the public to report any leads.\n
     """
     print(news_report)
-    user_commands()
+    helpers.user_commands()
     print("You died. Ending 5 of 7.")
     print("\nGame closing. Click 'Run Program' to restart.\n")
     quit()
@@ -286,7 +286,7 @@ def accept_fate():
     """
     print(fate_description)
 
-    user_commands()
+    helpers.user_commands()
 
     print("\nYou died. Ending 7 of 7.\n")
     print("\nGame closing. Click 'Run Program' to restart.\n")

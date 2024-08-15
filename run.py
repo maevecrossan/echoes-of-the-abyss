@@ -1,6 +1,6 @@
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 import os
-from helper_functions import *
+import helper_functions as helpers
 from choices_functions import *
 from choices_functions import examine_desk
 from ending_sequences import *
@@ -68,7 +68,7 @@ def entry_hall():
     item that can be found throughout the game. 
     """
     
-    terminal_clear()
+    helpers.terminal_clear()
 
     entry_hall_description_1 = """ 
     The Entry Hall is the facility's main entrance, now a hollow shell of 
@@ -82,7 +82,7 @@ def entry_hall():
     """
     print(entry_hall_description_1)
 
-    user_commands()
+    helpers.user_commands()
 
     entry_hall_description_2 = """
     Near the center of the room is a large reception desk, toppled over 
@@ -94,7 +94,7 @@ def entry_hall():
     """
     print(entry_hall_description_2)
 
-    user_commands()
+    helpers.user_commands()
 
     entry_hall_choices = """
     1. Look behind the DESK.
@@ -129,7 +129,7 @@ def observation_chamber():
     """
     Gives the observation chamber description and choices to be made.
     """
-    terminal_clear() #working
+    helpers.terminal_clear() #working
 
     observation_chamber_description_1 = """
     You enter the Observation Chamber, once used to monitor experiments 
@@ -142,7 +142,7 @@ def observation_chamber():
     """
     print(observation_chamber_description_1) #working
 
-    user_commands() #working
+    helpers.user_commands() #working
     
     observation_chamber_description_2 = """
     The room is otherwise eerily quiet, the only sound being the occasional
@@ -154,7 +154,7 @@ def observation_chamber():
     """
     print(observation_chamber_description_2) #working
 
-    user_commands() #working
+    helpers.user_commands() #working
 
     observation_chamber_choices = """
     1. Pick up the SYRINGE.\n 
@@ -194,7 +194,7 @@ def observation_chamber():
         else:
             print("Invalid choice. Please try again.")
             
-    user_commands()
+    helpers.user_commands()
 
 
 def storage_closet():
@@ -202,7 +202,7 @@ def storage_closet():
     Gives the storage closet description and choices to be made.
     Establishes whether or not the player has the key to open the door.
     """
-    terminal_clear()
+    helpers.terminal_clear()
 
     storage_closet_description_1 = """
     The Storage Closet is cramped and claustrophobic, with shelves 
@@ -213,7 +213,7 @@ def storage_closet():
     """
     print(storage_closet_description_1)
 
-    user_commands()
+    helpers.user_commands()
 
     storage_closet_description_2 = """
     The walls are lined with peeling paint, and there’s a small, 
@@ -224,7 +224,7 @@ def storage_closet():
     """
     print(storage_closet_description_2)
 
-    user_commands()
+    helpers.user_commands()
 
     storage_closet_description_3 = """
     On one shelf, you spot a few items that might be useful: a small toolbox, 
@@ -234,7 +234,7 @@ def storage_closet():
 
     print(storage_closet_description_3)
 
-    user_commands()
+    helpers.user_commands()
 
     storage_closet_choices = """
     1. Pick up the CROWBAR.\n
@@ -272,14 +272,14 @@ def storage_closet():
         else:
             print("Invalid choice. Please try again.")
 
-    user_commands()
+    helpers.user_commands()
 
 
 def office():
     """
     Gives the office description and choices to be made.
     """
-    terminal_clear() #working
+    helpers.terminal_clear() #working
 
     office_description_1 = """
     The Office is in disarray, with toppled chairs and scattered papers 
@@ -291,7 +291,7 @@ def office():
     """
     print(office_description_1)
 
-    user_commands()#working
+    helpers.user_commands()#working
 
     office_description_2 = """
     The room feels strangely untouched compared to the rest of the facility, 
@@ -302,7 +302,7 @@ def office():
     """
     print(office_description_2) #working
 
-    user_commands() #working
+    helpers.user_commands() #working
 
     office_choices = """
     1. Read through the LOGBOOK.\n
@@ -338,14 +338,14 @@ def office():
         else:
             print("Invalid choice. Please try again.")
 
-    user_commands() #working
+    helpers.user_commands() #working
 
 
 def laboratory():
     """
     Gives the laboratory description and choices to be made.
     """
-    terminal_clear() #working
+    helpers.terminal_clear() #working
 
     laboratory_description_1 = """
     The Laboratory is the heart of the facility, where experiments were conducted. 
@@ -358,7 +358,7 @@ def laboratory():
     """
     print(laboratory_description_1)#working
 
-    user_commands()#working
+    helpers.user_commands()#working
 
     laboratory_description_2 = """
     You can’t pinpoint the source, but you can hear the quiet hum of old machinery, 
@@ -370,7 +370,7 @@ def laboratory():
     """
     print(laboratory_description_2)#working
 
-    user_commands()#working
+    helpers.user_commands()#working
 
     laboratory_choices = """
     1. Pick up the KEY.\n
@@ -413,14 +413,14 @@ def laboratory():
         else:
             print("Invalid choice. Please try again.")
 
-    user_commands()#working
+    helpers.user_commands()#working
 
 
 def morgue():
     """
     Gives the morgue description and choices to be made.
     """
-    terminal_clear()
+    helpers.terminal_clear()
 
     morgue_description_1 = """
     The Morgue is cold and sterile, with rows of metal drawers lining the walls. 
@@ -431,7 +431,7 @@ def morgue():
     """
     print(morgue_description_1)
 
-    user_commands()
+    helpers.user_commands()
 
     morgue_description_2 = """
     The smell of formaldehyde is overwhelming, mixed with something else—something 
@@ -444,7 +444,7 @@ def morgue():
     """
     print(morgue_description_2)
 
-    user_commands()
+    helpers.user_commands()
 
     morgue_choices = """
     1. Pick up the SCALPEL.\n
@@ -483,14 +483,14 @@ def morgue():
         else:
             print("Invalid choice. Please try again.")
 
-    user_commands()
+    helpers.user_commands()
 
 
 def break_room():
     """
     Gives the break room description and choices to be made.
     """
-    terminal_clear()#working
+    helpers.terminal_clear()#working
 
     break_room_description_1 = """
     The Break Room was once a place where the lab staff could relax, but now it’s 
@@ -502,7 +502,7 @@ def break_room():
     """
     print(break_room_description_1)#working
 
-    user_commands()#working
+    helpers.user_commands()#working
 
     break_room_description_2 = """
     The room feels oddly out of place compared to the rest of the facility, 
@@ -514,7 +514,7 @@ def break_room():
     """
     print(break_room_description_2)#working
 
-    user_commands()#working
+    helpers.user_commands()#working
 
     break_room_choices = """
     1. Pick up the KNIFE.\n
@@ -548,14 +548,14 @@ def break_room():
         else:
             print("Invalid choice. Please try again.")
        
-    user_commands()
+    helpers.user_commands()
 
 
 def security_room():
     """
     Gives the security room description and choices to be made.
     """
-    terminal_clear()#working
+    helpers.terminal_clear()#working
 
     security_room_description_1 = """
     The Security Room is filled with monitors and control panels, most of which 
@@ -567,7 +567,7 @@ def security_room():
     """
     print(security_room_description_1)#working
 
-    user_commands()#working
+    helpers.user_commands()#working
 
     security_room_description_2 = """
     A red light blinks ominously on one of the control panels, indicating that 
@@ -579,7 +579,7 @@ def security_room():
     """
     print(security_room_description_2)#working
 
-    user_commands()#working
+    helpers.user_commands()#working
 
     security_room_choices = """
     1. Read the security LOGS.\n
@@ -613,7 +613,7 @@ def security_room():
         else:
             print("Invalid choice. Please try again.")#working
 
-    user_commands()
+    helpers.user_commands()
 
 
 def containment_room():
@@ -623,7 +623,7 @@ def containment_room():
     their inventory.
     Triggers ending sequences. 
     """
-    terminal_clear()
+    helpers.terminal_clear()
 
     #can be accessed if they have keycard
 
@@ -637,7 +637,7 @@ def containment_room():
     """
     print(containment_room_description_1)#working
 
-    user_commands() #working
+    helpers.user_commands() #working
 
     containment_room_description_2 = """
     The air is heavy with a sense of dread, as if the very walls are charged 
@@ -652,7 +652,7 @@ def containment_room():
     """
     print(containment_room_description_2) #working
 
-    user_commands() #working
+    helpers.user_commands() #working
 
     containment_room_choices = """
     1. Examine the control PANEL.\n
@@ -686,7 +686,7 @@ def containment_room():
         else:
             print("Invalid choice. Please try again.")
 
-    user_commands()
+    helpers.user_commands()
 
 def game_main():
     title_screen()
