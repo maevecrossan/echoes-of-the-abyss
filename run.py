@@ -594,6 +594,7 @@ def security_room():
 
         if security_room_choices_prompt == "logs":#working
             security_logs()
+            print(security_room_choices)
         elif security_room_choices_prompt == "laboratory":#working
             laboratory()
             break
@@ -689,17 +690,17 @@ def containment_room():
     helpers.user_commands()
 
 def game_main():
-    title_screen()
-    backstory()
-    entry_hall()
-    observation_chamber()
-    storage_closet()
-    office()
-    laboratory()
-    morgue()
-    break_room()
+    #title_screen()
+    #backstory()
+    #entry_hall()
+    #observation_chamber()
+    #storage_closet()
+    #office()
+    #laboratory()
+    #morgue()
+    #break_room()
     security_room()
-    containment_room()
+    #containment_room()
 
 game_main()
 choices_main()
