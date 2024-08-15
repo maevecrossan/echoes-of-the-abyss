@@ -133,6 +133,6 @@ def display_inventory():
     if current_inventory:
         print("Current inventory: ")
         for i, item in enumerate(current_inventory, start=1):
-            print(f"{i}. {item.capitalize()}")
+            print(f"{i}. {item.capitalize()}\n")
     else:
-        print("Invetntory empty.")
+        print("Invetntory empty.\n")
