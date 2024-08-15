@@ -623,12 +623,12 @@ def containment_room():
     #can be accessed if they have keycard
 
     containment_room_description_1 = """
-    The Containment Room is the most ominous part of the facility. It’s large and 
-    mostly empty, with the main feature being a massive, reinforced glass enclosure 
-    in the center. The glass is cracked but still intact, though dark stains and 
-    scratch marks on the inside suggest something tried hard to escape. The room 
-    is dimly lit by emergency lights, casting a red glow that makes everything 
-    look surreal and threatening.
+    The Containment Room is the most ominous part of the facility. It’s large 
+    and mostly empty, with the main feature being a massive, reinforced glass 
+    enclosure in the center. The glass is cracked but still intact, though 
+    dark stains and scratch marks on the inside suggest something tried hard 
+    to escape. The room is dimly lit by emergency lights, casting a red glow 
+    that makes everything look surreal and threatening.
     """
     print(containment_room_description_1)#working
 
@@ -636,12 +636,14 @@ def containment_room():
 
     containment_room_description_2 = """
     The air is heavy with a sense of dread, as if the very walls are charged 
-    with fear. The temperature here is noticeably lower, and a faint mist clings 
-    to the floor. There’s a control panel near the entrance, it still looks operational.\n 
-    You can hear the distant sound of something scraping 
-    against metal, but it’s impossible to tell where it’s coming from. The 
-    atmosphere is thick with tension, as if something terrible could happen at any 
-    moment. The hair on the back of your neck stands on end.\n
+    with fear. The temperature here is noticeably lower, and a faint mist
+    clings to the floor. There’s a control panel near the entrance, it still 
+    looks operational.\n 
+    
+    You can hear the distant sound of something scraping against metal, but 
+    it’s impossible to tell where it’s coming from. The atmosphere is thick 
+    with tension, as if something terrible could happen at any moment. The 
+    hair on the back of your neck stands on end.\n
     """
     print(containment_room_description_2) #working
 
@@ -694,4 +696,4 @@ def game_main():
 game_main()
 helper_functions()
 choices_main()
-ending_sequences()
+ending_main()

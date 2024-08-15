@@ -168,10 +168,8 @@ def encounter_run():
         """) 
         user_commands()
         print("\nYou died. Ending 4 of 7.\n")
-        user_commands()
+        user_commands()    
     
-    
-
 def use_crowbar(): #crowbar?
 
     use_crowbar_content = """
@@ -258,8 +256,8 @@ def use_syringe():
     """
     print(use_syringe_content)
     print("\nYou escaped. Ending 6 of 7.\n")
-    
     user_commands()
+
 
 def accept_fate():
     fate_description = """
@@ -284,4 +282,10 @@ def accept_fate():
 
     user_commands()
 
-encounter_run()
+
+def endings_main():
+    encounter()
+    encounter_run()
+    use_crowbar()
+    use_syringe()
+    accept_fate()
