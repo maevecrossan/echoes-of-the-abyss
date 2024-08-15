@@ -32,6 +32,9 @@ def terminal_clear():
 
 
 def map():
+    """
+    Prints facility map to terminal without disrupting the story.
+    """
     show_map = """
 
     Here is the map of the facility.
@@ -92,7 +95,7 @@ def user_commands():
             print("Invalid command. Please try again.")
 
 
-possible_inventory = [
+possible_inventory = [ #list of all possible collectable items
     "syringe",
     "crowbar",
     "wire cutters",
@@ -101,10 +104,11 @@ possible_inventory = [
     "keycard",
     "scalpel",
     "knife"]
+
 current_inventory = []
 
 
-def add_to_inventory(item):
+def add_to_inventory(item): 
     """
     Checks player input to see if it's a valid item and not already in inventory.
     The selected item will be added to the player's inventory if both
