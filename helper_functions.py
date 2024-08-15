@@ -64,7 +64,7 @@ def user_commands():
     Reads user's comands and calls the relevant functions.
     """
     while True:
-        command = input("Press enter to continue...").strip().lower()
+        command = input("Type a command, or press enter to continue...").strip().lower()
         if command == 'map':
             map()
         elif command == 'inventory': #not working
