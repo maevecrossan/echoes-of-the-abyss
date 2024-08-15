@@ -9,32 +9,32 @@ def encounter():
     helpers.terminal_clear()
 
     encounter_description_1 = """
-    As you stand near the cracked glass enclosure, your curiosity gets the better
-    of you. You lean closer to inspect the dark stains and the deep scratch marks.
-    Suddenly, you hear the rumbling growl you heard earlier. Suddenly, it becomes a
-    full-blown roar that shakes the room. The mist on the floor begins to swirl
-    violently, and the air grows colder still. That's when you look up and see an
-    opening at the top of the enclosure.\n
+    As you stand near the cracked glass enclosure, your curiosity gets the 
+    better of you. You lean closer to inspect the dark stains and the deep 
+    scratch marks. Suddenly, you hear the rumbling growl you heard earlier. 
+    Suddenly, it becomes a full-blown roar that shakes the room. The mist 
+    on the floor begins to swirl violently, and the air grows colder still. 
+    That's when you look up and see an opening at the top of the enclosure.\n
     """
     print(encounter_description_1)
 
     helpers.user_commands()
 
     encounter_description_2 = """
-    Before you can react, a pair of glowing eyes appear in the darkness behind
-    the cracked glass. A powerful force slams against the inside of the enclosure,
-    causing the glass to splinter further. Panic sets in as you realize the
-    creature is still inside, but can roam within the containment room as
-    it pleases. \n
+    Before you can react, a pair of glowing eyes appear in the darkness 
+    behind the cracked glass. A powerful force slams against the inside 
+    of the enclosure, causing the glass to splinter further. Panic sets 
+    in as you realize the creature is still inside, but can roam within 
+    the containment room as it pleases. \n
     """
     print(encounter_description_2)
 
     helpers.user_commands()
 
     encounter_description_3 = """
-    From inside the enclosure, you see a black, shapless entity spring through the
-    hole in the top sof the enclosure. Glass fractures and falls as it prowls in
-    your direction.\n
+    From inside the enclosure, you see a black, shapless entity spring 
+    through the hole in the top sof the enclosure. Glass fractures and 
+    falls as it prowls in your direction.\n
 
     You need to do something. Fast.\n
     """
@@ -195,16 +195,17 @@ def use_crowbar():  # crowbar?
 
     use_crowbar_content = """
     Hands sweaty, you grip onto the crowbar and prepare to defend yourself.
-    You just need to buy some time to get out. The entity is now right in front
-    out you. It's claws making a shrieking noise as it stalks lazily towards
-    you, like it knows it's won already.\n
+    You just need to buy some time to get out. The entity is now right in 
+    front out you. It's claws making a shrieking noise as it stalks lazily 
+    towards you, like it knows it's already won.\n
     """
     print(use_crowbar_content)
 
     helpers.user_commands()
 
     use_crowbar_content_2 = """
-    It pauses about 15 feet from you, and you try to take a steadying breath. \n
+    It pauses about 15 feet from you, and you try to take a 
+    steadying breath. \n
     """
     print(use_crowbar_content_2)
 
@@ -268,13 +269,16 @@ def use_syringe():
     As it lunges, you thrust the syringe forward, plunging it into the
     creature's form. The liquid spreads quickly, glowing brighter and
     brighter, until the entity is enveloped in light. It lets out a terrible,
-    otherworldly screech, thrashing violently before collapsing to the ground.\n
+    otherworldly screech, thrashing violently before collapsing 
+    to the ground.\n
 
-    The glow fades, and the entity remains still on the ground, breathing deeply.\n
+    The glow fades, and the entity remains still on the ground, breathing 
+    deeply.\n
 
     You did it. You’ve subdued it.\n
 
-    The path to the exit is clear. You don't waste any more time and make your way out. You're free.\n
+    The path to the exit is clear. You don't waste any more time and 
+    make your way out. You're free.\n
     """
     print(use_syringe_content)
     print("\nYou escaped. Ending 6 of 7.\n")
