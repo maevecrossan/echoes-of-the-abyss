@@ -131,7 +131,7 @@ def add_to_inventory(item):
 
 def display_inventory():
     if current_inventory:
-        print("Current inventory: ")
+        print("\nCurrent inventory: ")
         for i, item in enumerate(current_inventory, start=1):
             print(f"{i}. {item.capitalize()}\n")
     else:
