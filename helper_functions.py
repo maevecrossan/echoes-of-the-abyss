@@ -95,7 +95,8 @@ def user_commands():
             print("Invalid command. Please try again.")
 
 
-possible_inventory = [ #list of all possible collectable items
+# list of all possible collectable items
+possible_inventory = [
     "syringe",
     "crowbar",
     "wire cutters",
