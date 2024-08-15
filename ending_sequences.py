@@ -106,14 +106,14 @@ you whole."\n
             accept_fate()
             break
         elif encounter_choices_prompt == "inventory":  # not working
-            display_inventory()
+            helpers.display_inventory()
         elif encounter_choices_prompt == "quit":
             print("\nExiting the game. Thank you for playing!\n")
             exit()
         elif containment_room_choices_prompt == 'map':
             map()
         elif containment_room_choices_prompt == 'inventory':  # not working
-            display_inventory()
+            helpers.display_inventory()
         elif command == 'help':
             print("""
             To make a choice, when prompted, type the word in CAPITALS and hit 'enter'.\n
