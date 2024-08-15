@@ -63,7 +63,7 @@ def encounter():
         if encounter_choices_prompt == "run":
             encounter_run()
         elif encounter_choices_prompt == "crowbar":
-            if "crowbar" not in current_inventory:
+            if "crowbar" not in helpers.current_inventory:
                 print("""
 Uh-oh... you don't have that item...\n
 
@@ -82,7 +82,7 @@ you whole."\n
             else:
                 use_crowbar()
         elif encounter_choices_prompt == "syringe":
-            if "syringe" not in current_inventory:
+            if "syringe" not in helpers.current_inventory:
                 print("\nUh-oh... you don't have that item...\n")
                 print("""
 You turn around and see a shadowy creature

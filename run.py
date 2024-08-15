@@ -183,7 +183,7 @@ def observation_chamber():
         elif observation_chamber_prompt == "mirror":
             investigate_mirror()
         elif observation_chamber_prompt == "storage":
-            if "key" not in current_inventory:
+            if "key" not in helpers.current_inventory:
                 print("\nThe door is locked. Maybe there's a key somewhere?\n")
                 print(observation_chamber_choices)
             else:
@@ -519,7 +519,7 @@ def morgue():
 
         if morgue_choices_prompt == "scalpel":  # working
             item = take_scalpel()
-            helpers.addto_inventory(item)
+            helpers.add_to_inventory(item)
         elif morgue_choices_prompt == "coat":  # working
             item = examine_lab_coat()
             helpers.add_to_inventory(item)
@@ -527,7 +527,7 @@ def morgue():
             laboratory()
             break
         elif morgue_choices_prompt == "containment":  # add keycard if/else
-            if "keycard" not in current_inventory:
+            if "keycard" not in helpers.current_inventory:
                 print("The door is locked. I need a keycard to open it.")
                 print(morgue_choices)
             else:
