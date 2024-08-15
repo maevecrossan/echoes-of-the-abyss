@@ -1,5 +1,6 @@
 import os
-from art import text2art #title art
+from art import text2art  # title art
+
 
 def title_screen():
     """
@@ -7,10 +8,10 @@ def title_screen():
     Informs the user of the type commands they can use.
     """
     terminal_clear()
-    title = text2art("Echoes  of  the  Abyss", font="smaller", chr_ignore = True)
+    title = text2art("Echoes  of  the  Abyss", font="smaller", chr_ignore=True)
     welcome_message = "Welcome to Echoes of the Abyss, a choose your own adventure game.\n"
     instructions = """
-    You will be able to make multiple choices in this game.\n 
+    You will be able to make multiple choices in this game.\n
     To make a choice, when prompted, type the word in CAPITALS and hit 'enter'.\n
     To look at the map, type MAP and hit 'enter'.\n
     To see your inventory, type INVENTORY and hit 'enter'.\n
@@ -22,11 +23,13 @@ def title_screen():
     print(instructions)
     user_commands()
 
+
 def terminal_clear():
     """
     Clears terminal of all text.
     """
     os.system('clear')
+
 
 def map():
     show_map = """
@@ -60,12 +63,14 @@ def map():
     """
     print(show_map)
 
+
 def user_commands():
     """
     Reads user's comands and calls the relevant functions.
     """
     while True:
-        command = input("Type a command, or press enter to continue...").strip().lower()
+        command = input(
+            "Type a command, or press enter to continue...").strip().lower()
         if command == 'map':
             map()
         elif command == 'inventory':
@@ -86,27 +91,38 @@ def user_commands():
         else:
             print("Invalid command. Please try again.")
 
-possible_inventory = ["syringe", "crowbar", "wire cutters", "roll of tape", "key", "keycard", "scalpel", "knife"]
+
+possible_inventory = [
+    "syringe",
+    "crowbar",
+    "wire cutters",
+    "roll of tape",
+    "key",
+    "keycard",
+    "scalpel",
+    "knife"]
 current_inventory = []
+
 
 def add_to_inventory(item):
     """
-    Checks player input to see if it's a valid item and not already in inventory. 
+    Checks player input to see if it's a valid item and not already in inventory.
     The selected item will be added to the player's inventory if both
     cases are true.
     If empty, player will be informed.
     """
     item = item.strip().lower()
 
-    #checks the item is in the possible_inventory list.
+    # checks the item is in the possible_inventory list.
     if item in possible_inventory:
         if item not in current_inventory:
-            current_inventory.append(item) #adds item to inventory.
+            current_inventory.append(item)  # adds item to inventory.
             print(f"{item.capitalize()} has been added to your inventory.\n")
         else:
             print(f"{item.capitalize()} is already in your invetory.\n")
     else:
         print(f"{item.capitalize()} is not valid. Please try again.\n")
+
 
 def display_inventory():
     if current_inventory:
