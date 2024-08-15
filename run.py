@@ -21,7 +21,7 @@ def backstory():
     you decide to investigate.
     """
     print(intro_1)
-    user_commands()
+    helpers.user_commands()
 
     intro_2 = """
     The journey to the facility is challenging, with overgrown paths and an
@@ -31,7 +31,7 @@ def backstory():
     your spine.
     """
     print(intro_2)
-    user_commands()
+    helpers.user_commands()
 
     intro_3 = """
     Inside, the lab is a maze of twisted hallways, rusted equipment, and 
@@ -40,7 +40,7 @@ def backstory():
     their own, and sudden drops in temperature.
     """
     print(intro_3)
-    user_commands()
+    helpers.user_commands()
 
     intro_4 = """
     You discover a shattered containment room and realize that this is no
@@ -49,21 +49,21 @@ def backstory():
     is turning into a fight for survival.
     """
     print(intro_4)
-    user_commands()
+    helpers.user_commands()
 
     intro_5 = """
     You’ve come too far to turn back. The secrets of the Echoes of the Abyss
     are within reach—but so are the horrors that still haunt this place.
     """
     print(intro_5)
-    user_commands()
+    helpers.user_commands()
 
     intro_6 = """
     Will you uncover the truth, or will you become another lost
     soul in this forsaken facility?
     """
     print(intro_6)
-    user_commands()
+    helpers.user_commands()
 
 
 def entry_hall():
@@ -179,7 +179,7 @@ def observation_chamber():
 
         if observation_chamber_prompt == "syringe":
             item = take_syringe()
-            helper.add_to_inventory(item)
+            helpers.add_to_inventory(item)
         elif observation_chamber_prompt == "mirror":
             investigate_mirror()
         elif observation_chamber_prompt == "storage":
@@ -271,12 +271,12 @@ def storage_closet():
 
         if storage_closet_prompt == "crowbar":
             item = take_crowbar()
-            helper.add_to_inventory(item)
+            helpers.add_to_inventory(item)
         elif storage_closet_prompt == "notebook":
             read_notebook()
         elif storage_closet_prompt == "toolbox":
             item = inspect_toolbox()
-            helper.add_to_inventory(item)
+            helpers.add_to_inventory(item)
         elif storage_closet_prompt == "observation":
             observation_chamber()
             break
@@ -432,7 +432,7 @@ def laboratory():
 
         if laboratory_choices_prompt == "key":  # working
             item = take_key()
-            helper.add_to_inventory(item)
+            helpers.add_to_inventory(item)
         elif laboratory_choices_prompt == "equipment":  # working
             examine_equipment()
             break
@@ -519,10 +519,10 @@ def morgue():
 
         if morgue_choices_prompt == "scalpel":  # working
             item = take_scalpel()
-            helper.addto_inventory(item)
+            helpers.addto_inventory(item)
         elif morgue_choices_prompt == "coat":  # working
             item = examine_lab_coat()
-            helper.add_to_inventory(item)
+            helpers.add_to_inventory(item)
         elif morgue_choices_prompt == "laboratory":  # working
             laboratory()
             break
@@ -600,7 +600,7 @@ def break_room():
         # all working
         if break_room_choices_prompt == "knife":
             item = take_knife()
-            helper.add_to_inventory(item)
+            helpers.add_to_inventory(item)
         elif break_room_choices_prompt == "drink":
             energy_drink()
         elif break_room_choices_prompt == "office":
