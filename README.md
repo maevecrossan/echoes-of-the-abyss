@@ -450,11 +450,7 @@ Below is a summary of the bigs I encountered during development and through test
 
 Once inital testing had been done, I used Code Institute's [Python Linter](https://pep8ci.herokuapp.com/).
 
-I received the following error:
-
-    'E501 line too long (X > X characters)'
-
-This error was occassionally raised across all files due to the length the some strings. The highlighted lines featured a line in the 'help' prompt. This error, however, counts the empty spaces/indents as character. After checking each error and comparing it to the GitPod version, each line was under 79 characters and easily fit in the terminal on the live site. 
+All tests came back with no errors raised.
 
 1. run.py Linter Check Results.
 
