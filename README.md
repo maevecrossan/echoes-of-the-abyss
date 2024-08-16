@@ -266,15 +266,15 @@ The following is a chart I used to record the results of the quality test for al
 | Room 2 : Observation Chamber |  | Y |
 |  | Pick up syringe. | Y |
 |  | Look behind mirror. | Y |
-|  | Move to Storage Closet. |  |
+|  | Move to Storage Closet. | Y |
 |  | Move to Laboratory. | Y |
 |  | Return to Entry Hall. | Y |
-| Room 3: Storage Closet |  |  |
-|  | Examine notebook. |  |
-|  | Pick up crowbar. |  |
-|  | Pick up toolbox items. |  |
-|  | Move to Morgue. |  |
-|  | Move to Observation Chamber. |  |
+| Room 3: Storage Closet |  | Y |
+|  | Examine notebook. | Y |
+|  | Pick up crowbar. | Y |
+|  | Pick up toolbox item. | Y |
+|  | Move to Morgue. | Y |
+|  | Move to Observation Chamber. | Y |
 | Room 4: Office |  | Y |
 |  | Look at logbook. | Y |
 |  | Examine computers. | Y |
@@ -284,42 +284,42 @@ The following is a chart I used to record the results of the quality test for al
 | Room 5: Laboratory |  | Y |
 |  | Examine equipment. | Y |
 |  | Pick up key. | Y |
-|  | Move to Morgue. |  |
+|  | Move to Morgue. | Y |
 |  | Move to Observation Chamber. | Y |
-|  | Move to Containment Room. |  |
+|  | Move to Containment Room. | Y|
 |  | Return to Office | Y |
-| Room 6: Morgue |  |  |
-|  | Pick up crowbar. |  |
-|  | Examine lab coat. |  |
-|  | Move to Laboratory. |  |
-|  | Move to Containment Room. |  |
+| Room 6: Morgue |  | Y |
+|  | Pick up crowbar. | Y |
+|  | Examine lab coat. | Y |
+|  | Move to Laboratory. | Y |
+|  | Move to Containment Room. | Y |
 | Room 7: Break Room |  | Y |
 |  | Take energy drink. | Y |
 |  | Pick up knife. | Y |
 |  | Move to Office. | Y |
 |  | Move to Security Room. | Y |
 | Room 8: Security Room |  | Y |
-|  | Read logs. |  |
+|  | Read logs. | Y |
 |  | Move to Laboratory. | Y |
-|  | Move to Containment Room. |  |
-|  | Move to Morgue. |  |
+|  | Move to Containment Room. | Y |
+|  | Move to Morgue. | Y |
 |  | Move to Break Room. | Y |
-| Room 9: Containment Room |  |  |
-|  | Inspect glass enclosure. |  |
-|  | Examine control panel. |  |
-|  | Move to Security Room. |  |
-|  | Move to Morgue. |  |
-| Ending Sequence |  |  |
-|  | Run. |  |
-|  | Use crowbar. |  |
-|  | Use syringe. |  |
-|  | Accept fate. |  |
-| User Commands |  |  |
-|  | MAP |  |
-|  | INVENTORY |  |
-|  | press enter |  |
-|  | QUIT |  |
-|  | HELP |  |
+| Room 9: Containment Room |  | Y |
+|  | Inspect glass enclosure. | Y |
+|  | Examine control panel. | Y |
+|  | Move to Security Room. | Y |
+|  | Move to Morgue. | Y |
+| Ending Sequence |  | Y |
+|  | Run. | Y |
+|  | Use crowbar. | Y |
+|  | Use syringe. | Y |
+|  | Accept fate. | Y |
+| User Commands |  | Y |
+|  | MAP | Y |
+|  | INVENTORY | Y |
+|  | press enter | Y |
+|  | QUIT | Y |
+|  | HELP | Y |
 
 
 -----------------------------------------------
