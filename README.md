@@ -343,6 +343,8 @@ As I mentioned before, there were an endless amount of opportunites to build and
 
 * Add character backstory.
 
+* Find a python library that will allow text to be printed character by character, as if being written in the moment.
+
 &nbsp;
 ## Testing
 
