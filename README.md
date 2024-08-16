@@ -11,7 +11,52 @@ You play the part of an URBEX explorer and content creator who visits an abandon
 As the player, you must uncover the facility's dark secrets, avoid the lurking dangers, and find a way to escape before it's too late.
 
 
-> **Note:** Please cmd-click (Mac) or ctrl-click (Windows) on any links to open them in a new tab.
+## **Table of Contents**
+
+* [**How to Play:**](#how-to-play)
+
+* [**UX**](#ux)
+	* [**User Stories**](#user-stories)
+	* [**Opportunities**](#opportunities)
+
+* [**Development**](#development)
+	* [**Planning**](#planning)
+	* [**Game Tree Structure**](#game-tree-structure)
+	* [**Game Tree Breakdown**](#game-tree-breakdown)
+	* [**File Organisation**](#file-organisation)
+		* [**1. run.py**](#1-runpy)
+		* [**2. helper_functions.py**](#2-helper_functionspy)
+		* [**3. choices_functions.py**](#3-choices_functionspy)
+		* [**4. ending_sequences.py**](#4-ending_sequencespy)
+
+* [**Future Developments**](#future-developments)
+
+* [**Features**](#features)
+	* [**The Title Screen**](#the-title-screen)
+	* [**Back Story**](#back-story)
+	* [**Room Functions**](#room-functions)
+	* [**Navigating Through the Game: User Input**](#navigating-through-the-game-user-input)
+		* [**User Commands**](#user-commands)
+		* [**Choices**](#choices)
+	* [**Data Model**](#data-model)
+		* [**1. run.py**](#1-runpy-1)
+		* [**2. helper_functions.py**](#2-helper_functionspy-1)
+		* [**3. choices_functions.py**](#3-choices_functionspy-1)
+		* [**4. ending_sequences.py**](#4-ending_sequencespy-1)
+
+* [**Testing Results Table**](#testing-results-table)
+	* [**Error Handling**](#error-handling)
+	* [**Bugs and Fixes**](#bugs-and-fixes)
+	* [**Post Development Testing**](#post-development-testing)
+		* [**Python/PEP8 Testing**](#pythonpep8-testing)
+		* [**HTML & CSS Testing**](#html--css-testing)
+
+* [**Deployment**](#deployment)
+
+* [**Credits**](#credits)
+	* [**Content**](#content)
+	* [**Testing Resources**](#testing-resources)
+	* [**Additional Resources**](#additional-resources)
 
 Link to live website: 
 
