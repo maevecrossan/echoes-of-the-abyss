@@ -299,11 +299,11 @@ As I mentioned before, there were an endless amount of opportunites to build and
 &nbsp;
 ## Testing
 
-The following is a chart I used to record the results of the quality test for all functions. The test included testing that the function worked in isolation, was called correctly within another function, and that the program continued to run smoothly.
+The following is a chart I used to record the results of the manual quality test for all functions. The test included testing that the function worked in isolation, was called correctly within another function, and that the program continued to run smoothly.
 
 Once I completed my code, I used [autopep8](https://pypi.org/project/autopep8/) to format it.
 
-### Testing Results Table
+### Manual Testing Results Table
 
 | Function Name | Choice | Working: Y / N |
 |-----|:-----:|:-----:|
