@@ -8,18 +8,18 @@ def encounter():
     Initiates ending sequences by providing the player with four possible
     choices, with 7 possible outcomes.
 
-    The syringe-related ending is contained in this function with two 
-    possibilities depending on whether or not the item is in the player's 
+    The syringe-related ending is contained in this function with two
+    possibilities depending on whether or not the item is in the player's
     inventory.
     """
     helpers.terminal_clear()
 
     encounter_description_1 = """
-    As you stand near the cracked glass enclosure, your curiosity gets the 
-    better of you. You lean closer to inspect the dark stains and the deep 
-    scratch marks. Suddenly, you hear the rumbling growl you heard earlier. 
-    Suddenly, it becomes a full-blown roar that shakes the room. The mist 
-    on the floor begins to swirl violently, and the air grows colder still. 
+    As you stand near the cracked glass enclosure, your curiosity gets the
+    better of you. You lean closer to inspect the dark stains and the deep
+    scratch marks. Suddenly, you hear the rumbling growl you heard earlier.
+    Suddenly, it becomes a full-blown roar that shakes the room. The mist
+    on the floor begins to swirl violently, and the air grows colder still.
     That's when you look up and see an opening at the top of the enclosure.\n
     """
     print(encounter_description_1)
@@ -27,10 +27,10 @@ def encounter():
     helpers.user_commands()
 
     encounter_description_2 = """
-    Before you can react, a pair of glowing eyes appear in the darkness 
-    behind the cracked glass. A powerful force slams against the inside 
-    of the enclosure, causing the glass to splinter further. Panic sets 
-    in as you realize the creature is still inside, but can roam within 
+    Before you can react, a pair of glowing eyes appear in the darkness
+    behind the cracked glass. A powerful force slams against the inside
+    of the enclosure, causing the glass to splinter further. Panic sets
+    in as you realize the creature is still inside, but can roam within
     the containment room as it pleases. \n
     """
     print(encounter_description_2)
@@ -38,8 +38,8 @@ def encounter():
     helpers.user_commands()
 
     encounter_description_3 = """
-    From inside the enclosure, you see a black, shapless entity spring 
-    through the hole in the top sof the enclosure. Glass fractures and 
+    From inside the enclosure, you see a black, shapless entity spring
+    through the hole in the top sof the enclosure. Glass fractures and
     falls as it prowls in your direction.\n
 
     You need to do something. Fast.\n
@@ -129,7 +129,7 @@ you whole."\n
 def encounter_run():
     """
     Prints the content if the player enters 'run' keyword.
-    Player will have to enter correct room sequence to escape the facility. 
+    Player will have to enter correct room sequence to escape the facility.
     If wrong, the get caught and die. If correct, they escape.
     """
     encounter_run_content = """
@@ -206,13 +206,13 @@ def use_crowbar():
     There are two possible outcomes depending on whether of not
     the item is in their inventory.
 
-    If the player dies, a news article is printed to add futher 
-    lore to the game. 
+    If the player dies, a news article is printed to add futher
+    lore to the game.
     """
     use_crowbar_content = """
     Hands sweaty, you grip onto the crowbar and prepare to defend yourself.
-    You just need to buy some time to get out. The entity is now right in 
-    front out you. It's claws making a shrieking noise as it stalks lazily 
+    You just need to buy some time to get out. The entity is now right in
+    front out you. It's claws making a shrieking noise as it stalks lazily
     towards you, like it knows it's already won.\n
     """
     print(use_crowbar_content)
@@ -220,7 +220,7 @@ def use_crowbar():
     helpers.user_commands()
 
     use_crowbar_content_2 = """
-    It pauses about 15 feet from you, and you try to take a 
+    It pauses about 15 feet from you, and you try to take a
     steadying breath. \n
     """
     print(use_crowbar_content_2)
@@ -290,15 +290,15 @@ def use_syringe():
     As it lunges, you thrust the syringe forward, plunging it into the
     creature's form. The liquid spreads quickly, glowing brighter and
     brighter, until the entity is enveloped in light. It lets out a terrible,
-    otherworldly screech, thrashing violently before collapsing 
+    otherworldly screech, thrashing violently before collapsing
     to the ground.\n
 
-    The glow fades, and the entity remains still on the ground, breathing 
+    The glow fades, and the entity remains still on the ground, breathing
     deeply.\n
 
     You did it. You’ve subdued it.\n
 
-    The path to the exit is clear. You don't waste any more time and 
+    The path to the exit is clear. You don't waste any more time and
     make your way out. You're free.\n
     """
     print(use_syringe_content)

@@ -27,16 +27,16 @@ def backstory():
     The journey to the facility is challenging, with overgrown paths and an
     eerie silence that thickens as you approach. The crumbling building stands
     before you, its walls covered in ivy and decay, the windows shattered like
-    dark, empty eyes. A chill hangs in the air, sending shivers down 
+    dark, empty eyes. A chill hangs in the air, sending shivers down
     your spine.
     """
     print(intro_2)
     helpers.user_commands()
 
     intro_3 = """
-    Inside, the lab is a maze of twisted hallways, rusted equipment, and 
-    cryptic symbols. Every step echoes through the empty corridors, and 
-    strange phenomena begin to occur—moving shadows, doors slamming shut on 
+    Inside, the lab is a maze of twisted hallways, rusted equipment, and
+    cryptic symbols. Every step echoes through the empty corridors, and
+    strange phenomena begin to occur—moving shadows, doors slamming shut on
     their own, and sudden drops in temperature.
     """
     print(intro_3)
@@ -45,7 +45,7 @@ def backstory():
     intro_4 = """
     You discover a shattered containment room and realize that this is no
     ordinary abandoned site. Something still lurks in the darkness, watching
-    and waiting. The deeper you go, the more you sense that this exploration 
+    and waiting. The deeper you go, the more you sense that this exploration
     is turning into a fight for survival.
     """
     print(intro_4)
@@ -69,7 +69,7 @@ def backstory():
 def entry_hall():
     """
     Gives the entry hall description and choices to be made.
-    Links to choices_funtions file which details the interactions 
+    Links to choices_funtions file which details the interactions
     with each item that can be found throughout the game.
     """
 
@@ -137,7 +137,7 @@ def entry_hall():
 def observation_chamber():
     """
     Gives the observation chamber description and choices to be made.
-    Links to choices_funtions file which details the interactions 
+    Links to choices_funtions file which details the interactions
     with each item that can be found throughout the game.
     """
     helpers.terminal_clear()  # working
@@ -223,7 +223,7 @@ def observation_chamber():
 def storage_closet():
     """
     Gives the storage closet description and choices to be made.
-    Links to choices_funtions file which details the interactions 
+    Links to choices_funtions file which details the interactions
     with each item that can be found throughout the game.
 
     Establishes whether or not the player has the key to open the door.
@@ -316,7 +316,7 @@ def storage_closet():
 def office():
     """
     Gives the office description and choices to be made.
-    Links to choices_funtions file which details the interactions 
+    Links to choices_funtions file which details the interactions
     with each item that can be found throughout the game.
     """
     helpers.terminal_clear()  # working
@@ -396,18 +396,18 @@ def office():
 def laboratory():
     """
     Gives the laboratory description and choices to be made.
-    Links to choices_funtions file which details the interactions 
+    Links to choices_funtions file which details the interactions
     with each item that can be found throughout the game.
     """
     helpers.terminal_clear()  # working
 
     laboratory_description_1 = """
-    The Laboratory is the heart of the facility, where experiments were 
-    conducted. The room is large, with long tables covered in various 
-    pieces of scientific equipment, most of which are now broken or 
-    rusted. Glass beakers and test tubes are scattered across the floor, 
-    some of them shattered. A strange, faintly glowing residue clings 
-    to the surfaces of the tables, and the air is thick with the smell 
+    The Laboratory is the heart of the facility, where experiments were
+    conducted. The room is large, with long tables covered in various
+    pieces of scientific equipment, most of which are now broken or
+    rusted. Glass beakers and test tubes are scattered across the floor,
+    some of them shattered. A strange, faintly glowing residue clings
+    to the surfaces of the tables, and the air is thick with the smell
     of chemicals that sting your nose.
 
     """
@@ -416,12 +416,12 @@ def laboratory():
     helpers.user_commands()  # working
 
     laboratory_description_2 = """
-    You can’t pinpoint the source, but you can hear the quiet hum of 
-    old machinery, though none of it seems to be working. Occasionally, 
-    you hear a faint buzzing noise, like electricity sparking. The room 
-    feels charged with an unseen energy, as if the experiments conducted 
-    here left a permanent mark on the space. The walls are lined with 
-    cabinets, most of which are locked. In one corner, a lab coat hangs 
+    You can’t pinpoint the source, but you can hear the quiet hum of
+    old machinery, though none of it seems to be working. Occasionally,
+    you hear a faint buzzing noise, like electricity sparking. The room
+    feels charged with an unseen energy, as if the experiments conducted
+    here left a permanent mark on the space. The walls are lined with
+    cabinets, most of which are locked. In one corner, a lab coat hangs
     on a hook, and you notice something bulging in one of its pockets.
     """
     print(laboratory_description_2)  # working
@@ -486,17 +486,17 @@ def laboratory():
 def morgue():
     """
     Gives the morgue description and choices to be made.
-    Links to choices_funtions file which details the interactions 
+    Links to choices_funtions file which details the interactions
     with each item that can be found throughout the game.
     """
     helpers.terminal_clear()
 
     morgue_description_1 = """
-    The Morgue is cold and sterile, with rows of metal drawers lining 
-    the walls. The air is frigid, and your breath creates small clouds 
-    of mist in front of you. The room is dimly lit, with a single 
-    lightbulb flickering overhead, casting long, eerie shadows across 
-    the room. A metal examination table sits in the center, covered with 
+    The Morgue is cold and sterile, with rows of metal drawers lining
+    the walls. The air is frigid, and your breath creates small clouds
+    of mist in front of you. The room is dimly lit, with a single
+    lightbulb flickering overhead, casting long, eerie shadows across
+    the room. A metal examination table sits in the center, covered with
     a stained sheet.\n
     """
     print(morgue_description_1)
@@ -504,15 +504,15 @@ def morgue():
     helpers.user_commands()
 
     morgue_description_2 = """
-    The smell of formaldehyde is overwhelming, mixed with something 
-    else—something rotten. The drawers in the walls are mostly closed, 
-    but a few are slightly ajar, as if someone didn’t have time to close 
-    them all. In front of the row of draws, you see a lab coat crumpled 
+    The smell of formaldehyde is overwhelming, mixed with something
+    else—something rotten. The drawers in the walls are mostly closed,
+    but a few are slightly ajar, as if someone didn’t have time to close
+    them all. In front of the row of draws, you see a lab coat crumpled
     on the floor. Something is peaking out of the pocket.\n
 
-    You pause, unable to shake the feeling that you’re being watched, 
-    even though the room is empty. There’s a small, rusted surgical cart 
-    in the corner, holding a few old, bloodstained tools. Something in the 
+    You pause, unable to shake the feeling that you’re being watched,
+    even though the room is empty. There’s a small, rusted surgical cart
+    in the corner, holding a few old, bloodstained tools. Something in the
     corner catches your eye.\n
     """
     print(morgue_description_2)
@@ -574,17 +574,17 @@ def morgue():
 def break_room():
     """
     Gives the break room description and choices to be made.
-    Links to choices_funtions file which details the interactions 
+    Links to choices_funtions file which details the interactions
     with each item that can be found throughout the game.
     """
     helpers.terminal_clear()  # working
 
     break_room_description_1 = """
-    The Break Room was once a place where the lab staff could relax, but 
-    now it’s a scene of chaos. The room is cluttered with overturned and 
-    broken chairs and tables, as if something had torn through in a fit of 
-    rage. A vending machine lies on its side, its glass shattered and snacks 
-    scattered across the floor. There’s a small kitchenette in one corner, 
+    The Break Room was once a place where the lab staff could relax, but
+    now it’s a scene of chaos. The room is cluttered with overturned and
+    broken chairs and tables, as if something had torn through in a fit of
+    rage. A vending machine lies on its side, its glass shattered and snacks
+    scattered across the floor. There’s a small kitchenette in one corner,
     with a fridge and a microwave, both covered in grime.
     """
     print(break_room_description_1)  # working
@@ -595,8 +595,8 @@ def break_room():
     The room feels oddly out of place compared to the rest of the facility,
     as if the normalcy of a break room doesn’t belong in such a sinister
     environment. There’s a calendar on the wall, still turned to a month from
-    decades ago, and a few personal items left behind on the counter — 
-    a coffee mug, a half-eaten sandwich, now mummified with age. The room 
+    decades ago, and a few personal items left behind on the counter —
+    a coffee mug, a half-eaten sandwich, now mummified with age. The room
     is eerily silent, and the air is thick with dust.
     """
     print(break_room_description_2)  # working
@@ -653,17 +653,17 @@ def break_room():
 def security_room():
     """
     Gives the security room description and choices to be made.
-    Links to choices_funtions file which details the interactions 
+    Links to choices_funtions file which details the interactions
     with each item that can be found throughout the game.
     """
     helpers.terminal_clear()  # working
 
     security_room_description_1 = """
-    The Security Room is filled with monitors and control panels, most of 
-    which are now dark and lifeless. A few of the monitors still flicker 
-    with static, offering brief, distorted glimpses of various parts of the 
-    facility. The room is cramped, with just enough space for a single chair 
-    in front of the console. Papers and old security logs are scattered across 
+    The Security Room is filled with monitors and control panels, most of
+    which are now dark and lifeless. A few of the monitors still flicker
+    with static, offering brief, distorted glimpses of various parts of the
+    facility. The room is cramped, with just enough space for a single chair
+    in front of the console. Papers and old security logs are scattered across
     the desk, detailing the final days of the lab’s operation.
     """
     print(security_room_description_1)  # working
@@ -673,9 +673,9 @@ def security_room():
     security_room_description_2 = """
     A red light blinks ominously on one of the control panels, indicating that
     something is still active in the facility. A nearby locker stands open,
-    with a few items left behind by the last security personnel. The room 
-    feels like a nerve center, where someone once kept watch over the entire 
-    lab. Now, it’s a tomb of information, with the only clues to what happened 
+    with a few items left behind by the last security personnel. The room
+    feels like a nerve center, where someone once kept watch over the entire
+    lab. Now, it’s a tomb of information, with the only clues to what happened
     hidden within the disjointed logs and static-filled screens.
     """
     print(security_room_description_2)  # working
@@ -743,11 +743,11 @@ def containment_room():
     # can be accessed if they have keycard
 
     containment_room_description_1 = """
-    The Containment Room is the most ominous part of the facility. It’s 
-    large and mostly empty, with the main feature being a massive, reinforced 
-    glass enclosure in the center. The glass is cracked but still intact, 
-    though dark stains and scratch marks on the inside suggest something tried 
-    hard to escape. The room is dimly lit by emergency lights, casting a red 
+    The Containment Room is the most ominous part of the facility. It’s
+    large and mostly empty, with the main feature being a massive, reinforced
+    glass enclosure in the center. The glass is cracked but still intact,
+    though dark stains and scratch marks on the inside suggest something tried
+    hard to escape. The room is dimly lit by emergency lights, casting a red
     glow that makes everything look surreal and threatening.\n
     """
     print(containment_room_description_1)  # working
