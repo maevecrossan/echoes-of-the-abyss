@@ -223,33 +223,6 @@ This file holds the functions that will be called if the player types in an obje
 This file is only called in when the player reaches the Observation Room, Room 9. There are 7 possible endings in this file.
 
 &nbsp;
-## Future Developments
-
-As I mentioned before, there were an endless amount of opportunites to build and incorporate into this game. Sadly, I didn't have enough time to add all the features I would like, so below is a (long) list of additional changes and features I would like to make:
-
-* I would like to create more interable objects to give the player the chance to learn more about the scientists, facility and the entity.
-
-* I would like to create more endings, as only one rom at the moment triggers the ending sequences. I would like to create some novelty endings like 'falling through a hole', or 'electrocution'.
-
-* I would like to create an achievements system, which can be printed at the end of the game when the player lives/dies. For example, letting them start from a certain point in the game to achieve a different ending.
-
-* I want to create more inventory items, all with specific uses throughout the game. Some items currently don't have a function tied to the ending.
-
-* I want to create a restricted inventory, forcing the plater to drop items if it's full, in turn affecting their survival.
-
-* I want to include puzzles to increase interactivity and enocurage the player to interact with as many obejcts as possible.
-
-* I want to create a summary of the player's pathing, allowing them to see what rooms the visited and in what order. 
-
-* I want the room functions to update to remove items already collected and inform the player that they've already been there. 
-
-* I would like the energy drink to play a bigger part after being consumed. For example, an ending where the player gets sick, or is too caffeinated to pay attention and dies somehow. 
-
-* I would also like to add multiple levels, but this would require some restructuring as it would get very text-heavy if kept in the current format.
-
-* Add character backstory.
-
-&nbsp;
 ## Features
 
 ### The Title Screen
@@ -294,6 +267,34 @@ This file holds the functions that will be called if the player types in an obje
 
 #### 4. ending_sequences.py
 This file is only called in when the player reaches the Observation Room, Room 9. There are 7 possible endings in this file.
+
+
+&nbsp;
+## Future Developments
+
+As I mentioned before, there were an endless amount of opportunites to build and incorporate into this game. Sadly, I didn't have enough time to add all the features I would like, so below is a (long) list of additional changes and features I would like to make:
+
+* I would like to create more interable objects to give the player the chance to learn more about the scientists, facility and the entity.
+
+* I would like to create more endings, as only one rom at the moment triggers the ending sequences. I would like to create some novelty endings like 'falling through a hole', or 'electrocution'.
+
+* I would like to create an achievements system, which can be printed at the end of the game when the player lives/dies. For example, letting them start from a certain point in the game to achieve a different ending.
+
+* I want to create more inventory items, all with specific uses throughout the game. Some items currently don't have a function tied to the ending.
+
+* I want to create a restricted inventory, forcing the plater to drop items if it's full, in turn affecting their survival.
+
+* I want to include puzzles to increase interactivity and enocurage the player to interact with as many obejcts as possible.
+
+* I want to create a summary of the player's pathing, allowing them to see what rooms the visited and in what order. 
+
+* I want the room functions to update to remove items already collected and inform the player that they've already been there. 
+
+* I would like the energy drink to play a bigger part after being consumed. For example, an ending where the player gets sick, or is too caffeinated to pay attention and dies somehow. 
+
+* I would also like to add multiple levels, but this would require some restructuring as it would get very text-heavy if kept in the current format.
+
+* Add character backstory.
 
 &nbsp;
 ## Testing
