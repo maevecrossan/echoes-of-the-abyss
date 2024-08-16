@@ -512,7 +512,7 @@ Below are the steps I followed for deployment once I did the above:
 
 * [utils](https://pypi.org/project/utils/) 1.0.2 from pypi.
 
-* Favicon sourced from [loading.io](https://file.loading.io/resources/icon/kpp0bq.svg?v=1) under [loading.io BY License](https://loading.io/license/#by-license).
+* Favicon sourced from [pixbay.com](https://cdn.pixabay.com/photo/2017/01/19/09/41/hole-1991881_1280.png).
 
 * [autopep8](https://pypi.org/project/autopep8/) for code strucutring.
 
