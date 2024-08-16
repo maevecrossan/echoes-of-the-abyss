@@ -76,7 +76,7 @@ The commands include:
 You will be periodically prompted to either type a command or press enter to progress with the story. 
 The first room you will experience is the 'entry room'. From here, your journey begins. You can interact with objects, add items to your inventory, and/progress to a new room.
 
-Each room has unique items to be interacted with or collected. You can revisit rooms, and experience multiple endings.
+Each room has unique items to be interacted with or collected. You can revisit rooms, and experience multiple endings. When you have reached the end of the game, the game will telling you what ending number you got and will quit the program. A message will be printed to the terminal telling you to click 'Run Program' if you wish to replay.'
 
 Enjoy!
 
