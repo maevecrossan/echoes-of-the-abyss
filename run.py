@@ -34,6 +34,7 @@ def backstory():
     print(intro_2)
     helpers.user_commands()
 
+    helpers.terminal_clear()
     intro_3 = """
     Inside, the lab is a maze of twisted hallways, rusted equipment, and
     cryptic symbols. Every step echoes through the empty corridors, and
@@ -51,20 +52,17 @@ def backstory():
     """
     print(intro_4)
     helpers.user_commands()
+    helpers.terminal_clear()
 
     intro_5 = """
     You’ve come too far to turn back. The secrets of the Echoes of the Abyss
     are within reach—but so are the horrors that still haunt this place.
-    """
-    print(intro_5)
-    helpers.user_commands()
-
-    intro_6 = """
     Will you uncover the truth, or will you become another lost
     soul in this forsaken facility?
     """
-    print(intro_6)
+    print(intro_5)
     helpers.user_commands()
+    
 
 
 def entry_hall():
@@ -87,8 +85,9 @@ def entry_hall():
     walls.\n
     """
     print(entry_hall_description_1)
-
+    
     helpers.user_commands()
+    helpers.terminal_clear()
 
     entry_hall_description_2 = """
     Near the center of the room is a large reception desk, toppled over
@@ -164,6 +163,7 @@ def observation_chamber():
     print(observation_chamber_description_1)  # working
 
     helpers.user_commands()  # working
+    helpers.terminal_clear()
 
     observation_chamber_description_2 = """
     The room is otherwise eerily quiet, the only sound being the occasional
@@ -251,6 +251,7 @@ def storage_closet():
     print(storage_closet_description_1)
 
     helpers.user_commands()
+    helpers.terminal_clear()
 
     storage_closet_description_2 = """
     The walls are lined with peeling paint, and there’s a small,
@@ -344,6 +345,7 @@ def office():
     print(office_description_1)
 
     helpers.user_commands()  # working
+    helpers.terminal_clear()
 
     office_description_2 = """
     The room feels strangely untouched compared to the rest of the facility,
@@ -427,6 +429,7 @@ def laboratory():
     print(laboratory_description_1)  # working
 
     helpers.user_commands()  # working
+    helpers.terminal_clear()
 
     laboratory_description_2 = """
     You can’t pinpoint the source, but you can hear the quiet hum of
@@ -516,6 +519,7 @@ def morgue():
     print(morgue_description_1)
 
     helpers.user_commands()
+    helpers.terminal_clear()
 
     morgue_description_2 = """
     The smell of formaldehyde is overwhelming, mixed with something
@@ -605,6 +609,7 @@ def break_room():
     print(break_room_description_1)  # working
 
     helpers.user_commands()  # working
+    helpers.terminal_clear() 
 
     break_room_description_2 = """
     The room feels oddly out of place compared to the rest of the facility,
@@ -685,6 +690,7 @@ def security_room():
     print(security_room_description_1)  # working
 
     helpers.user_commands()  # working
+    helpers.terminal_clear()
 
     security_room_description_2 = """
     A red light blinks ominously on one of the control panels, indicating that
@@ -770,6 +776,7 @@ def containment_room():
     print(containment_room_description_1)  # working
 
     helpers.user_commands()  # working
+    helpers.terminal_clear()
 
     containment_room_description_2 = """
     The air is heavy with a sense of dread, as if the very walls are charged
