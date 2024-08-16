@@ -1,5 +1,7 @@
 # **Echoes of the Abyss**
 
+![screenshot of the Echoes of the Abyss Live Site](docs/game_screenshot.png)
+
 ## **Introduction**
 
 'Echoes of the Abyss' is a terminal-based, narrative driven horror game. The game blends classic survival horror elements with the interactive storytelling of a choose-your-own-adventure, creating a suspenseful experience where every decision affects your fate.
