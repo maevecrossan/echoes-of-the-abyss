@@ -47,11 +47,11 @@ As a developer...
 | Time-sensitive decisions | 2 | 2 |
 | Hint keyword | 1 | 1 |
 
+
 The opportunites available in this project were endless, and narrowing them down was a challenge. Due to time constraints, I decided to build a branching story that is fairly linear, as only one room triggers the ending sequences.
 More details about features I' dlove to add can be found in 'Future Developments', below the 'Development' section.
 
 ## Development
------------------------------------------------
 ### File Organisation
 Within this project are four Python files. 
 
@@ -66,9 +66,6 @@ This file holds the functions that will be called if the player types in an obje
 
 #### 4. ending_sequences.py
 This file is only called in when the player reaches the Observation Room, Room 9. There are 7 possible endings in this file.
-
-
-### Game Visuals & Environment
 
 -----------------------------------------------
 ## Future Developments
@@ -407,7 +404,7 @@ Below are the steps I followed for deployment once I did the above:
 
 * [autopep8](https://pypi.org/project/autopep8/) for code strucutring.
 
-* [LucidChart] to make the tree chart displaying all possible game paths. (https://lucid.app/lucidchart/ab90e1dd-8762-4d4f-80d7-7b74bf9fbeb4/edit?invitationId=inv_40e4ed57-e5f2-4ac5-9a5c-2a17065440a2&page=0_0#)
+* [LucidChart](https://lucid.app/lucidchart/ab90e1dd-8762-4d4f-80d7-7b74bf9fbeb4/edit?invitationId=inv_40e4ed57-e5f2-4ac5-9a5c-2a17065440a2&page=0_0#) to make the tree chart displaying all possible game paths.
 
 ### Testing Resources
 The following were used for testing (during and after development):

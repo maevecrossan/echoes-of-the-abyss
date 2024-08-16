@@ -127,7 +127,7 @@ def entry_hall():
             """)
             exit()
         elif entry_hall_prompt == 'map':  # working
-            helper.map()
+            helpers.map()
         elif entry_hall_prompt == 'inventory':  # working
             helpers.display_inventory()
         else:
@@ -296,7 +296,7 @@ def storage_closet():
             """)
             exit()
         elif storage_closet_prompt == 'map':
-            helper.map()
+            helpers.map()
         elif storage_closet_prompt == 'inventory':
             helpers.display_inventory()
         elif storage_closet_prompt == 'help':
@@ -376,7 +376,7 @@ def office():
             """)
             exit()
         elif office_choices_prompt == 'map':
-            helper.map()
+            helpers.map()
         elif office_choices_prompt == 'inventory':  # working
             helpers.display_inventory()
         elif office_choices_prompt == 'help':
@@ -466,7 +466,7 @@ def laboratory():
             """)
             exit()
         elif laboratory_choices_prompt == 'map':
-            helper.map()
+            helpers.map()
         elif laboratory_choices_prompt == 'inventory':  # working
             helpers.display_inventory()
         elif office_choices_prompt == 'help':
@@ -554,7 +554,7 @@ def morgue():
             """)
             exit()
         elif morgue_choices_prompt == 'map':
-            helper.map()
+            helpers.map()
         elif morgue_choices_prompt == 'inventory':
             helpers.display_inventory()
         elif morgue_choices_prompt == 'help':
@@ -633,7 +633,7 @@ def break_room():
             """)
             exit()
         elif break_room_choices_prompt == 'map':
-            helper.map()
+            helpers.map()
         elif break_room_choices_prompt == 'inventory':
             helpers.display_inventory()
         elif break_room_choices_prompt == 'help':
@@ -713,7 +713,7 @@ def security_room():
             """)
             exit()
         elif security_room_choices_prompt == 'map':  # working
-            helper.map()
+            helpers.map()
         elif security_room_choices_prompt == 'inventory':  # working
             helpers.display_inventory()
         elif security_room_choices_prompt == 'help':
@@ -799,12 +799,13 @@ def containment_room():
             """)
             exit()
         elif containment_room_choices_prompt == 'map':
-            helper.map()
+            helpers.map()
         elif containment_room_choices_prompt == 'inventory':
             helpers.display_inventory()
         elif containment_room_choices_prompt == 'help':
             print("""
-            To make a choice, when prompted, type the word in CAPITALS and hit 'enter'.\n
+            To make a choice, when prompted, type the word in CAPITALS\
+                 and hit 'enter'.\n
             To look at the map, type MAP and hit 'enter'.\n
             To see your inventory, type INVENTORY and hit 'enter'.\n
             To quit the game, type QUIT.\n
