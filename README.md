@@ -464,7 +464,7 @@ Below are the steps I followed for deployment once I did the above:
 
 * [utils](https://pypi.org/project/utils/) 1.0.2 from pypi.
 
-* Favicon sourced from [Flaticon](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flaticon.com%2Ffree-icon%2Fblack-hole_433927&psig=AOvVaw2y60zNP64vAryLj_XbRDtO&ust=1723917706188000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIC1uoaM-ocDFQAAAAAdAAAAABAE).
+* Favicon sourced from [loading.io](https://file.loading.io/resources/icon/kpp0bq.svg?v=1) under [loading.io BY License](https://loading.io/license/#by-license).
 
 * [autopep8](https://pypi.org/project/autopep8/) for code strucutring.
 
@@ -482,6 +482,6 @@ The following were used for testing (during and after development):
 ### Additional Resources
 Below is a list of additional resources I used to help build my game.
 
-* https://libguides.ntu.edu.sg/python/input#:~:text=The%20input%20function,-The%20input%20function&text=In%20Python%2C%20we%20request%20user%20input%20using%20the%20input()%20function.&text=This%20set%20of%20code%20is,math%20operators%20like%20addition%20%2F%20subtraction
+* [Python Basic Data Analysis](https://libguides.ntu.edu.sg/python/input#:~:text=The%20input%20function,-The%20input%20function&text=In%20Python%2C%20we%20request%20user%20input%20using%20the%20input()%20function.&text=This%20set%20of%20code%20is,math%20operators%20like%20addition%20%2F%20subtraction).
 
-* https://www.geeksforgeeks.org/enumerate-in-python/
+* Enumrate() by [geeksforgeeks.com](https://www.geeksforgeeks.org/enumerate-in-python/).
