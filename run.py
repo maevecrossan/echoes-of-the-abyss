@@ -339,7 +339,7 @@ def office():
     1. Read through the LOGBOOK.\n
     2. Examine the broken COMPUTERS.\n
     3. Move to Room 1, the ENTRY hall.\n
-    4. Move to Room 5, the LABRATORY.\n
+    4. Move to Room 5, the LABORATORY.\n
     5. Move to Room 7, the BREAK room.\n
     """
     print(office_choices)  # working
