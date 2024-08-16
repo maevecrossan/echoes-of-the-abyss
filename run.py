@@ -62,7 +62,7 @@ def backstory():
     """
     print(intro_5)
     helpers.user_commands()
-    
+
 
 
 def entry_hall():
@@ -130,7 +130,7 @@ def entry_hall():
             helpers.map()
         elif entry_hall_prompt == 'inventory':  # working
             helpers.display_inventory()
-        elif observation_chamber_prompt == 'help':
+        elif entry_hall_prompt == 'help':
             print("""
             To make a choice, when prompted, type the word in CAPITALS \
 and hit 'enter'.\n
@@ -485,7 +485,7 @@ def laboratory():
             helpers.map()
         elif laboratory_choices_prompt == 'inventory':  # working
             helpers.display_inventory()
-        elif office_choices_prompt == 'help':
+        elif laboratory_choices_prompt == 'help':
             print("""
             To make a choice, when prompted, type the word in CAPITALS \
 and hit 'enter'.\n
