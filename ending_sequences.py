@@ -36,7 +36,7 @@ def encounter():
 
     helpers.user_commands()
     helpers.terminal_clear()
-    
+
     encounter_description_3 = """
     From inside the enclosure, you see a black, shapless entity spring
     through the hole in the top sof the enclosure. Glass fractures and
@@ -105,14 +105,14 @@ you whole."\n
         elif encounter_choices_prompt == "fate":
             accept_fate()
             break
-        elif encounter_choices_prompt == "inventory":  # not working
+        elif encounter_choices_prompt == "inventory": 
             helpers.display_inventory()
         elif encounter_choices_prompt == "quit":
             print("\nExiting the game. Thank you for playing!\n")
             exit()
         elif containment_room_choices_prompt == 'map':
             map()
-        elif containment_room_choices_prompt == 'inventory':  # not working
+        elif containment_room_choices_prompt == 'inventory':
             helpers.display_inventory()
         elif command == 'help':
             print("""

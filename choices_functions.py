@@ -253,7 +253,7 @@ def energy_drink():
     print(energy_drink_content)
 
 
-def security_logs():  # working
+def security_logs():
     """
     Prints the content if the player enters 'logs' keyword.
     """
