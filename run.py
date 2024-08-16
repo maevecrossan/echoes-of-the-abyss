@@ -121,7 +121,10 @@ def entry_hall():
             office()
             break
         elif entry_hall_prompt == "quit":  # working
-            print("Exiting the game. Thank you for playing!")
+            print("""
+            Exiting the game. Thank you for playing!
+            Click 'Run Program' to restart.
+            """)
             exit()
         elif entry_hall_prompt == 'map':  # working
             helper.map()
@@ -198,7 +201,10 @@ def observation_chamber():
         elif observation_chamber_prompt == "inventory":
             helpers.display_inventory()
         elif observation_chamber_prompt == "quit":
-            print("Exiting the game. Thank you for playing!")
+            print("""
+            Exiting the game. Thank you for playing!
+            Click 'Run Program' to restart.
+            """)
             exit()
         elif observation_chamber_prompt == 'help':
             print("""
@@ -284,7 +290,10 @@ def storage_closet():
             morgue()
             break
         elif storage_closet_prompt == "quit":
-            print("Exiting the game. Thank you for playing!")
+            print("""
+            Exiting the game. Thank you for playing!
+            Click 'Run Program' to restart.
+            """)
             exit()
         elif storage_closet_prompt == 'map':
             helper.map()
@@ -361,7 +370,10 @@ def office():
             break_room()
             break
         elif office_choices_prompt == "quit":
-            print("Exiting the game. Thank you for playing!")
+            print("""
+            Exiting the game. Thank you for playing!
+            Click 'Run Program' to restart.
+            """)
             exit()
         elif office_choices_prompt == 'map':
             helper.map()
@@ -448,7 +460,10 @@ def laboratory():
             security_room()
             break
         elif laboratory_choices_prompt == "quit":
-            print("Exiting the game. Thank you for playing!")
+            print("""
+            Exiting the game. Thank you for playing!
+            Click 'Run Program' to restart.
+            """)
             exit()
         elif laboratory_choices_prompt == 'map':
             helper.map()
@@ -533,7 +548,10 @@ def morgue():
                 containment_room()
                 break
         elif morgue_choices_prompt == "quit":
-            print("Exiting the game. Thank you for playing!")
+            print("""
+            Exiting the game. Thank you for playing!
+            Click 'Run Program' to restart.
+            """)
             exit()
         elif morgue_choices_prompt == 'map':
             helper.map()
@@ -609,7 +627,10 @@ def break_room():
             security_room()
             break
         elif break_room_choices_prompt == "quit":
-            print("Exiting the game. Thank you for playing!")
+            print("""
+            Exiting the game. Thank you for playing!
+            Click 'Run Program' to restart.
+            """)
             exit()
         elif break_room_choices_prompt == 'map':
             helper.map()
@@ -686,7 +707,10 @@ def security_room():
             containment_room()
             break
         elif security_room_choices_prompt == "quit":  # working
-            print("Exiting the game. Thank you for playing!")
+            print("""
+            Exiting the game. Thank you for playing!
+            Click 'Run Program' to restart.
+            """)
             exit()
         elif security_room_choices_prompt == 'map':  # working
             helper.map()
@@ -769,7 +793,10 @@ def containment_room():
             security_room()
             break
         elif containment_room_choices_prompt == "quit":
-            print("Exiting the game. Thank you for playing!")
+            print("""
+            Exiting the game. Thank you for playing!
+            Click 'Run Program' to restart.
+            """)
             exit()
         elif containment_room_choices_prompt == 'map':
             helper.map()

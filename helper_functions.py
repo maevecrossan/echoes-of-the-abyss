@@ -81,7 +81,10 @@ def user_commands():
         elif command in ["continue", ""]:
             return
         elif command == 'quit':
-            print("Exiting the game. Thank you for playing!")
+            print("""
+            Exiting the game. Thank you for playing!
+            Click 'Run Program' to restart.
+            """)
             exit()
         elif command == 'help':
             print("""
