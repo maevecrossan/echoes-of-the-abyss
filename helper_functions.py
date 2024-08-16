@@ -9,12 +9,12 @@ def title_screen():
     """
     terminal_clear()
     title = text2art("Echoes  of  the  Abyss", font="smaller", chr_ignore=True)
-    welcome_message = "Welcome to Echoes of the Abyss, a choose your \
-    own adventure game.\n"
+    welcome_message = "Welcome to Echoes of the Abyss, a choose \
+        your own adventure game.\n"
     instructions = """
     You will be able to make multiple choices in this game.\n
     To make a choice, when prompted, type the word in CAPITALS \
-    and hit 'enter'.\n
+        and hit 'enter'.\n
     To look at the map, type MAP and hit 'enter'.\n
     To see your inventory, type INVENTORY and hit 'enter'.\n
     To quit the game, type QUIT.\n

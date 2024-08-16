@@ -208,7 +208,8 @@ def observation_chamber():
             exit()
         elif observation_chamber_prompt == 'help':
             print("""
-            To make a choice, when prompted, type the word in CAPITALS and hit 'enter'.\n
+            To make a choice, when prompted, type the word in CAPITALS \
+                and hit 'enter'.\n
             To look at the map, type MAP and hit 'enter'.\n
             To see your inventory, type INVENTORY and hit 'enter'.\n
             To quit the game, type QUIT.\n
@@ -301,7 +302,8 @@ def storage_closet():
             helpers.display_inventory()
         elif storage_closet_prompt == 'help':
             print("""
-            To make a choice, when prompted, type the word in CAPITALS and hit 'enter'.\n
+            To make a choice, when prompted, type the word in CAPITALS \
+                and hit 'enter'.\n
             To look at the map, type MAP and hit 'enter'.\n
             To see your inventory, type INVENTORY and hit 'enter'.\n
             To quit the game, type QUIT.\n
@@ -381,7 +383,8 @@ def office():
             helpers.display_inventory()
         elif office_choices_prompt == 'help':
             print("""
-            To make a choice, when prompted, type the word in CAPITALS and hit 'enter'.\n
+            To make a choice, when prompted, type the word in CAPITALS \
+                and hit 'enter'.\n
             To look at the map, type MAP and hit 'enter'.\n
             To see your inventory, type INVENTORY and hit 'enter'.\n
             To quit the game, type QUIT.\n
@@ -471,7 +474,8 @@ def laboratory():
             helpers.display_inventory()
         elif office_choices_prompt == 'help':
             print("""
-            To make a choice, when prompted, type the word in CAPITALS and hit 'enter'.\n
+            To make a choice, when prompted, type the word in CAPITALS \
+                and hit 'enter'.\n
             To look at the map, type MAP and hit 'enter'.\n
             To see your inventory, type INVENTORY and hit 'enter'.\n
             To quit the game, type QUIT.\n
@@ -559,7 +563,8 @@ def morgue():
             helpers.display_inventory()
         elif morgue_choices_prompt == 'help':
             print("""
-            To make a choice, when prompted, type the word in CAPITALS and hit 'enter'.\n
+            To make a choice, when prompted, type the word in CAPITALS \
+                and hit 'enter'.\n
             To look at the map, type MAP and hit 'enter'.\n
             To see your inventory, type INVENTORY and hit 'enter'.\n
             To quit the game, type QUIT.\n
@@ -638,7 +643,8 @@ def break_room():
             helpers.display_inventory()
         elif break_room_choices_prompt == 'help':
             print("""
-            To make a choice, when prompted, type the word in CAPITALS and hit 'enter'.\n
+            To make a choice, when prompted, type the word in CAPITALS \
+                and hit 'enter'.\n
             To look at the map, type MAP and hit 'enter'.\n
             To see your inventory, type INVENTORY and hit 'enter'.\n
             To quit the game, type QUIT.\n
@@ -718,7 +724,8 @@ def security_room():
             helpers.display_inventory()
         elif security_room_choices_prompt == 'help':
             print("""
-            To make a choice, when prompted, type the word in CAPITALS and hit 'enter'.\n
+            To make a choice, when prompted, type the word in CAPITALS \
+                and hit 'enter'.\n
             To look at the map, type MAP and hit 'enter'.\n
             To see your inventory, type INVENTORY and hit 'enter'.\n
             To quit the game, type QUIT.\n

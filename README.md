@@ -406,6 +406,8 @@ Below are the steps I followed for deployment once I did the above:
 
 * [LucidChart](https://lucid.app/lucidchart/ab90e1dd-8762-4d4f-80d7-7b74bf9fbeb4/edit?invitationId=inv_40e4ed57-e5f2-4ac5-9a5c-2a17065440a2&page=0_0#) to make the tree chart displaying all possible game paths.
 
+* Background image from [freepik.com](https://www.freepik.com/free-photo/black-glitch-effect-digital-noise-texture-background_15599962.htm#query=glitch%20background&position=2&from_view=keyword&track=ais_hybrid&uuid=226904e6-aa58-4dc3-8d69-fb3838029595)
+
 ### Testing Resources
 The following were used for testing (during and after development):
 

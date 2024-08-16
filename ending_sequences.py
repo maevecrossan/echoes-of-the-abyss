@@ -116,7 +116,8 @@ you whole."\n
             helpers.display_inventory()
         elif command == 'help':
             print("""
-            To make a choice, when prompted, type the word in CAPITALS and hit 'enter'.\n
+            To make a choice, when prompted, type the word in CAPITALS \
+                and hit 'enter'.\n
             To look at the map, type MAP and hit 'enter'.\n
             To see your inventory, type INVENTORY and hit 'enter'.\n
             To quit the game, type QUIT.\n
