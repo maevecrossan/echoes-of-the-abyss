@@ -385,6 +385,8 @@ Below are the steps I followed for deployment once I did the above:
 ## Credits
 ### Content
 
+* Terminal/live site template from Code Institute. 
+
 * Storyline created by [ChatGPT](https://openai.com/chatgpt/).
 
 * Background image from Adobe Stock. [Link to image used.](https://stock.adobe.com/ie/search/free?filters%5Bcontent_type%3Aphoto%5D=1&filters%5Bcontent_type%3Aillustration%5D=1&filters%5Bcontent_type%3Azip_vector%5D=1&filters%5Bcontent_type%3Aimage%5D=1&filters%5Borientation%5D=horizontal&filters%5Bcontent_type%3A3d%5D=0&filters%5Bcontent_type%3Atemplate%5D=0&filters%5Bcontent_type%3Avideo%5D=0&filters%5Bfree_collection%5D=1&filters%5Border%5D=relevance&k=glitch&order=relevance&safe_search=1&limit=100&search_page=1&search_type=asset-type-change&acp=&aco=glitch&get_facets=1&asset_id=248081843)
@@ -412,5 +414,3 @@ Below is a list of additional resources I used to help build my game.
 * https://libguides.ntu.edu.sg/python/input#:~:text=The%20input%20function,-The%20input%20function&text=In%20Python%2C%20we%20request%20user%20input%20using%20the%20input()%20function.&text=This%20set%20of%20code%20is,math%20operators%20like%20addition%20%2F%20subtraction
 
 * https://www.geeksforgeeks.org/enumerate-in-python/
-
-* 

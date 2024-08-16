@@ -3,7 +3,7 @@ from helper_functions import user_commands
 
 def examine_desk():
     """
-    Prints the content if the player chooses ''
+    Prints the content if the player chooses 'desk'.
     """
     desk_content = """
     Upon closer inspection, the you find a small panel on the wall 
@@ -19,7 +19,7 @@ def examine_desk():
     print(desk_content)
 
 
-def take_syringe(): #INVENTORYITEM
+def take_syringe():  # INVENTORYITEM
     """
     Prints the content if the player chooses ''
     """

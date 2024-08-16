@@ -75,7 +75,7 @@ The creature lunges at you before you can react.
 Without the crowbar, you have no way to defend yourself.
 The last thing you hear is the creature's snarl as it devours
 you whole."\n
-                """) # indented as above so it prints in line in terminal.
+                """)  # indented as above so it prints in line in terminal.
                 print("You died. Ending 1 of 7.")
                 print("\nExiting the game. Thank you for playing!\n")
                 exit()
@@ -93,7 +93,7 @@ The creature lunges at you before you can react.
 Without the syringe, you have no way to sedate the creature.
 The last thing you hear is the creature's snarl as it devours
 you whole."\n
-                """) # indented as above so it prints in line in terminal.
+                """)  # indented as above so it prints in line in terminal.
                 print("You died. Ending 2 of 7.")
                 input("\nPress enter to proceed to title screen...")
                 title_screen()
