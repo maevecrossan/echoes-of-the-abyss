@@ -102,79 +102,130 @@ As I mentioned before, there were an endless amount of opportunites to build and
 ![Game Tree Structure](docs/eotb-gameplay-flowchart.png)
 
 ## Game Tree Breakdown
-The game involves exploring different rooms (represented by the various functions), making choices about what to examine or collect, and managing inventory.
+**Room 1: Entry Hall**
+    
+    Actions:
 
-Each function represents a specific action or discovery the player can make, adding to the overall narrative and survival strategy.
-Players must use the inventory items they collect to progress, solve puzzles, or defend themselves against potential threats.
-
-Below is a list of possible paths in the game, divided up by file. 
-
-
-### 1. helper_functions.py Breakdown
-Starting Point: Entry Hall
-
-1. Look behind the DESK:
-
-This action will trigger the examine_desk() function.
-Possible outcomes include finding items, clues, or encountering something unexpected.
-
-2.Move to the OBSERVATION Chamber:
-
-Leads to the Observation Chamber. The player will explore this area and can make new choices based on the room's description.
-Possible choices in the Observation Chamber:
-Pick up the SYRINGE.
-Try to see what’s behind the MIRROR.
-Move to the STORAGE closet.
-Move to the LABORATORY.
-Return to the ENTRY hall.
-Move to the OFFICE:
-
-Leads to the Office. The player will explore the room and face new choices.
-Possible choices in the Office:
-Read through the LOGBOOK.
-Examine the broken COMPUTERS.
-Move to the ENTRY hall.
-Move to the LABORATORY.
-Move to the BREAK room.
-Possible Routes and Outcomes:
-Route 1: Desk > Observation Chamber > Storage Closet
-
-Starting at the desk, the player may decide to explore the Observation Chamber and then proceed to the Storage Closet.
-In the Storage Closet:
-Pick up the CROWBAR.
-Examine the NOTEBOOK.
-Inspect the TOOLBOX.
-Move to the OBSERVATION chamber, MORGUE, or stay.
-Route 2: Desk > Office > Break Room
-
-Starting at the desk, the player may explore the Office and then proceed to the Break Room.
-In the Break Room:
-The room is chaotic, and players will be faced with new choices based on the objects and atmosphere described.
-Choices might include interacting with vending machines, tables, or moving to other rooms like the Laboratory.
-Route 3: Observation Chamber > Laboratory > Morgue
-
-Starting at the Observation Chamber, the player may decide to explore the Laboratory and then proceed to the Morgue.
-In the Laboratory:
-Pick up the KEY.
-Examine the lab EQUIPMENT.
-Move to the OBSERVATION chamber, OFFICE, MORGUE, or SECURITY Room.
-In the Morgue:
-Pick up the SCALPEL.
-Examine the lab COAT.
-Move to the LABORATORY or CONTAINMENT Room.
-
-____________________________________________________
-
-### 2. choices_functions.py Breakdown
+    - Look behind the desk: Move to Room 2: Observation Chamber.
+    - Move to Observation Chamber: Move to Room 2: Observation Chamber.
+    - Move to Office: Move to Room 4: Office.
 
 
+**Room 2: Observation Chamber**
 
-____________________________________________________
+    Actions:
 
-### 3. ending_sequences.py Breakdown
+    - Pick up syringe: Add the Syringe to the inventory.
+    - Look behind mirror: Trigger an event (not detailed in the diagram).
+    - Move to Storage Closet: Move to Room 3: Storage Closet (only if the player has the key in their inventory).
+    - Move to Laboratory: Move to Room 5: Laboratory.
+    - Return to Entry Hall: Move back to Room 1: Entry Hall.
 
 
-____________________________________________________
+**Room 3: Storage Closet (Accessible with Key)**
+
+    Actions:
+
+    - Examine notebook: Explore and gain possible clues.
+    - Pick up crowbar: Add the Crowbar to the inventory.
+    - Pick up toolbox items: Add the Toolbox items to the inventory.
+    - Move to Morgue: Move to Room 6: Morgue.
+    - Move to Observation Chamber: Move back to Room 2: Observation Chamber.
+
+
+**Room 4: Office**
+
+    Actions:
+
+    - Look at logbook: Read the logbook for clues or story progression.
+    - Examine computers: Possibly gain more information or trigger an event.
+    - Move to Break Room: Move to Room 7: Break Room.
+    - Move to Laboratory: Move to Room 5: Laboratory.
+    - Return to Entry Hall: Move back to Room 1: Entry Hall.
+
+
+**Room 5: Laboratory**
+
+    Actions:
+
+    - Examine equipment: Possibly gain information or story progression.
+    - - Pick up key: Add the Key to the inventory.
+    - Move to Morgue: Move to Room 6: Morgue.
+    - Move to Observation Chamber: Move back to Room 2: Observation Chamber.
+    - Move to Containment Room: Move to Room 9: Containment Room (if you have the keycard in your inventory).
+    - Return to Office: Move back to Room 4: Office.
+
+
+**Room 6: Morgue**
+
+    Actions:
+
+    - Pick up crowbar: Add the Crowbar to the inventory.
+    - Examine lab coat: Possibly gain a keycard or additional information.
+    - Move to Laboratory: Move back to Room 5: Laboratory.
+    - Move to Containment Room: Move to Room 9: Containment Room (if you have the keycard in your inventory).
+
+
+**Room 7: Break Room**
+
+    Actions:
+
+    - Take energy drink: Add the Energy Drink to the inventory.
+    - Pick up knife: Add the Knife to the inventory.
+    - Move to Office: Move back to Room 4: Office.
+    - Move to Security Room: Move to Room 8: Security Room.
+
+
+**Room 8: Security Room**
+
+    Actions:
+
+    - Read logs: Gain clues or trigger an event.
+    - Move to Laboratory: Move back to Room 5: Laboratory.
+    - Move to Containment Room: Move to Room 9: Containment Room (if you have the keycard in your inventory).
+    - Move to Morgue: Move back to Room 6: Morgue.
+    - Move to Break Room: Move back to Room 7: Break Room.
+
+
+**Room 9: Containment Room**
+
+    Actions:
+
+    - Inspect glass enclosure: Trigger an event or reveal information.
+    - Examine control panel: Possibly solve a puzzle or gain clues.
+    - Move to Security Room: Move back to Room 8: Security Room.
+    - Move to Morgue: Move back to Room 6: Morgue.
+
+
+**Ending Sequence**
+
+    Upon reaching the Encounter (Ending Sequence), the player's fate depends on the items they have in their inventory:
+
+    - Run: 
+      Player's fate is determined by their ability to enter the correct room sequence.
+
+    - Use Crowbar:
+      If the player has no crowbar in their inventory, they die.
+      If the player has a crowbar, they escape.
+
+    - Use Syringe:
+      If the player has no syringe in their inventory, they die.
+      If the player has a syringe, they escape.
+
+    - Accept Fate: 
+      The player dies.
+
+
+    The sequence of entering rooms also impacts the outcome:
+
+        Enter correct room sequence & escape.
+        Enter incorrect room sequence & die.
+
+    The game includes multiple possible endings depending on the player's choices and the items they have gathered:
+
+        Escape (via correct room sequence, crowbar, or syringe).
+        Death (via incorrect choices or lacking essential items).
+
 ### 
 
 
