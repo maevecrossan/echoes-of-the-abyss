@@ -191,7 +191,7 @@ def observation_chamber():
             "Type keyword here to make your choice: ").strip().lower()
 
         if observation_chamber_prompt == "syringe":
-            item = take_syringe()
+            item = choices.take_syringe()
             helpers.add_to_inventory(item)
         elif observation_chamber_prompt == "mirror":
             choices.investigate_mirror()
@@ -288,12 +288,12 @@ def storage_closet():
             "Type keyword here to make your choice: ").strip().lower()
 
         if storage_closet_prompt == "crowbar":
-            item = take_crowbar()
+            item = choices.take_crowbar()
             helpers.add_to_inventory(item)
         elif storage_closet_prompt == "notebook":
             choices.read_notebook()
         elif storage_closet_prompt == "toolbox":
-            item = inspect_toolbox()
+            item = choices.inspect_toolbox()
             helpers.add_to_inventory(item)
         elif storage_closet_prompt == "observation":
             observation_chamber()
@@ -459,7 +459,7 @@ def laboratory():
             "Type keyword here to make your choice: ").strip().lower()
 
         if laboratory_choices_prompt == "key":  # working
-            item = take_key()
+            item = choices.take_key()
             helpers.add_to_inventory(item)
         elif laboratory_choices_prompt == "equipment":  # working
             choices.examine_equipment()
@@ -550,10 +550,10 @@ def morgue():
             "Type keyword here to make your choice: ").strip().lower()
 
         if morgue_choices_prompt == "scalpel":  # working
-            item = take_scalpel()
+            item = choices.take_scalpel()
             helpers.add_to_inventory(item)
         elif morgue_choices_prompt == "coat":  # working
-            item = examine_lab_coat()
+            item = choices.examine_lab_coat()
             helpers.add_to_inventory(item)
         elif morgue_choices_prompt == "laboratory":  # working
             laboratory()
@@ -636,7 +636,7 @@ def break_room():
             "Type keyword here to make your choice: ").strip().lower()
         # all working
         if break_room_choices_prompt == "knife":
-            item = take_knife()
+            item = choices.take_knife()
             helpers.add_to_inventory(item)
         elif break_room_choices_prompt == "drink":
             energy_drink()
