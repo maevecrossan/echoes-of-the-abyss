@@ -117,9 +117,9 @@ def read_logbook():
     Entry 147\n
 
     The subject continues to exhibit signs of increased aggression
-    and intelligence. It has begun to recognize patterns in our containment
-    procedures, and I fear it’s only a matter of time before it attempts
-    to escape. \n
+    and intelligence. It has begun to recognize patterns in our
+    containment procedures, and I fear it’s only a matter of time
+    before it attempts to escape. \n
 
     We’ve reinforced the glass in the containment unit, but I’m not sure it
     will hold. The creature’s strength is beyond anything we anticipated.
@@ -148,8 +148,8 @@ def examine_computers():
 
         In case of containment breach, all personnel are to evacuate the
         facility immediately. The creature must not be allowed to escape
-        under any circumstances. Keycards are required to access the Containment
-        Room and initiate the lockdown procedure.\n
+        under any circumstances. Keycards are required to access the
+        Containment Room and initiate the lockdown procedure.\n
 
         Failure to follow protocol will result in immediate termination of the
         facility’s power and security systems. This measure is in place to

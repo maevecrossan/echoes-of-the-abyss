@@ -343,20 +343,17 @@ Below is a summary of the bigs I encountered during development and through test
 
 Once inital testing had been done, I used Code Institute's [Python Linter](https://pep8ci.herokuapp.com/).
 
-I received the following two errors:
+I received the following error:
 
-1. 'W291 trailing whitespace' 
-    
-    This error was frequently raised across all files due to the length of the strings. The strings have been forced onto new lines repeatedly to fit the terminal window on the live website.
+'E501 line too long (X > X characters)'
 
-2. 'E501 line too long (X > X characters)'
+This error was occassionally raised across all files due to the length the some strings. The highlighted lines featured a line in the 'help' prompt. This error, however, counts the empty spaces/indents as character. In this example, the linter is saying the line is 89 characters long,but the line in GitPod is only 77 characters. 
+As the white space isn't printed in the terminal, I've chosen to check each line, and ignore it if it less than 79 characters.
 
-    This error was occassionally raised across all files due to the length of some strings. The highlighted lines featured a line in the 'help' prompt. This error, however, counts the empty spaces/indents as character. In this example, the linter is saying the line is 89 characters long,but the line in GitPod is only 77 characters. 
-    As the white space isn't printed in the terminal, I've chosen to check each line, and ignore it if it less than 79 characters.
-
-    ![line too long error](docs/line_too_long.png)
-    ![line count not too long](docs/line_counter.png)
-    (Character count for highlighted sentence at bottom of screen ('77 selected').)
+![Choice File Linter Check Screenshot](docs/choice_linter_check.png)
+![Run File Linter Check Screenshot](docs/run_linter_check.png)
+![Ending Sequences Linter Check Screenshot](docs/endings_linter_check.png)
+![Helper File Linter Check Screenshot](docs)
 
 -----------------------------------------------
 ## Deployment
