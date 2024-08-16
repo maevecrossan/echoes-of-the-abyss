@@ -1,6 +1,5 @@
 import helper_functions as helpers
 
-
 def encounter():
     """
     Gives the description for the encounter in the containment room if the
@@ -36,7 +35,8 @@ def encounter():
     print(encounter_description_2)
 
     helpers.user_commands()
-
+    helpers.terminal_clear()
+    
     encounter_description_3 = """
     From inside the enclosure, you see a black, shapless entity spring
     through the hole in the top sof the enclosure. Glass fractures and
