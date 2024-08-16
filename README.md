@@ -279,11 +279,11 @@ The following is a chart I used to record the results of the quality test for al
 |  | Look at logbook. | Y |
 |  | Examine computers. | Y |
 |  | Move to Break Room. | Y |
-|  | Move to Laboratory. |  |
-|  | Return to Entry Hall. |  |
-| Room 5: Laboratory |  |  |
-|  | Examine equipment. |  |
-|  | Pick up key. |  |
+|  | Move to Laboratory. | Y |
+|  | Return to Entry Hall. | Y |
+| Room 5: Laboratory |  | Y |
+|  | Examine equipment. | Y |
+|  | Pick up key. | Y |
 |  | Move to Morgue. |  |
 |  | Move to Observation Chamber. |  |
 |  | Move to Containment Room. |  |
@@ -293,17 +293,17 @@ The following is a chart I used to record the results of the quality test for al
 |  | Examine lab coat. |  |
 |  | Move to Laboratory. |  |
 |  | Move to Containment Room. |  |
-| Room 7: Break Room |  |  |
-|  | Take energy drink. |  |
-|  | Pick up knife. |  |
-|  | Move to Office. |  |
-|  | Move to Security Room. |  |
-| Room 8: Security Room |  |  |
+| Room 7: Break Room |  | Y |
+|  | Take energy drink. | Y |
+|  | Pick up knife. | Y |
+|  | Move to Office. | Y |
+|  | Move to Security Room. | Y |
+| Room 8: Security Room |  | Y |
 |  | Read logs. |  |
-|  | Move to Laboratory. |  |
+|  | Move to Laboratory. | Y |
 |  | Move to Containment Room. |  |
 |  | Move to Morgue. |  |
-|  | Move to Break Room. |  |
+|  | Move to Break Room. | Y |
 | Room 9: Containment Room |  |  |
 |  | Inspect glass enclosure. |  |
 |  | Examine control panel. |  |

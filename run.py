@@ -435,7 +435,6 @@ def laboratory():
             helpers.add_to_inventory(item)
         elif laboratory_choices_prompt == "equipment":  # working
             examine_equipment()
-            break
         elif laboratory_choices_prompt == "observation":  # working
             observation_chamber()
             break
