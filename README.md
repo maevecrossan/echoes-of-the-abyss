@@ -253,6 +253,8 @@ The choices functions account for both inventory items and items that introduce 
 
 The following is a chart I used to record the results of the quality test for all functions. The test included testing that the function worked in isolation, was called correctly within another function, and that the program continued to run smoothly.
 
+Once I completed my code, I used [autopep8](https://pypi.org/project/autopep8/) to format it.
+
 ### Testing Results Table
 
 | Function Name | Choice | Working: Y / N |
@@ -328,14 +330,33 @@ Below is a summary of the bigs I encountered during development and through test
 
 | Issue | Details | Fix |
 |-----|:-----:|:-----:|
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+| ![testing screenshot](docs/examine_desk_bug.png) | Wasn't being called and resulted in error printing. | Was explicitly imported, later functions were refactored. Explicit import remove and function worked normally. |
+| ![testing screenshot](docs/helper_ftns_not_availbable_loops.png) | Incorrect call. | Changed helper_function file to use dot notation. |
+| ![testing screenshot](docs/display_inv_not_working.png) | Item was added to inventory, but display inventory was not being called. | Fixed by adding helper dot notation. |
+| ![testing screenshot](docs/investigate_mirror_not_called.png) | Wasn't being called and resulted in error printing. | Was explicitly imported, later functions were refactored. Explicit import remove and function worked normally. |
+| ![testing screenshot](docs/map_quit_commands_fix.png) | Functions weren't being called. | Added functions to user_commands and added dot notation. |
+| ![testing screenshot](docs/terminalclear_endingsqns_error.png) | Not being imported correctly. | Added helper dot notation. |
+| ![testing screenshot](docs/remove_breaks_from_inv_items.png) | While loop was breaking after item was added to inventory. | Removed break following inventory items to allow player's to access other options. |
+| ![testing screenshot](docs/change_command.png) | Not being imported and called properly | Added helper dot notation. |
 
 ### Post Development Testing
+
+Once inital testing had been done, I used Code Institute's [Python Linter](https://pep8ci.herokuapp.com/).
+
+I received the following two errors:
+
+1. 'W291 trailing whitespace' 
+    
+    This error was frequently raised across all files due to the length of the strings. The strings have been forced onto new lines repeatedly to fit the terminal window on the live website.
+
+2. 'E501 line too long (X > X characters)'
+
+    This error was occassionally raised across all files due to the length of some strings. The highlighted lines featured a line in the 'help' prompt. This error, however, counts the empty spaces/indents as character. In this example, the linter is saying the line is 89 characters long,but the line in GitPod is only 77 characters. 
+    As the white space isn't printed in the terminal, I've chosen to check each line, and ignore it if it less than 79 characters.
+
+    ![line too long error](docs/line_too_long.png)
+    ![line count not too long](docs/line_counter.png)
+    (Character count for highlighted sentence at bottom of screen ('77 selected').)
 
 -----------------------------------------------
 ## Deployment
