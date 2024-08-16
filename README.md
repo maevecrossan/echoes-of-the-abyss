@@ -226,10 +226,6 @@ As I mentioned before, there were an endless amount of opportunites to build and
         Escape (via correct room sequence, crowbar, or syringe).
         Death (via incorrect choices or lacking essential items).
 
-### 
-
-
-
 -----------------------------------------------
 ### Navigating through the game.
 
@@ -262,13 +258,14 @@ The following is a chart I used to record the results of the quality test for al
 | Function Name | Choice | Working: Y / N |
 |-----|:-----:|:-----:|
 | Title screen | - | Y |
+| Back story | - | Y |
 | Add to inventory | - | Y |
-| Room 1: Entry Hall | Look behind the desk. |  |
-|  | Move to Observation Chamber. |  |
-|  | Move to Office. |  |
+| Room 1: Entry Hall | Look behind the desk. | Y |
+|  | Move to Observation Chamber. | Y |
+|  | Move to Office. | Y |
 | Room 2 : Observation Chamber |  |  |
-|  | Pick up syringe. |  |
-|  | Look behind mirror. |  |
+|  | Pick up syringe. | Y |
+|  | Look behind mirror. | Y |
 |  | Move to Storage Closet. |  |
 |  | Move to Laboratory. |  |
 |  | Return to Entry Hall. |  |
@@ -278,10 +275,10 @@ The following is a chart I used to record the results of the quality test for al
 |  | Pick up toolbox items. |  |
 |  | Move to Morgue. |  |
 |  | Move to Observation Chamber. |  |
-| Room 4: Office |  |  |
-|  | Look at logbook. |  |
-|  | Examine computers. |  |
-|  | Move to Break Room. |  |
+| Room 4: Office |  | Y |
+|  | Look at logbook. | Y |
+|  | Examine computers. | Y |
+|  | Move to Break Room. | Y |
 |  | Move to Laboratory. |  |
 |  | Return to Entry Hall. |  |
 | Room 5: Laboratory |  |  |

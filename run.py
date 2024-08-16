@@ -200,7 +200,7 @@ def observation_chamber():
         elif observation_chamber_prompt == "quit":
             print("Exiting the game. Thank you for playing!")
             exit()
-        elif command == 'help':
+        elif observation_chamber_prompt == 'help':
             print("""
             To make a choice, when prompted, type the word in CAPITALS and hit 'enter'.\n
             To look at the map, type MAP and hit 'enter'.\n
@@ -616,7 +616,7 @@ def break_room():
             map()
         elif break_room_choices_prompt == 'inventory':
             helpers.display_inventory()
-        elif command == 'help':
+        elif break_room_choices_prompt == 'help':
             print("""
             To make a choice, when prompted, type the word in CAPITALS and hit 'enter'.\n
             To look at the map, type MAP and hit 'enter'.\n
