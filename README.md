@@ -253,7 +253,7 @@ The choices functions account for both inventory items and items that introduce 
 
 The following is a chart I used to record the results of the quality test for all functions. The test included testing that the function worked in isolation, was called correctly within another function, and that the program continued to run smoothly.
 
-### Each room (run.py)
+### Testing Results Table
 
 | Function Name | Choice | Working: Y / N |
 |-----|:-----:|:-----:|
@@ -321,6 +321,21 @@ The following is a chart I used to record the results of the quality test for al
 |  | QUIT | Y |
 |  | HELP | Y |
 
+
+### Bugs and Fixes
+
+Below is a summary of the bigs I encountered during development and through testing.
+
+| Issue | Details | Fix |
+|-----|:-----:|:-----:|
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+
+### Post Development Testing
 
 -----------------------------------------------
 ## Deployment
