@@ -113,8 +113,8 @@ current_inventory = []
 
 def add_to_inventory(item):
     """
-    Checks player input to see if it's a valid item and not already 
-    in inventory. The selected item will be added to the player's 
+    Checks player input to see if it's a valid item and not already
+    in inventory. The selected item will be added to the player's
     inventory if both cases are true.
     If empty, player will be informed.
     """
