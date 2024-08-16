@@ -1,9 +1,8 @@
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 import os
 import helper_functions as helpers
-from choices_functions import *
-from choices_functions import examine_desk
-from ending_sequences import *
+import choices_functions as choices
+import ending_sequences as endings
 
 helpers.title_screen()  # Calls title_screen() from helper_functions file.
 
@@ -12,6 +11,8 @@ def backstory():
     """
     Prints backstory to terminal in increments after title screen.
     """
+    
+    helpers.terminal_clear()
 
     intro_1 = """
     You are a seasoned urban explorer, known for uncovering the secrets
@@ -113,12 +114,12 @@ def entry_hall():
             "Type keyword here to make your choice: ").strip().lower()
 
         if entry_hall_prompt == "desk":  # working
-            examine_desk()
+            choices.examine_desk()
         elif entry_hall_prompt == "observation":  # working
-            observation_chamber()
+            choices.observation_chamber()
             break
         elif entry_hall_prompt == "office":  # working
-            office()
+            choices.office()
             break
         elif entry_hall_prompt == "quit":  # working
             print("""
@@ -130,6 +131,15 @@ def entry_hall():
             helpers.map()
         elif entry_hall_prompt == 'inventory':  # working
             helpers.display_inventory()
+        elif observation_chamber_prompt == 'help':
+            print("""
+            To make a choice, when prompted, type the word in CAPITALS \
+and hit 'enter'.\n
+            To look at the map, type MAP and hit 'enter'.\n
+            To see your inventory, type INVENTORY and hit 'enter'.\n
+            To quit the game, type QUIT.\n
+            To see this list of commands, type HELP and hit 'enter'.\n
+            """)
         else:
             print("Invalid choice. Please try again.")
 
@@ -184,19 +194,19 @@ def observation_chamber():
             item = take_syringe()
             helpers.add_to_inventory(item)
         elif observation_chamber_prompt == "mirror":
-            investigate_mirror()
+            choices.investigate_mirror()
         elif observation_chamber_prompt == "storage":
             if "key" not in helpers.current_inventory:
                 print("\nThe door is locked. Maybe there's a key somewhere?\n")
                 print(observation_chamber_choices)
             else:
-                storage_closet()
+                choices.storage_closet()
                 break
         elif observation_chamber_prompt == "laboratory":
-            laboratory()
+            choices.laboratory()
             break
         elif observation_chamber_prompt == "entry":
-            entry_hall()
+            choices.entry_hall()
             break
         elif observation_chamber_prompt == "inventory":
             helpers.display_inventory()
@@ -209,7 +219,7 @@ def observation_chamber():
         elif observation_chamber_prompt == 'help':
             print("""
             To make a choice, when prompted, type the word in CAPITALS \
-                and hit 'enter'.\n
+and hit 'enter'.\n
             To look at the map, type MAP and hit 'enter'.\n
             To see your inventory, type INVENTORY and hit 'enter'.\n
             To quit the game, type QUIT.\n
@@ -280,15 +290,15 @@ def storage_closet():
             item = take_crowbar()
             helpers.add_to_inventory(item)
         elif storage_closet_prompt == "notebook":
-            read_notebook()
+            choices.read_notebook()
         elif storage_closet_prompt == "toolbox":
             item = inspect_toolbox()
             helpers.add_to_inventory(item)
         elif storage_closet_prompt == "observation":
-            observation_chamber()
+            choices.observation_chamber()
             break
         elif storage_closet_prompt == "morgue":
-            morgue()
+            choices.morgue()
             break
         elif storage_closet_prompt == "quit":
             print("""
@@ -303,7 +313,7 @@ def storage_closet():
         elif storage_closet_prompt == 'help':
             print("""
             To make a choice, when prompted, type the word in CAPITALS \
-                and hit 'enter'.\n
+and hit 'enter'.\n
             To look at the map, type MAP and hit 'enter'.\n
             To see your inventory, type INVENTORY and hit 'enter'.\n
             To quit the game, type QUIT.\n
@@ -359,17 +369,17 @@ def office():
         office_choices_prompt = input(
             "Type keyword here to make your choice: ").strip().lower()
         if office_choices_prompt == "logbook":  # working
-            read_logbook()
+            choices.read_logbook()
         elif office_choices_prompt == "computers":  # working
-            examine_computers()
+            choices.examine_computers()
         elif office_choices_prompt == "entry":  # working
-            entry_hall()
+            choices.entry_hall()
             break
         elif office_choices_prompt == "laboratory":  # working
-            laboratory()
+            choices.laboratory()
             break
         elif office_choices_prompt == "break":  # working
-            break_room()
+            choices.break_room()
             break
         elif office_choices_prompt == "quit":
             print("""
@@ -384,7 +394,7 @@ def office():
         elif office_choices_prompt == 'help':
             print("""
             To make a choice, when prompted, type the word in CAPITALS \
-                and hit 'enter'.\n
+and hit 'enter'.\n
             To look at the map, type MAP and hit 'enter'.\n
             To see your inventory, type INVENTORY and hit 'enter'.\n
             To quit the game, type QUIT.\n
@@ -449,18 +459,18 @@ def laboratory():
             item = take_key()
             helpers.add_to_inventory(item)
         elif laboratory_choices_prompt == "equipment":  # working
-            examine_equipment()
+            choices.examine_equipment()
         elif laboratory_choices_prompt == "observation":  # working
-            observation_chamber()
+            choices.observation_chamber()
             break
         elif laboratory_choices_prompt == "office":  # working
-            office()
+            choices.office()
             break
         elif laboratory_choices_prompt == "morgue":  # working
-            morgue()
+            choices.morgue()
             break
         elif laboratory_choices_prompt == "security":  # working
-            security_room()
+            choices.security_room()
             break
         elif laboratory_choices_prompt == "quit":
             print("""
@@ -475,7 +485,7 @@ def laboratory():
         elif office_choices_prompt == 'help':
             print("""
             To make a choice, when prompted, type the word in CAPITALS \
-                and hit 'enter'.\n
+and hit 'enter'.\n
             To look at the map, type MAP and hit 'enter'.\n
             To see your inventory, type INVENTORY and hit 'enter'.\n
             To quit the game, type QUIT.\n
@@ -542,14 +552,14 @@ def morgue():
             item = examine_lab_coat()
             helpers.add_to_inventory(item)
         elif morgue_choices_prompt == "laboratory":  # working
-            laboratory()
+            choices.laboratory()
             break
         elif morgue_choices_prompt == "containment":  # add keycard if/else
             if "keycard" not in helpers.current_inventory:
                 print("The door is locked. I need a keycard to open it.")
                 print(morgue_choices)
             else:
-                containment_room()
+                choices.containment_room()
                 break
         elif morgue_choices_prompt == "quit":
             print("""
@@ -564,7 +574,7 @@ def morgue():
         elif morgue_choices_prompt == 'help':
             print("""
             To make a choice, when prompted, type the word in CAPITALS \
-                and hit 'enter'.\n
+and hit 'enter'.\n
             To look at the map, type MAP and hit 'enter'.\n
             To see your inventory, type INVENTORY and hit 'enter'.\n
             To quit the game, type QUIT.\n
@@ -624,12 +634,12 @@ def break_room():
             item = take_knife()
             helpers.add_to_inventory(item)
         elif break_room_choices_prompt == "drink":
-            energy_drink()
+            choices.energy_drink()
         elif break_room_choices_prompt == "office":
-            office()
+            choices.office()
             break
         elif break_room_choices_prompt == "security":
-            security_room()
+            choices.security_room()
             break
         elif break_room_choices_prompt == "quit":
             print("""
@@ -644,7 +654,7 @@ def break_room():
         elif break_room_choices_prompt == 'help':
             print("""
             To make a choice, when prompted, type the word in CAPITALS \
-                and hit 'enter'.\n
+and hit 'enter'.\n
             To look at the map, type MAP and hit 'enter'.\n
             To see your inventory, type INVENTORY and hit 'enter'.\n
             To quit the game, type QUIT.\n
@@ -704,13 +714,13 @@ def security_room():
             security_logs()
             print(security_room_choices)
         elif security_room_choices_prompt == "laboratory":  # working
-            laboratory()
+            choices.laboratory()
             break
         elif security_room_choices_prompt == "break":  # working
-            break_room()
+            choices.break_room()
             break
         elif security_room_choices_prompt == "containment":  # working
-            containment_room()
+            choices.containment_room()
             break
         elif security_room_choices_prompt == "quit":  # working
             print("""
@@ -725,7 +735,7 @@ def security_room():
         elif security_room_choices_prompt == 'help':
             print("""
             To make a choice, when prompted, type the word in CAPITALS \
-                and hit 'enter'.\n
+and hit 'enter'.\n
             To look at the map, type MAP and hit 'enter'.\n
             To see your inventory, type INVENTORY and hit 'enter'.\n
             To quit the game, type QUIT.\n
@@ -789,15 +799,15 @@ def containment_room():
             "Type keyword here to make your choice: ").strip().lower()
 
         if containment_room_choices_prompt == "panel":
-            security_panel()
+            choices.security_panel()
         elif containment_room_choices_prompt == "inspect":
-            encounter()
+            endings.encounter()
             break
         elif containment_room_choices_prompt == "morgue":
-            morgue()
+            choices.morgue()
             break
         elif containment_room_choices_prompt == "security":
-            security_room()
+            choices.security_room()
             break
         elif containment_room_choices_prompt == "quit":
             print("""
@@ -812,7 +822,7 @@ def containment_room():
         elif containment_room_choices_prompt == 'help':
             print("""
             To make a choice, when prompted, type the word in CAPITALS\
-                 and hit 'enter'.\n
+and hit 'enter'.\n
             To look at the map, type MAP and hit 'enter'.\n
             To see your inventory, type INVENTORY and hit 'enter'.\n
             To quit the game, type QUIT.\n

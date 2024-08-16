@@ -1,4 +1,4 @@
-from helper_functions import user_commands
+import helper_functions as helpers
 
 
 def examine_desk():
