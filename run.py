@@ -612,7 +612,7 @@ def break_room():
         elif break_room_choices_prompt == "quit":
             print("Exiting the game. Thank you for playing!")
             exit()
-        if break_room_choices_prompt == 'map':
+        elif break_room_choices_prompt == 'map':
             map()
         elif break_room_choices_prompt == 'inventory':
             helpers.display_inventory()

@@ -263,12 +263,12 @@ The following is a chart I used to record the results of the quality test for al
 | Room 1: Entry Hall | Look behind the desk. | Y |
 |  | Move to Observation Chamber. | Y |
 |  | Move to Office. | Y |
-| Room 2 : Observation Chamber |  |  |
+| Room 2 : Observation Chamber |  | Y |
 |  | Pick up syringe. | Y |
 |  | Look behind mirror. | Y |
 |  | Move to Storage Closet. |  |
-|  | Move to Laboratory. |  |
-|  | Return to Entry Hall. |  |
+|  | Move to Laboratory. | Y |
+|  | Return to Entry Hall. | Y |
 | Room 3: Storage Closet |  |  |
 |  | Examine notebook. |  |
 |  | Pick up crowbar. |  |
