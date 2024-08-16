@@ -345,18 +345,29 @@ Once inital testing had been done, I used Code Institute's [Python Linter](https
 
 I received the following error:
 
-'E501 line too long (X > X characters)'
+    'E501 line too long (X > X characters)'
 
-This error was occassionally raised across all files due to the length the some strings. The highlighted lines featured a line in the 'help' prompt. This error, however, counts the empty spaces/indents as character. In this example, the linter is saying the line is 89 characters long,but the line in GitPod is only 77 characters. 
-As the white space isn't printed in the terminal, I've chosen to check each line, and ignore it if it less than 79 characters.
+This error was occassionally raised across all files due to the length the some strings. The highlighted lines featured a line in the 'help' prompt. This error, however, counts the empty spaces/indents as character. After checking each error and comparing it to the GitPod version, each line was under 79 characters and easily fit in the terminal on the live site. 
+
+1. run.py Linter Check Results.
+
+![Run File Linter Check Screenshot](docs/run_linter_check.png)
+
+2. choice_functions.py Linter Check Results.
 
 ![Choice File Linter Check Screenshot](docs/choice_linter_check.png)
-![Run File Linter Check Screenshot](docs/run_linter_check.png)
+
+3. ending_sequences.py Linter Check Results.
+
 ![Ending Sequences Linter Check Screenshot](docs/endings_linter_check.png)
-![Helper File Linter Check Screenshot](docs)
+
+4. helper_functions.py Linter Check Results.
+
+![Helper File Linter Check Screenshot](docs/helper_linter_check.png)
 
 -----------------------------------------------
 ## Deployment
+
 Before deploying, I checked two things:
 1. Is my requirements.txt up to date?
 2. Have I pushed all pending changes to my GitHub repository?
@@ -401,9 +412,9 @@ Below are the steps I followed for deployment once I did the above:
 ### Testing Resources
 The following were used for testing (during and after development):
 
-* [Code Institute Python Linter](https://pep8ci.herokuapp.com/)
+* [Code Institute Python Linter.](https://pep8ci.herokuapp.com/)
 
-* GitPod
+* GitPod terminal.
 
 ### Additional Resources
 Below is a list of additional resources I used to help build my game.
