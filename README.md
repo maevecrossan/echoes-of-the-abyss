@@ -16,6 +16,24 @@ Link to live website:
 [Echoes of the Abyss Live Site](https://echoes-of-the-abyss-8920634f42db.herokuapp.com/)
 
 
+## How to Play:
+
+The game will automatically print the title screen, displaying the welcome message as well as the commands that you, the player, can type at any time.
+The commands include:
+
+* 'map': Prints the map, showing your current location and available rooms.
+* 'inventory': Lists the items you have collected.
+* 'quit': Exits the game.
+* 'help': Prints the available commands.
+
+You will be periodically prompted to either type a command or press enter to progress with the story. 
+The first room you will experience is the 'entry room'. From here, your journey begins. You can interact with objects, add items to your inventory, and/progress to a new room.
+
+Each room has unique items to be interacted with or collected. You can revisit rooms, and experience multiple endings.
+
+Enjoy!
+
+&nbsp;
 ## UX
 ### User Stories
 
@@ -49,56 +67,21 @@ As a developer...
 
 
 The opportunites available in this project were endless, and narrowing them down was a challenge. Due to time constraints, I decided to build a branching story that is fairly linear, as only one room triggers the ending sequences.
-More details about features I' dlove to add can be found in 'Future Developments', below the 'Development' section.
+More details about features I'd love to add can be found in 'Future Developments'.
 
+&nbsp;
 ## Development
-### File Organisation
-Within this project are four Python files. 
 
-#### 1. run.py
-This file holds the main game functions, or the room functions. These functions act at starting points from which a player can progress through the story and make certain chices.
+### Planning
 
-#### 2. helper_functions.py
-This file holds functions that add to the player's experience. It is linked to the other python files and facilitates a more enjoyable experience for the user. 
+Once the important and feasibile opportunties were established, I began planning. I created a map first, wanting to limit this version of the story to nine rooms. I generated the story with ChatGPT, asking it to include items to interact with and collect, as well as endings related to the final room.
 
-#### 3. choices_functions.py
-This file holds the functions that will be called if the player types in an object key word. Anythng that is interactable has its function here, and allows the player to learn more about the lore, interact with an item, or add an item to their inventory.
+From there, I began mapping out my game with LucidChart. A screenshot of the game logic can be seen below, followed by a breakdown. 
 
-#### 4. ending_sequences.py
-This file is only called in when the player reaches the Observation Room, Room 9. There are 7 possible endings in this file.
-
------------------------------------------------
-## Future Developments
-
-As I mentioned before, there were an endless amount of opportunites to build and incorporate into this game. Sadly, I didn't have enough time to add all the features I would like, so below is a (long) list of additional changes and features I would like to make:
-
-* I would like to create more interable objects to give the player the chance to learn more about the scientists, facility and the entity.
-
-* I would like to create more endings, as only one rom at the moment triggers the ending sequences. I would like to create some novelty endings like 'falling through a hole', or 'electrocution'.
-
-* I would like to create an achievements system, which can be printed at the end of the game when the player lives/dies. For example, letting them start from a certain point in the game to achieve a different ending.
-
-* I want to create more inventory items, all with specific uses throughout the game. Some items currently don't have a function tied to the ending.
-
-* I want to create a restricted inventory, forcing the plater to drop items if it's full, in turn affecting their survival.
-
-* I want to include puzzles to increase interactivity and enocurage the player to interact with as many obejcts as possible.
-
-* I want to create a summary of the player's pathing, allowing them to see what rooms the visited and in what order. 
-
-* I want the room functions to update to remove items already collected and inform the player that they've already been there. 
-
-* I would like the energy drink to play a bigger part after being consumed. For example, an ending where the player gets sick, or is too caffeinated to pay attention and dies somehow. 
-
-* I would also like to add multiple levels, but this would require some restructuring as it would get very text-heavy if kept in the current format.
-
-* Add character backstory.
-
------------------------------------------------
-## Game Tree Structure
+### Game Tree Structure
 ![Game Tree Structure](docs/eotb-gameplay-flowchart.png)
 
-## Game Tree Breakdown
+### Game Tree Breakdown
 **Room 1: Entry Hall**
     
     Actions:
@@ -223,15 +206,67 @@ As I mentioned before, there were an endless amount of opportunites to build and
         Escape (via correct room sequence, crowbar, or syringe).
         Death (via incorrect choices or lacking essential items).
 
------------------------------------------------
-### Navigating through the game.
+&nbsp;        
+### File Organisation
+Within this project are four Python files. 
 
-#### Input Options
+#### 1. run.py
+This file holds the main game functions, or the room functions. These functions act at starting points from which a player can progress through the story and make certain chices.
+
+#### 2. helper_functions.py
+This file holds functions that add to the player's experience. It is linked to the other python files and facilitates a more enjoyable experience for the user. 
+
+#### 3. choices_functions.py
+This file holds the functions that will be called if the player types in an object key word. Anythng that is interactable has its function here, and allows the player to learn more about the lore, interact with an item, or add an item to their inventory.
+
+#### 4. ending_sequences.py
+This file is only called in when the player reaches the Observation Room, Room 9. There are 7 possible endings in this file.
+
+&nbsp;
+## Future Developments
+
+As I mentioned before, there were an endless amount of opportunites to build and incorporate into this game. Sadly, I didn't have enough time to add all the features I would like, so below is a (long) list of additional changes and features I would like to make:
+
+* I would like to create more interable objects to give the player the chance to learn more about the scientists, facility and the entity.
+
+* I would like to create more endings, as only one rom at the moment triggers the ending sequences. I would like to create some novelty endings like 'falling through a hole', or 'electrocution'.
+
+* I would like to create an achievements system, which can be printed at the end of the game when the player lives/dies. For example, letting them start from a certain point in the game to achieve a different ending.
+
+* I want to create more inventory items, all with specific uses throughout the game. Some items currently don't have a function tied to the ending.
+
+* I want to create a restricted inventory, forcing the plater to drop items if it's full, in turn affecting their survival.
+
+* I want to include puzzles to increase interactivity and enocurage the player to interact with as many obejcts as possible.
+
+* I want to create a summary of the player's pathing, allowing them to see what rooms the visited and in what order. 
+
+* I want the room functions to update to remove items already collected and inform the player that they've already been there. 
+
+* I would like the energy drink to play a bigger part after being consumed. For example, an ending where the player gets sick, or is too caffeinated to pay attention and dies somehow. 
+
+* I would also like to add multiple levels, but this would require some restructuring as it would get very text-heavy if kept in the current format.
+
+* Add character backstory.
+
+&nbsp;
+## Features
+
+### The Title Screen
+The title screen prints the title of the game, but also the command keywords the user can type in throughout the game.
+
+### Back Story
+The back story gives some context to the game and explains why you are there in the first place (and why you would continue to stay).
+
+### Room Functions
+Each room has it's own function equally named, and is repsonsible for printing the readable content. From here, the player will enter in their choice from the choices/keywords, and can progress from there.
+
+### Navigating Through the Game: User Input
 
 After each text paragraph, and other regular intervals, a prompt will appear through which the player can choose to enter certain commands. 
 These commands vary from function to function, but there are some constants. All commands can be entered in upper or lower case.
 
-##### User Commands
+#### User Commands
 
 Players can input user commands whenever an input is posspromptedible. They can enter them in lower or upper case.
 
@@ -240,12 +275,27 @@ Players can input user commands whenever an input is posspromptedible. They can 
 * HELP: Displays the list of available commands.
 * QUIT: Exits the game.
 
-##### Choices
+#### Choices
 
 The choices functions account for both inventory items and items that introduce lore. Choices vary from room to room, with some rooms only being accessible if a certain item is in the player's inventory. 
 
------------------------------------------------
+&nbsp;
+### Data Model
+Throughout this project, I opted for a function-oriented program with the functions divided into relevant files. A copy of the summary of the four python files, previously seen in the planning section, can be seen below:
 
+#### 1. run.py
+This file holds the main game functions, or the room functions. These functions act at starting points from which a player can progress through the story and make certain chices.
+
+#### 2. helper_functions.py
+This file holds functions that add to the player's experience. It is linked to the other python files and facilitates a more enjoyable experience for the user. 
+
+#### 3. choices_functions.py
+This file holds the functions that will be called if the player types in an object key word. Anythng that is interactable has its function here, and allows the player to learn more about the lore, interact with an item, or add an item to their inventory.
+
+#### 4. ending_sequences.py
+This file is only called in when the player reaches the Observation Room, Room 9. There are 7 possible endings in this file.
+
+&nbsp;
 ## Testing
 
 The following is a chart I used to record the results of the quality test for all functions. The test included testing that the function worked in isolation, was called correctly within another function, and that the program continued to run smoothly.
@@ -320,7 +370,16 @@ Once I completed my code, I used [autopep8](https://pypi.org/project/autopep8/) 
 |  | QUIT | Y |
 |  | HELP | Y |
 
+&nbsp;
+### Error Handling
 
+Each input statement can receive a keyword from the player. The keyword will then be compared against the options by using a while loop. IF the keyword is valid, the appropriate action will be executed (add item to inventory, display contnet, move room, etc). If the keyword is invalid, an error will print informing the player of this, and will reprint the input prompt allowing them to try again.
+
+This check also applies to the inventory items. Duplicate items cannot be added. If a player tires to add an item a second time, an error message will print informing them it is already in their inventory.
+
+Each input prompt has a set of values it will accept. It will not punish a player for inputting something invalid, and will display an error messafe. The only exception is in the 'run' ending sequence. If the player inputs the wrong numbers, it will result in the player's death. It will not however accept invalid answers in the wrong format.
+
+&nbsp;
 ### Bugs and Fixes
 
 Below is a summary of the bigs I encountered during development and through testing.
@@ -336,7 +395,10 @@ Below is a summary of the bigs I encountered during development and through test
 | ![testing screenshot](docs/remove_breaks_from_inv_items.png) | While loop was breaking after item was added to inventory. | Removed break following inventory items to allow player's to access other options. |
 | ![testing screenshot](docs/change_command.png) | Not being imported and called properly | Added helper dot notation. |
 
+&nbsp;
 ### Post Development Testing
+
+#### Python/PEP8 Testing
 
 Once inital testing had been done, I used Code Institute's [Python Linter](https://pep8ci.herokuapp.com/).
 
@@ -362,7 +424,9 @@ This error was occassionally raised across all files due to the length the some 
 
 ![Helper File Linter Check Screenshot](docs/helper_linter_check.png)
 
------------------------------------------------
+#### HTML & CSS Testing
+As I added some custom styling to this template, I ran the code through W3 checker.
+
 ## Deployment
 
 Before deploying, I checked two things:
@@ -400,7 +464,7 @@ Below are the steps I followed for deployment once I did the above:
 
 * [utils](https://pypi.org/project/utils/) 1.0.2 from pypi.
 
-* Favicon created with [Favicon](https://favicon.io/).
+* Favicon sourced from [Flaticon](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flaticon.com%2Ffree-icon%2Fblack-hole_433927&psig=AOvVaw2y60zNP64vAryLj_XbRDtO&ust=1723917706188000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIC1uoaM-ocDFQAAAAAdAAAAABAE).
 
 * [autopep8](https://pypi.org/project/autopep8/) for code strucutring.
 
