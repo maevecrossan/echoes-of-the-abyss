@@ -471,6 +471,10 @@ All tests came back with no errors raised.
 #### HTML & CSS Testing
 As I added some custom styling to this template, I ran the code through W3 checker.
 
+![Screenshot of the W3C HTML Validator Results](docs/w3-html-validator.png)
+
+![Screenshot of the W3C CSS Validator Results](docs/w3-css-validator.png)
+
 ## Deployment
 
 Before deploying, I checked two things:
