@@ -235,8 +235,12 @@ As I mentioned before, there were an endless amount of opportunites to build and
 
 #### Input Options
 
+After each text paragraph, and other regular intervals, a prompt will appear through which the player can choose to enter certain commands. 
+These commands vary from function to function, but there are some constants. All commands can be entered in upper or lower case.
+
 ##### User Commands
-Users can use the following commands whenever an input is possible. They can enter them in lower or upper case.
+
+Players can input user commands whenever an input is posspromptedible. They can enter them in lower or upper case.
 
 * MAP: Displays the facility map.
 * INVENTORY: Displays the current inventory.
@@ -245,25 +249,82 @@ Users can use the following commands whenever an input is possible. They can ent
 
 ##### Choices
 
-##### Inventory
-
+The choices functions account for both inventory items and items that introduce lore. Choices vary from room to room, with some rooms only being accessible if a certain item is in the player's inventory. 
 
 -----------------------------------------------
 
 ## Testing
+
+The following is a chart I used to record the results of the quality test for all functions. The test included testing that the function worked in isolation, was called correctly within another function, and that the program continued to run smoothly.
+
 ### Each room (run.py)
 
+| Function Name | Choice | Working: Y / N |
+|-----|:-----:|:-----:|
+| Title screen | - | Y |
+| Add to inventory | - | Y |
+| Room 1: Entry Hall | Look behind the desk. |  |
+|  | Move to Observation Chamber. |  |
+|  | Move to Office. |  |
+| Room 2 : Observation Chamber |  |  |
+|  | Pick up syringe. |  |
+|  | Look behind mirror. |  |
+|  | Move to Storage Closet. |  |
+|  | Move to Laboratory. |  |
+|  | Return to Entry Hall. |  |
+| Room 3: Storage Closet |  |  |
+|  | Examine notebook. |  |
+|  | Pick up crowbar. |  |
+|  | Pick up toolbox items. |  |
+|  | Move to Morgue. |  |
+|  | Move to Observation Chamber. |  |
+| Room 4: Office |  |  |
+|  | Look at logbook. |  |
+|  | Examine computers. |  |
+|  | Move to Break Room. |  |
+|  | Move to Laboratory. |  |
+|  | Return to Entry Hall. |  |
+| Room 5: Laboratory |  |  |
+|  | Examine equipment. |  |
+|  | Pick up key. |  |
+|  | Move to Morgue. |  |
+|  | Move to Observation Chamber. |  |
+|  | Move to Containment Room. |  |
+|  | Return to Office |  |
+| Room 6: Morgue |  |  |
+|  | Pick up crowbar. |  |
+|  | Examine lab coat. |  |
+|  | Move to Laboratory. |  |
+|  | Move to Containment Room. |  |
+| Room 7: Break Room |  |  |
+|  | Take energy drink. |  |
+|  | Pick up knife. |  |
+|  | Move to Office. |  |
+|  | Move to Security Room. |  |
+| Room 8: Security Room |  |  |
+|  | Read logs. |  |
+|  | Move to Laboratory. |  |
+|  | Move to Containment Room. |  |
+|  | Move to Morgue. |  |
+|  | Move to Break Room. |  |
+| Room 9: Containment Room |  |  |
+|  | Inspect glass enclosure. |  |
+|  | Examine control panel. |  |
+|  | Move to Security Room. |  |
+|  | Move to Morgue. |  |
+| Ending Sequence |  |  |
+|  | Run. |  |
+|  | Use crowbar. |  |
+|  | Use syringe. |  |
+|  | Accept fate. |  |
+| User Commands |  |  |
+|  | MAP |  |
+|  | INVENTORY |  |
+|  | press enter |  |
+|  | QUIT |  |
+|  | HELP |  |
 
-### Helper Functions
 
-
-### Choices Functions
-
-
-### Ending Sequences
-
-
-### Quality Testing (Path Variants)
 -----------------------------------------------
 ## Deployment
 Before deploying, I checked two things:
