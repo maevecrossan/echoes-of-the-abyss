@@ -110,11 +110,11 @@ you whole."\n
         elif encounter_choices_prompt == "quit":
             print("\nExiting the game. Thank you for playing!\n")
             exit()
-        elif containment_room_choices_prompt == 'map':
+        elif encounter_choices_prompt == 'map':
             map()
-        elif containment_room_choices_prompt == 'inventory':
+        elif encounter_choices_prompt == 'inventory':
             helpers.display_inventory()
-        elif command == 'help':
+        elif encounter_choices_prompt == 'help':
             print("""
             To make a choice, when prompted, type the word in CAPITALS \
                 and hit 'enter'.\n
