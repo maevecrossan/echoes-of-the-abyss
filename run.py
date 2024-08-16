@@ -1,10 +1,9 @@
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
 import os
 import helper_functions as helpers
 import choices_functions as choices
 import ending_sequences as endings
 
-helpers.title_screen()  # Calls title_screen() from helper_functions file.
+helpers.title_screen()
 
 
 def backstory():
@@ -149,7 +148,7 @@ def observation_chamber():
     Links to choices_funtions file which details the interactions
     with each item that can be found throughout the game.
     """
-    helpers.terminal_clear()  # working
+    helpers.terminal_clear()
 
     observation_chamber_description_1 = """
     You enter the Observation Chamber, once used to monitor experiments
@@ -160,9 +159,9 @@ def observation_chamber():
     spiderwebbing from the center, as if something struck it with immense
     force.
     """
-    print(observation_chamber_description_1)  # working
+    print(observation_chamber_description_1)
 
-    helpers.user_commands()  # working
+    helpers.user_commands()
     helpers.terminal_clear()
 
     observation_chamber_description_2 = """
@@ -173,9 +172,9 @@ def observation_chamber():
     the floor that you hope are just oil. The air feels heavy, as though
     the room is holding its breath, waiting for something to happen.
     """
-    print(observation_chamber_description_2)  # working
+    print(observation_chamber_description_2)
 
-    helpers.user_commands()  # working
+    helpers.user_commands()
 
     observation_chamber_choices = """
     1. Pick up the SYRINGE.\n
@@ -332,7 +331,7 @@ def office():
     Links to choices_funtions file which details the interactions
     with each item that can be found throughout the game.
     """
-    helpers.terminal_clear()  # working
+    helpers.terminal_clear() 
 
     office_description_1 = """
     The Office is in disarray, with toppled chairs and scattered papers
@@ -344,7 +343,7 @@ def office():
     """
     print(office_description_1)
 
-    helpers.user_commands()  # working
+    helpers.user_commands()
     helpers.terminal_clear()
 
     office_description_2 = """
@@ -354,9 +353,9 @@ def office():
     and unexpectedly. A logbook lies open on the desk, its pages filled with
     notes on the lab’s experiments.
     """
-    print(office_description_2)  # working
+    print(office_description_2) 
 
-    helpers.user_commands()  # working
+    helpers.user_commands()  
 
     office_choices = """
     1. Read through the LOGBOOK.\n
@@ -365,22 +364,21 @@ def office():
     4. Move to Room 5, the LABORATORY.\n
     5. Move to Room 7, the BREAK room.\n
     """
-    print(office_choices)  # working
-
+    print(office_choices) 
     while True:
         office_choices_prompt = input(
             "Type keyword here to make your choice: ").strip().lower()
-        if office_choices_prompt == "logbook":  # working
+        if office_choices_prompt == "logbook":  
             choices.read_logbook()
-        elif office_choices_prompt == "computers":  # working
+        elif office_choices_prompt == "computers":  
             choices.examine_computers()
-        elif office_choices_prompt == "entry":  # working
+        elif office_choices_prompt == "entry":  
             entry_hall()
             break
-        elif office_choices_prompt == "laboratory":  # working
+        elif office_choices_prompt == "laboratory": 
             laboratory()
             break
-        elif office_choices_prompt == "break":  # working
+        elif office_choices_prompt == "break": 
             break_room()
             break
         elif office_choices_prompt == "quit":
@@ -391,7 +389,7 @@ def office():
             exit()
         elif office_choices_prompt == 'map':
             helpers.map()
-        elif office_choices_prompt == 'inventory':  # working
+        elif office_choices_prompt == 'inventory': 
             helpers.display_inventory()
         elif office_choices_prompt == 'help':
             print("""
@@ -405,8 +403,7 @@ and hit 'enter'.\n
         else:
             print("Invalid choice. Please try again.")
 
-    helpers.user_commands()  # working
-
+    helpers.user_commands()  
 
 def laboratory():
     """
@@ -414,7 +411,7 @@ def laboratory():
     Links to choices_funtions file which details the interactions
     with each item that can be found throughout the game.
     """
-    helpers.terminal_clear()  # working
+    helpers.terminal_clear() 
 
     laboratory_description_1 = """
     The Laboratory is the heart of the facility, where experiments were
@@ -426,9 +423,9 @@ def laboratory():
     of chemicals that sting your nose.
 
     """
-    print(laboratory_description_1)  # working
+    print(laboratory_description_1)
 
-    helpers.user_commands()  # working
+    helpers.user_commands()
     helpers.terminal_clear()
 
     laboratory_description_2 = """
@@ -440,9 +437,9 @@ def laboratory():
     cabinets, most of which are locked. In one corner, a lab coat hangs
     on a hook, and you notice something bulging in one of its pockets.
     """
-    print(laboratory_description_2)  # working
+    print(laboratory_description_2) 
 
-    helpers.user_commands()  # working
+    helpers.user_commands()
 
     laboratory_choices = """
     1. Pick up the KEY.\n
@@ -452,27 +449,27 @@ def laboratory():
     5. Move to Room 6, the MORGUE.\n
     6. Move to Room 8, the SECURITY Room.\n
     """
-    print(laboratory_choices)  # working
+    print(laboratory_choices)
 
     while True:
         laboratory_choices_prompt = input(
             "Type keyword here to make your choice: ").strip().lower()
 
-        if laboratory_choices_prompt == "key":  # working
+        if laboratory_choices_prompt == "key": 
             item = choices.take_key()
             helpers.add_to_inventory(item)
-        elif laboratory_choices_prompt == "equipment":  # working
+        elif laboratory_choices_prompt == "equipment":  
             choices.examine_equipment()
-        elif laboratory_choices_prompt == "observation":  # working
+        elif laboratory_choices_prompt == "observation":  
             observation_chamber()
             break
-        elif laboratory_choices_prompt == "office":  # working
+        elif laboratory_choices_prompt == "office": 
             office()
             break
-        elif laboratory_choices_prompt == "morgue":  # working
+        elif laboratory_choices_prompt == "morgue":  
             morgue()
             break
-        elif laboratory_choices_prompt == "security":  # working
+        elif laboratory_choices_prompt == "security": 
             security_room()
             break
         elif laboratory_choices_prompt == "quit":
@@ -483,7 +480,7 @@ def laboratory():
             exit()
         elif laboratory_choices_prompt == 'map':
             helpers.map()
-        elif laboratory_choices_prompt == 'inventory':  # working
+        elif laboratory_choices_prompt == 'inventory': 
             helpers.display_inventory()
         elif laboratory_choices_prompt == 'help':
             print("""
@@ -497,7 +494,7 @@ and hit 'enter'.\n
         else:
             print("Invalid choice. Please try again.")
 
-    helpers.user_commands()  # working
+    helpers.user_commands()
 
 
 def morgue():
@@ -549,16 +546,16 @@ def morgue():
         morgue_choices_prompt = input(
             "Type keyword here to make your choice: ").strip().lower()
 
-        if morgue_choices_prompt == "scalpel":  # working
+        if morgue_choices_prompt == "scalpel": 
             item = choices.take_scalpel()
             helpers.add_to_inventory(item)
-        elif morgue_choices_prompt == "coat":  # working
+        elif morgue_choices_prompt == "coat": 
             item = choices.examine_lab_coat()
             helpers.add_to_inventory(item)
-        elif morgue_choices_prompt == "laboratory":  # working
+        elif morgue_choices_prompt == "laboratory": 
             laboratory()
             break
-        elif morgue_choices_prompt == "containment":  # add keycard if/else
+        elif morgue_choices_prompt == "containment": 
             if "keycard" not in helpers.current_inventory:
                 print("The door is locked. I need a keycard to open it.")
                 print(morgue_choices)
@@ -596,7 +593,7 @@ def break_room():
     Links to choices_funtions file which details the interactions
     with each item that can be found throughout the game.
     """
-    helpers.terminal_clear()  # working
+    helpers.terminal_clear()
 
     break_room_description_1 = """
     The Break Room was once a place where the lab staff could relax, but
@@ -606,9 +603,9 @@ def break_room():
     scattered across the floor. There’s a small kitchenette in one corner,
     with a fridge and a microwave, both covered in grime.
     """
-    print(break_room_description_1)  # working
+    print(break_room_description_1)
 
-    helpers.user_commands()  # working
+    helpers.user_commands()  
     helpers.terminal_clear() 
 
     break_room_description_2 = """
@@ -619,9 +616,9 @@ def break_room():
     a coffee mug, a half-eaten sandwich, now mummified with age. The room
     is eerily silent, and the air is thick with dust.
     """
-    print(break_room_description_2)  # working
+    print(break_room_description_2)
 
-    helpers.user_commands()  # working
+    helpers.user_commands()
 
     break_room_choices = """
     1. Pick up the KNIFE.\n
@@ -629,12 +626,12 @@ def break_room():
     3. Go back to Room 4, the OFFICE.\n
     4. Move to Room 8, SECURITY Room.\n
     """
-    print(break_room_choices)  # working
+    print(break_room_choices)
 
-    while True:  # working
+    while True:
         break_room_choices_prompt = input(
             "Type keyword here to make your choice: ").strip().lower()
-        # all working
+
         if break_room_choices_prompt == "knife":
             item = choices.take_knife()
             helpers.add_to_inventory(item)
@@ -677,7 +674,7 @@ def security_room():
     Links to choices_funtions file which details the interactions
     with each item that can be found throughout the game.
     """
-    helpers.terminal_clear()  # working
+    helpers.terminal_clear() 
 
     security_room_description_1 = """
     The Security Room is filled with monitors and control panels, most of
@@ -687,9 +684,9 @@ def security_room():
     in front of the console. Papers and old security logs are scattered across
     the desk, detailing the final days of the lab’s operation.
     """
-    print(security_room_description_1)  # working
+    print(security_room_description_1) 
 
-    helpers.user_commands()  # working
+    helpers.user_commands() 
     helpers.terminal_clear()
 
     security_room_description_2 = """
@@ -700,10 +697,9 @@ def security_room():
     lab. Now, it’s a tomb of information, with the only clues to what happened
     hidden within the disjointed logs and static-filled screens.
     """
-    print(security_room_description_2)  # working
+    print(security_room_description_2) 
 
-    helpers.user_commands()  # working
-
+    helpers.user_commands() 
     security_room_choices = """
     1. Read the security LOGS.\n
     2. Go back to Room 5, the LABORATORY.\n
@@ -716,27 +712,27 @@ def security_room():
         security_room_choices_prompt = input(
             "Type keyword here to make your choice: ").strip().lower()
 
-        if security_room_choices_prompt == "logs":  # working
+        if security_room_choices_prompt == "logs": 
             security_logs()
             print(security_room_choices)
-        elif security_room_choices_prompt == "laboratory":  # working
+        elif security_room_choices_prompt == "laboratory": 
             laboratory()
             break
-        elif security_room_choices_prompt == "break":  # working
+        elif security_room_choices_prompt == "break": 
             break_room()
             break
-        elif security_room_choices_prompt == "containment":  # working
+        elif security_room_choices_prompt == "containment": 
             containment_room()
             break
-        elif security_room_choices_prompt == "quit":  # working
+        elif security_room_choices_prompt == "quit": 
             print("""
             Exiting the game. Thank you for playing!
             Click 'Run Program' to restart.
             """)
             exit()
-        elif security_room_choices_prompt == 'map':  # working
+        elif security_room_choices_prompt == 'map':
             helpers.map()
-        elif security_room_choices_prompt == 'inventory':  # working
+        elif security_room_choices_prompt == 'inventory': 
             helpers.display_inventory()
         elif security_room_choices_prompt == 'help':
             print("""
@@ -748,7 +744,7 @@ and hit 'enter'.\n
             To see this list of commands, type HELP and hit 'enter'.\n
             """)
         else:
-            print("Invalid choice. Please try again.")  # working
+            print("Invalid choice. Please try again.") 
 
     helpers.user_commands()
 
@@ -773,9 +769,9 @@ def containment_room():
     hard to escape. The room is dimly lit by emergency lights, casting a red
     glow that makes everything look surreal and threatening.\n
     """
-    print(containment_room_description_1)  # working
+    print(containment_room_description_1)  
 
-    helpers.user_commands()  # working
+    helpers.user_commands() 
     helpers.terminal_clear()
 
     containment_room_description_2 = """
@@ -789,9 +785,9 @@ def containment_room():
     with tension, as if something terrible could happen at any moment. The
     hair on the back of your neck stands on end.\n
     """
-    print(containment_room_description_2)  # working
+    print(containment_room_description_2) 
 
-    helpers.user_commands()  # working
+    helpers.user_commands() 
 
     containment_room_choices = """
     1. Examine the control PANEL.\n
