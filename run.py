@@ -636,7 +636,7 @@ def break_room():
             item = choices.take_knife()
             helpers.add_to_inventory(item)
         elif break_room_choices_prompt == "drink":
-            energy_drink()
+            choices.energy_drink()
         elif break_room_choices_prompt == "office":
             office()
             break
