@@ -713,7 +713,7 @@ def security_room():
             "Type keyword here to make your choice: ").strip().lower()
 
         if security_room_choices_prompt == "logs": 
-            security_logs()
+            choices.security_logs()
             print(security_room_choices)
         elif security_room_choices_prompt == "laboratory": 
             laboratory()
