@@ -115,10 +115,10 @@ def entry_hall():
         if entry_hall_prompt == "desk":  # working
             choices.examine_desk()
         elif entry_hall_prompt == "observation":  # working
-            choices.observation_chamber()
+            observation_chamber()
             break
         elif entry_hall_prompt == "office":  # working
-            choices.office()
+            office()
             break
         elif entry_hall_prompt == "quit":  # working
             print("""
@@ -200,13 +200,13 @@ def observation_chamber():
                 print("\nThe door is locked. Maybe there's a key somewhere?\n")
                 print(observation_chamber_choices)
             else:
-                choices.storage_closet()
+                storage_closet()
                 break
         elif observation_chamber_prompt == "laboratory":
-            choices.laboratory()
+            laboratory()
             break
         elif observation_chamber_prompt == "entry":
-            choices.entry_hall()
+            entry_hall()
             break
         elif observation_chamber_prompt == "inventory":
             helpers.display_inventory()
@@ -296,10 +296,10 @@ def storage_closet():
             item = inspect_toolbox()
             helpers.add_to_inventory(item)
         elif storage_closet_prompt == "observation":
-            choices.observation_chamber()
+            observation_chamber()
             break
         elif storage_closet_prompt == "morgue":
-            choices.morgue()
+            morgue()
             break
         elif storage_closet_prompt == "quit":
             print("""
@@ -375,13 +375,13 @@ def office():
         elif office_choices_prompt == "computers":  # working
             choices.examine_computers()
         elif office_choices_prompt == "entry":  # working
-            choices.entry_hall()
+            entry_hall()
             break
         elif office_choices_prompt == "laboratory":  # working
-            choices.laboratory()
+            laboratory()
             break
         elif office_choices_prompt == "break":  # working
-            choices.break_room()
+            break_room()
             break
         elif office_choices_prompt == "quit":
             print("""
@@ -464,16 +464,16 @@ def laboratory():
         elif laboratory_choices_prompt == "equipment":  # working
             choices.examine_equipment()
         elif laboratory_choices_prompt == "observation":  # working
-            choices.observation_chamber()
+            observation_chamber()
             break
         elif laboratory_choices_prompt == "office":  # working
-            choices.office()
+            office()
             break
         elif laboratory_choices_prompt == "morgue":  # working
-            choices.morgue()
+            morgue()
             break
         elif laboratory_choices_prompt == "security":  # working
-            choices.security_room()
+            security_room()
             break
         elif laboratory_choices_prompt == "quit":
             print("""
@@ -556,14 +556,14 @@ def morgue():
             item = examine_lab_coat()
             helpers.add_to_inventory(item)
         elif morgue_choices_prompt == "laboratory":  # working
-            choices.laboratory()
+            laboratory()
             break
         elif morgue_choices_prompt == "containment":  # add keycard if/else
             if "keycard" not in helpers.current_inventory:
                 print("The door is locked. I need a keycard to open it.")
                 print(morgue_choices)
             else:
-                choices.containment_room()
+                containment_room()
                 break
         elif morgue_choices_prompt == "quit":
             print("""
@@ -639,12 +639,12 @@ def break_room():
             item = take_knife()
             helpers.add_to_inventory(item)
         elif break_room_choices_prompt == "drink":
-            choices.energy_drink()
+            energy_drink()
         elif break_room_choices_prompt == "office":
-            choices.office()
+            office()
             break
         elif break_room_choices_prompt == "security":
-            choices.security_room()
+            security_room()
             break
         elif break_room_choices_prompt == "quit":
             print("""
@@ -720,13 +720,13 @@ def security_room():
             security_logs()
             print(security_room_choices)
         elif security_room_choices_prompt == "laboratory":  # working
-            choices.laboratory()
+            laboratory()
             break
         elif security_room_choices_prompt == "break":  # working
-            choices.break_room()
+            break_room()
             break
         elif security_room_choices_prompt == "containment":  # working
-            choices.containment_room()
+            containment_room()
             break
         elif security_room_choices_prompt == "quit":  # working
             print("""
@@ -811,10 +811,10 @@ def containment_room():
             endings.encounter()
             break
         elif containment_room_choices_prompt == "morgue":
-            choices.morgue()
+            morgue()
             break
         elif containment_room_choices_prompt == "security":
-            choices.security_room()
+            security_room()
             break
         elif containment_room_choices_prompt == "quit":
             print("""
