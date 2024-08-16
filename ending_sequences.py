@@ -111,7 +111,7 @@ you whole."\n
             print("\nExiting the game. Thank you for playing!\n")
             exit()
         elif encounter_choices_prompt == 'map':
-            map()
+            helpers.map()
         elif encounter_choices_prompt == 'inventory':
             helpers.display_inventory()
         elif encounter_choices_prompt == 'help':
@@ -145,7 +145,7 @@ def encounter_run():
     What are the two room numbers that will get you out quickest?
     """
     print(encounter_run_content)
-    map()
+    helpers.map()
 
     correct_sequence = [(5, 1)]
     player_sequence = []
