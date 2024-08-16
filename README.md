@@ -17,7 +17,6 @@ Link to live website:
 
 
 ## UX
-
 ### User Stories
 
 As a user...
@@ -96,11 +95,89 @@ As I mentioned before, there were an endless amount of opportunites to build and
 
 * I would also like to add multiple levels, but this would require some restructuring as it would get very text-heavy if kept in the current format.
 
+* Add character backstory.
+
 -----------------------------------------------
 ## Game Tree Structure
+![Game Tree Structure](docs/eotb-gameplay-flowchart.png)
+
+## Game Tree Breakdown
+The game involves exploring different rooms (represented by the various functions), making choices about what to examine or collect, and managing inventory.
+
+Each function represents a specific action or discovery the player can make, adding to the overall narrative and survival strategy.
+Players must use the inventory items they collect to progress, solve puzzles, or defend themselves against potential threats.
+
+Below is a list of possible paths in the game, divided up by file. 
 
 
-## How to Play
+### 1. helper_functions.py Breakdown
+Starting Point: Entry Hall
+
+1. Look behind the DESK:
+
+This action will trigger the examine_desk() function.
+Possible outcomes include finding items, clues, or encountering something unexpected.
+
+2.Move to the OBSERVATION Chamber:
+
+Leads to the Observation Chamber. The player will explore this area and can make new choices based on the room's description.
+Possible choices in the Observation Chamber:
+Pick up the SYRINGE.
+Try to see what’s behind the MIRROR.
+Move to the STORAGE closet.
+Move to the LABORATORY.
+Return to the ENTRY hall.
+Move to the OFFICE:
+
+Leads to the Office. The player will explore the room and face new choices.
+Possible choices in the Office:
+Read through the LOGBOOK.
+Examine the broken COMPUTERS.
+Move to the ENTRY hall.
+Move to the LABORATORY.
+Move to the BREAK room.
+Possible Routes and Outcomes:
+Route 1: Desk > Observation Chamber > Storage Closet
+
+Starting at the desk, the player may decide to explore the Observation Chamber and then proceed to the Storage Closet.
+In the Storage Closet:
+Pick up the CROWBAR.
+Examine the NOTEBOOK.
+Inspect the TOOLBOX.
+Move to the OBSERVATION chamber, MORGUE, or stay.
+Route 2: Desk > Office > Break Room
+
+Starting at the desk, the player may explore the Office and then proceed to the Break Room.
+In the Break Room:
+The room is chaotic, and players will be faced with new choices based on the objects and atmosphere described.
+Choices might include interacting with vending machines, tables, or moving to other rooms like the Laboratory.
+Route 3: Observation Chamber > Laboratory > Morgue
+
+Starting at the Observation Chamber, the player may decide to explore the Laboratory and then proceed to the Morgue.
+In the Laboratory:
+Pick up the KEY.
+Examine the lab EQUIPMENT.
+Move to the OBSERVATION chamber, OFFICE, MORGUE, or SECURITY Room.
+In the Morgue:
+Pick up the SCALPEL.
+Examine the lab COAT.
+Move to the LABORATORY or CONTAINMENT Room.
+
+____________________________________________________
+
+### 2. choices_functions.py Breakdown
+
+
+
+____________________________________________________
+
+### 3. ending_sequences.py Breakdown
+
+
+____________________________________________________
+### 
+
+
 
 -----------------------------------------------
 ### Navigating through the game.
@@ -108,6 +185,12 @@ As I mentioned before, there were an endless amount of opportunites to build and
 #### Input Options
 
 ##### User Commands
+Users can use the following commands whenever an input is possible. They can enter them in lower or upper case.
+
+* MAP: Displays the facility map.
+* INVENTORY: Displays the current inventory.
+* HELP: Displays the list of available commands.
+* QUIT: Exits the game.
 
 ##### Choices
 
@@ -129,6 +212,7 @@ As I mentioned before, there were an endless amount of opportunites to build and
 ### Ending Sequences
 
 
+### Quality Testing (Path Variants)
 -----------------------------------------------
 ## Deployment
 Before deploying, I checked two things:
@@ -167,6 +251,8 @@ Below are the steps I followed for deployment once I did the above:
 * Favicon created with [Favicon](https://favicon.io/).
 
 * [autopep8](https://pypi.org/project/autopep8/) for code strucutring.
+
+* [LucidChart] to make the tree chart displaying all possible game paths. (https://lucid.app/lucidchart/ab90e1dd-8762-4d4f-80d7-7b74bf9fbeb4/edit?invitationId=inv_40e4ed57-e5f2-4ac5-9a5c-2a17065440a2&page=0_0#)
 
 ### Testing Resources
 The following were used for testing (during and after development):
