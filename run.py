@@ -124,7 +124,7 @@ def entry_hall():
             print("Exiting the game. Thank you for playing!")
             exit()
         elif entry_hall_prompt == 'map':  # working
-            map()
+            helper.map()
         elif entry_hall_prompt == 'inventory':  # working
             helpers.display_inventory()
         else:
@@ -287,7 +287,7 @@ def storage_closet():
             print("Exiting the game. Thank you for playing!")
             exit()
         elif storage_closet_prompt == 'map':
-            map()
+            helper.map()
         elif storage_closet_prompt == 'inventory':
             helpers.display_inventory()
         elif command == 'help':
@@ -364,7 +364,7 @@ def office():
             print("Exiting the game. Thank you for playing!")
             exit()
         elif office_choices_prompt == 'map':
-            map()
+            helper.map()
         elif office_choices_prompt == 'inventory':  # working
             helpers.display_inventory()
         elif command == 'help':
@@ -451,7 +451,7 @@ def laboratory():
             print("Exiting the game. Thank you for playing!")
             exit()
         elif laboratory_choices_prompt == 'map':
-            map()
+            helper.map()
         elif laboratory_choices_prompt == 'inventory':  # working
             helpers.display_inventory()
         elif command == 'help':
@@ -536,7 +536,7 @@ def morgue():
             print("Exiting the game. Thank you for playing!")
             exit()
         elif morgue_choices_prompt == 'map':
-            map()
+            helper.map()
         elif morgue_choices_promptand == 'inventory':
             helpers.display_inventory()
         elif command == 'help':
@@ -612,7 +612,7 @@ def break_room():
             print("Exiting the game. Thank you for playing!")
             exit()
         elif break_room_choices_prompt == 'map':
-            map()
+            helper.map()
         elif break_room_choices_prompt == 'inventory':
             helpers.display_inventory()
         elif break_room_choices_prompt == 'help':
@@ -689,7 +689,7 @@ def security_room():
             print("Exiting the game. Thank you for playing!")
             exit()
         elif security_room_choices_prompt == 'map':  # working
-            map()
+            helper.map()
         elif security_room_choices_prompt == 'inventory':  # working
             helpers.display_inventory()
         elif command == 'help':
@@ -772,7 +772,7 @@ def containment_room():
             print("Exiting the game. Thank you for playing!")
             exit()
         elif containment_room_choices_prompt == 'map':
-            map()
+            helper.map()
         elif containment_room_choices_prompt == 'inventory':
             helpers.display_inventory()
         elif command == 'help':

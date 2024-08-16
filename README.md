@@ -285,9 +285,9 @@ The following is a chart I used to record the results of the quality test for al
 |  | Examine equipment. | Y |
 |  | Pick up key. | Y |
 |  | Move to Morgue. |  |
-|  | Move to Observation Chamber. |  |
+|  | Move to Observation Chamber. | Y |
 |  | Move to Containment Room. |  |
-|  | Return to Office |  |
+|  | Return to Office | Y |
 | Room 6: Morgue |  |  |
 |  | Pick up crowbar. |  |
 |  | Examine lab coat. |  |
