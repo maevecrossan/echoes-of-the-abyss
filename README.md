@@ -301,13 +301,13 @@ The choices functions account for both inventory items and items that introduce 
 
 &nbsp;
 ### Data Model
-Throughout this project, I opted for a function-oriented program with the functions divided into relevant files. A copy of the summary of the four python files, previously seen in the planning section, can be seen below:
+Throughout this project, I opted for a function-oriented program with the functions divided into relevant files. A copy of the summary of the four Python files, previously seen in the planning section, can be seen below:
 
 #### 1. run.py
 This file holds the main game functions, or the room functions. These functions act at starting points from which a player can progress through the story and make certain chices.
 
 #### 2. helper_functions.py
-This file holds functions that add to the player's experience. It is linked to the other python files and facilitates a more enjoyable experience for the user. 
+This file holds functions that add to the player's experience. It is linked to the other Python files and facilitates a more enjoyable experience for the user. 
 
 #### 3. choices_functions.py
 This file holds the functions that will be called if the player types in an object key word. Anythng that is interactable has its function here, and allows the player to learn more about the lore, interact with an item, or add an item to their inventory.
@@ -343,7 +343,7 @@ As I mentioned before, there were an endless amount of opportunities to build an
 
 * Add character backstory.
 
-* Find a python library that will allow text to be printed character by character, as if being written in the moment.
+* Find a Python library that will allow text to be printed character by character, as if being written in the moment.
 
 &nbsp;
 ## Testing
