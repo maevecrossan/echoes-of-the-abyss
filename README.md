@@ -4,7 +4,7 @@
 
 ## **Introduction**
 
-'Echoes of the Abyss' is a terminal-based, narrative driven horror game. The game blends classic survival horror elements with the interactive storytelling of a choose-your-own-adventure, creating a suspenseful experience where every decision affects your fate.
+'Echoes of the Abyss' is a terminal-based, narrative-driven horror game. The game blends classic survival horror elements with the interactive storytelling of a choose-your-own-adventure, creating a suspenseful experience where every decision affects your fate.
 
 You play the part of an URBEX explorer and content creator who visits an abandoned research facility. The facility, once bustling with scientists and security personnel, is now eerily abandoned, its halls filled with the remnants of a hasty evacuation. The experiment was designed to study a mysterious and dangerous entity, but it broke free from containment, wreaking havoc on the facility. The few survivors sealed the creature in a containment room, but its intelligence and strength make it a constant threat. 
 
@@ -74,9 +74,9 @@ The commands include:
 * 'help': Prints the available commands.
 
 You will be periodically prompted to either type a command or press enter to progress with the story. 
-The first room you will experience is the 'entry room'. From here, your journey begins. You can interact with objects, add items to your inventory, and/progress to a new room.
+The first room you will experience is the 'entry room'. From here, your journey begins. You can interact with objects, add items to your inventory, or progress to a new room.
 
-Each room has unique items to be interacted with or collected. You can revisit rooms, and experience multiple endings. When you have reached the end of the game, the game will telling you what ending number you got and will quit the program. A message will be printed to the terminal telling you to click 'Run Program' if you wish to replay.'
+Each room has unique items to be interacted with or collected. You can revisit rooms, and experience multiple endings. When you have reached the end of the game, the game will tell you what ending number you got and will quit the program. A message will be printed to the terminal telling you to click 'Run Program' if you wish to replay.'
 
 Enjoy!
 
@@ -97,7 +97,7 @@ As a developer...
 * I want there to be consequences if a player doesn't collect the correct items.
 * I want to create a game that's replayable without being boring.
 * I want to create a game that is quick enough to progress through if the player dies and wants to try again.
-* I want the player to be able to access different commands to allow for a comfortable gamining experience.
+* I want the player to be able to access different commands to allow for a comfortable gaming experience.
 
 ### Opportunities
 
@@ -113,7 +113,7 @@ As a developer...
 | Hint keyword | 1 | 1 |
 
 
-The opportunites available in this project were endless, and narrowing them down was a challenge. Due to time constraints, I decided to build a branching story that is fairly linear, as only one room triggers the ending sequences.
+The opportunities available in this project were endless, and narrowing them down was a challenge. Due to time constraints, I decided to build a branching story that is fairly linear, as only one room triggers the ending sequences.
 More details about features I'd love to add can be found in 'Future Developments'.
 
 &nbsp;
@@ -258,13 +258,13 @@ From there, I began mapping out my game with LucidChart. A screenshot of the gam
 Within this project are four Python files. 
 
 #### 1. run.py
-This file holds the main game functions, or the room functions. These functions act at starting points from which a player can progress through the story and make certain chices.
+This file holds the main game functions, or the room functions. These functions act as starting points from which a player can progress through the story and make certain choices.
 
 #### 2. helper_functions.py
-This file holds functions that add to the player's experience. It is linked to the other python files and facilitates a more enjoyable experience for the user. 
+This file holds functions that add to the player's experience. It is linked to the other Python files and facilitates a more enjoyable experience for the user. 
 
 #### 3. choices_functions.py
-This file holds the functions that will be called if the player types in an object key word. Anythng that is interactable has its function here, and allows the player to learn more about the lore, interact with an item, or add an item to their inventory.
+This file holds the functions that will be called if the player types in an object keyword. Anything that is interactable has its function here, and allows the player to learn more about the lore, interact with an item, or add an item to their inventory.
 
 #### 4. ending_sequences.py
 This file is only called in when the player reaches the Observation Room, Room 9. There are 7 possible endings in this file.
@@ -279,7 +279,7 @@ The title screen prints the title of the game, but also the command keywords the
 The back story gives some context to the game and explains why you are there in the first place (and why you would continue to stay).
 
 ### Room Functions
-Each room has it's own function equally named, and is repsonsible for printing the readable content. From here, the player will enter in their choice from the choices/keywords, and can progress from there.
+Each room has its own function equally named, and is responsible for printing the readable content. From here, the player will enter in their choice from the choices/keywords, and can progress from there.
 
 ### Navigating Through the Game: User Input
 
@@ -288,7 +288,7 @@ These commands vary from function to function, but there are some constants. All
 
 #### User Commands
 
-Players can input user commands whenever an input is posspromptedible. They can enter them in lower or upper case.
+Players can input user commands whenever an input is available. They can enter them in lower or upper case.
 
 * MAP: Displays the facility map.
 * INVENTORY: Displays the current inventory.
@@ -319,21 +319,21 @@ This file is only called in when the player reaches the Observation Room, Room 9
 &nbsp;
 ## Future Developments
 
-As I mentioned before, there were an endless amount of opportunites to build and incorporate into this game. Sadly, I didn't have enough time to add all the features I would like, so below is a (long) list of additional changes and features I would like to make:
+As I mentioned before, there were an endless amount of opportunities to build and incorporate into this game. Sadly, I didn't have enough time to add all the features I would like, so below is a (long) list of additional changes and features I would like to make:
 
 * I would like to create more interable objects to give the player the chance to learn more about the scientists, facility and the entity.
 
-* I would like to create more endings, as only one rom at the moment triggers the ending sequences. I would like to create some novelty endings like 'falling through a hole', or 'electrocution'.
+* I would like to create more endings, as only one room at the moment triggers the ending sequences. I would like to create some novelty endings like 'falling through a hole', or 'electrocution'.
 
 * I would like to create an achievements system, which can be printed at the end of the game when the player lives/dies. For example, letting them start from a certain point in the game to achieve a different ending.
 
 * I want to create more inventory items, all with specific uses throughout the game. Some items currently don't have a function tied to the ending.
 
-* I want to create a restricted inventory, forcing the plater to drop items if it's full, in turn affecting their survival.
+* I want to create a restricted inventory, forcing the player to drop items if it's full, in turn affecting their survival.
 
-* I want to include puzzles to increase interactivity and enocurage the player to interact with as many obejcts as possible.
+* I want to include puzzles to increase interactivity and encourage the player to interact with as many objects as possible.
 
-* I want to create a summary of the player's pathing, allowing them to see what rooms the visited and in what order. 
+* I want to create a summary of the player's pathing, allowing them to see what rooms they visited and in what order. 
 
 * I want the room functions to update to remove items already collected and inform the player that they've already been there. 
 
@@ -423,11 +423,11 @@ Once I completed my code, I used [autopep8](https://pypi.org/project/autopep8/) 
 &nbsp;
 ### Error Handling
 
-Each input statement can receive a keyword from the player. The keyword will then be compared against the options by using a while loop. IF the keyword is valid, the appropriate action will be executed (add item to inventory, display contnet, move room, etc). If the keyword is invalid, an error will print informing the player of this, and will reprint the input prompt allowing them to try again.
+Each input statement can receive a keyword from the player. The keyword will then be compared against the options by using a while loop. If the keyword is valid, the appropriate action will be executed (add item to inventory, display content, move room, etc). If the keyword is invalid, an error will print informing the player of this, and will reprint the input prompt allowing them to try again.
 
 This check also applies to the inventory items. Duplicate items cannot be added. If a player tires to add an item a second time, an error message will print informing them it is already in their inventory.
 
-Each input prompt has a set of values it will accept. It will not punish a player for inputting something invalid, and will display an error messafe. The only exception is in the 'run' ending sequence. If the player inputs the wrong numbers, it will result in the player's death. It will not however accept invalid answers in the wrong format.
+Each input prompt has a set of values it will accept. It will not punish a player for inputting something invalid, and will display an error message. The only exception is in the 'run' ending sequence. If the player inputs the wrong numbers, it will result in the player's death. It will not however accept invalid answers in the wrong format.
 
 &nbsp;
 ### Bugs and Fixes
@@ -486,7 +486,7 @@ Before deploying, I checked two things:
 Below are the steps I followed for deployment once I did the above:
 
 1. Sign in to Heroku.
-2. Navigate to your dashbord.
+2. Navigate to your dashboard.
 3. In the top right corner, click 'New'.
 4. Click 'Create new app'.
 5. Give your app a name and choose a region. Click 'save'.
