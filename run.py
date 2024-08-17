@@ -759,7 +759,7 @@ def containment_room():
     """
     helpers.terminal_clear()
 
-    # can be accessed if they have keycard
+    # can be accessed if keycard in inventory
 
     containment_room_description_1 = """
     The Containment Room is the most ominous part of the facility. It’s
